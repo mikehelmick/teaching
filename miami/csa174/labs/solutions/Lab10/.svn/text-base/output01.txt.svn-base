@@ -1,0 +1,27 @@
+Cents in bag1? 
+Cents in bag2? 
+Bag1 $  0.99 Bag2 $  0.99 : Total=$  1.98
+Purchase amount? 
+Purchase made!
+Bag1 $  0.64 Bag2 $  0.99 : Total=$  1.63
+Purchase amount? 
+Purchase made!
+Bag1 $  0.50 Bag2 $  0.98 : Total=$  1.48
+Purchase amount? 
+Not enough money!
+Bag1 $  0.50 Bag2 $  0.98 : Total=$  1.48
+Purchase amount? 
+Purchase made!
+Bag1 $  0.50 Bag2 $  0.95 : Total=$  1.45
+Purchase amount? 
+Purchase made!
+Bag1 $  0.00 Bag2 $  0.45 : Total=$  0.45
+Purchase amount? 
+Purchase made!
+Bag1 $  0.00 Bag2 $  0.25 : Total=$  0.25
+Purchase amount? 
+Not enough money!
+Bag1 $  0.00 Bag2 $  0.25 : Total=$  0.25
+Purchase amount? 
+Purchase made!
+You're out of money, goodbye.

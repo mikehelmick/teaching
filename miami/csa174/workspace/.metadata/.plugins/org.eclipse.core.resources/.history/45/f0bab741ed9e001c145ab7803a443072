@@ -1,0 +1,15 @@
+
+public class Extra {
+
+	public int x;
+	public int y;
+	
+	public int radius;
+	
+	public Extra( int x, int y, int radius ) {
+		this.x = x;
+		this.y = y;
+		this.radius = radius;
+	}
+	
+}

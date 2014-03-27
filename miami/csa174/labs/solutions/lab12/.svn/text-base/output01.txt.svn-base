@@ -1,0 +1,15 @@
+How many students? How many tests? Enter 2 test scores for student number 1.
+----------
+Enter 2 test scores for student number 2.
+----------
+Enter 2 test scores for student number 3.
+----------
+****************************************
+Average test scores:
+Test #1 = 80.00
+Test #2 = 90.00
+Average for students:
+Student #1 = 95.00
+Student #2 = 85.00
+Student #3 = 75.00
+Overall average for the class: 85.00

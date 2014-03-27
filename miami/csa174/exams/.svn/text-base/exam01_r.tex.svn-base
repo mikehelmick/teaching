@@ -1,0 +1,409 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+% exam settings
+%\boxedpoints
+%\pointsinmargin
+%\printanswers 
+\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CSA174}{\bf\Large EXAM 01}{\bf\Large
+  2007-10-02 }
+\runningheader{CSA 174}{Miami University}{EXAM 01}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CSA174 - Fally 2007 - Exam 01 \newline
+	Miami University - Middletown \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points. 
+}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Java,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section*{Instructions}
+\begin{itemize}
+\item Please read through this entire exam very carefully before starting. 
+\item This exam is closed notes and closed books.
+\item All work must be written on the exam pages in order to be graded.   Any scrap paper used, must be the scrap paper provided during the exam period.
+\item For programming questions: Please be accurate with your Java syntax: this includes appropriate use of braces, semicolons, and the proper use of upper/lowercase letters.  
+\item No electronic devices may be used during the exam: this includes calculators, iPods, PDAs, and cellular phones.
+\item You have 75 minutes to complete the exam.  
+\end{itemize}
+
+\section*{Good Luck!}
+
+\begin{center} 
+\gradetable[h][questions] 
+\end{center}
+
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+	
+\part[3] The value of {\tt (int) 27.6} evaluates to:
+\begin{choices}
+  \choice 28 \choice 27 \choice 26 \choice none of the above	
+\end{choices}
+\begin{solution} B - 27 \end{solution}
+
+\part[3] The input to the Java compiler is called
+\begin{choices}
+ \choice byte code \choice source code \choice an executable file \choice numerical data	
+\end{choices}
+\begin{solution} B - source code \end{solution}
+
+\part[3] The input to the Java Virtual Machine is called
+\begin{choices}
+ \choice byte code \choice source code \choice an executable file \choice numerical data	
+\end{choices}
+\begin{solution} A - byte code \end{solution}
+
+\part[3] What is the correct order for the primitive types, so that each type can be assigned to the type on the right with an automatic widening conversion.
+\begin{choices}
+ \choice int $\Rightarrow$ double $\Rightarrow$ long $\Rightarrow$ short  
+ \choice double $\Rightarrow$ int $\Rightarrow$ long $\Rightarrow$ short  
+ \choice long $\Rightarrow$ short $\Rightarrow$ int $\Rightarrow$ double  
+ \choice short $\Rightarrow$ int $\Rightarrow$ long $\Rightarrow$ double 
+\end{choices}
+\begin{solution} D short, int, long, double \end{solution}
+
+\part[3] While these are all valid identifiers, which variable name is the most correct according to coding standards. 
+\begin{choices}
+	\choice {\tt pickme} \choice {\tt Pickme} \choice {\tt PickMe} \choice {\tt pickMe}
+\end{choices}
+\begin{solution} D - pickMe \end{solution}
+
+\newpage
+
+\part[3] Which of the following is a valid Java identifier for a variable name?
+\begin{choices}
+	\choice \_x19 \choice x\&22 \choice 22x19 \choice none of the above
+\end{choices}
+\begin{solution} A) \_x19 is a valid identifier \end{solution}
+
+\part[3] In Java, {\tt String} is what kind of type?
+\begin{choices}
+	\choice Simple
+	\choice Objectified 
+	\choice Class
+	\choice Primitive
+\end{choices}
+\begin{solution} C - class type \end{solution}
+
+\part[3] According to good coding style, what should you do on the line of code following a '{\tt \{}' character?
+\begin{choices}
+  \choice indent
+  \choice add a comment
+  \choice use an if statement
+  \choice decrease indentation
+\end{choices}
+\begin{solution} A - indent your code \end{solution}
+
+
+\end{parts}
+	
+\newpage
+
+\section*{Fill in the blank}
+
+\question State the value and type of the following expressions, given the following declarations:
+\begin{lstlisting}
+int length = 10;
+int width = 4;
+int depth = 22;
+double weight = 3.5;
+String label = "Do not bend";	
+\end{lstlisting}
+
+\begin{parts}
+ \part[3] {\tt length + depth \% width } 
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   String} 
+	\newline
+ \part[3] {\tt (width >= 4) || ((length < 11) \&\& (depth <= 22.5))}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   String}
+    \newline
+ \part[3] {\tt !(width == 2)}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   String}
+    \newline
+ \part[3] {\tt label.charAt(3)}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   String}
+    \newline
+ \part[3] {\tt label.substring(0,2).toUpperCase() + label.substring(5).toUpperCase()}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   String}
+    \newline
+\end{parts}
+
+\begin{solution}
+	{\it need to fill in}
+\end{solution}
+
+\newpage
+
+\section*{Short Answer}
+
+\question Answer each part of this question as instructed:
+
+\begin{parts}
+	\part[3] Write the equivalent Java statement for the following mathematical expression.   Use the {\bf minimum number} of parentheses required. \newline $\frac{\displaystyle a + b}{\displaystyle c}$
+	\begin{solution}[1.2in]
+		{\tt result = (a + b) / c;}
+	\end{solution}
+	
+	\part[4] Write the equivalent Java statement for the following mathematical expression.   Use the {\bf minimum number} of parentheses required. \newline $\frac{\displaystyle 3z}{\displaystyle y + z}$
+	\begin{solution}[1.2in]
+		{\tt result = 3 * z / (y + z);}
+	\end{solution}
+	
+	\part[4] Show what prints and explain clearly what the code does.  Use a diagram to help your explanation.
+	\begin{lstlisting}
+String firstName = "Bob";
+String lastName = "Smith";
+firstName = lastName;
+System.out.println( x + y );		
+	\end{lstlisting}
+	\begin{solution}[1.5in]
+		Output is "SmithSmith" \newline
+		This does a reference alias so that both firstName and lastName point to the word "Smith" in memory.
+	\end{solution}
+	
+	\part[4] Assuming that a {\tt Random} object has been created called generator, what is the range of the result in each of the following expressions:
+	\begin{lstlisting}
+generator.nextInt(10);
+generator.nextInt(45) + 10;		
+	\end{lstlisting}
+	\begin{solution}
+		0 through 9 and 10 through 54
+	\end{solution}
+	
+\end{parts}
+
+\newpage
+
+\question Please provide short answers to the following questions as instructed:
+
+\begin{parts}
+	
+\part[4] What is the output of this code?
+\begin{lstlisting}
+String str = "Java Programming";
+	
+System.out.println(str.equals("Java Programming!"));
+System.out.println(str.toLowerCase());
+System.out.println(str.substring(5,8));	
+\end{lstlisting}
+
+\begin{solution}[2in]
+\begin{verbatim}
+false
+java programming
+Pro
+\end{verbatim}
+\end{solution}
+	
+\part[4] What is the output of this code?
+\begin{lstlisting}
+int a = 3;
+int b = 12;
+double d = 2.0 ;
+System.out.println(a % b);
+System.out.println(a + b / 6);
+System.out.println(b / d + b / 7);	
+\end{lstlisting}
+\begin{solution}[2in]
+3
+5
+7
+\end{solution}	
+
+\part[4] What is the difference between the two declarations.  Explain in detail the difference in these data types.
+\begin{verbatim}
+        char name;               String name;
+\end{verbatim}
+\begin{solution}
+char is a primitive, string is a class type.  char can only hold a single character, string can hold multiple characters.
+\end{solution}
+
+\end{parts}
+\newpage
+
+\section*{Code Analysis}
+
+\question Examine the following code segment and answer the questions below.
+\begin{lstlisting}
+Scanner keyboard = new Scanner( System.in );	
+int x = keyboard.nextInt();
+int y = keyboard.nextInt();
+
+if ( x == y ) 
+   System.out.println("ALPHA");
+else
+   if ( x % 2 == 0 && y > 10 )
+      System.out.println("BETA"); 
+   else
+      if ( x < 0 || y < 0 )
+         System.out.println("GAMMA");
+
+System.out.println("PI");
+\end{lstlisting}
+
+\begin{parts}
+\part[3] What is the output of this code if the user enters {\tt 2} (stored in $x$) and {\tt 2} (stored in $y$)?
+\begin{solution}[1.0in]
+ALPHA
+PI
+\end{solution}
+
+\part[3] What is the output of this code if the user enters {\tt 8} and {\tt 10}?
+\begin{solution}[1.0in]
+PI
+\end{solution}
+
+\part[3] What is the output of this code if the user enters {\tt 6} and {\tt 11}?
+\begin{solution}[1.0in]
+BETA
+PI
+\end{solution}
+
+\part[3] What is the output of this code if the user enters {\tt -1} and {\tt 425}?
+\begin{solution}[1.0in]
+GAMMA
+PI
+\end{solution}
+	
+\end{parts}
+
+\newpage
+\section*{Programming Questions}
+
+\question[10] Complete the following Java program to read in the number of hours worked and an hourly wage (both doubles). Print out the worker’s gross pay, where the worker gets 1.5 times his hourly wage for the hours worked over 40. The following is an example of how your program should operate (user input in bold): \newline
+\begin{tt}
+Hours: {\bf 41.0}\newline
+Wage: {\bf 10.0}\newline
+Gross: \$415.00\newline
+\end{tt}
+
+\begin{verbatim}
+import java.util.Scanner;
+public class Payroll {
+  public static void main (String[] args) {
+    Scanner key = new Scanner(System.in);
+    System.out.print("Hours: ");
+    // START ANSWER HERE
+\end{verbatim}
+
+\begin{solution}[4.5in]
+\begin{verbatim}
+	double hours = key.nextDouble();
+	System.out.print("Wage: ");
+	double wage = key.nextDouble();
+	
+	double gross = hours * wage;
+	if ( hours > 40 ) {
+		gross += (hours - 40) * (0.5 * wage);
+	}
+	System.out.printf("Gross: $%.2f", gross);
+\end{verbatim}
+\end{solution}
+
+\begin{verbatim}
+    // END OF ANSWER
+  }
+}
+\end{verbatim}
+
+\newpage
+
+\question[12] Write a program that reads in 3 integers from the user, and returns the median (middle) value of the three number.  Example (user input in {\bf bold}).
+\begin{tt}
+Enter 3 integers: {\bf 3 5 7}\newline
+5 is the median\newline
+\end{tt}
+{\bf Example 2}\newline
+\begin{tt}
+Enter 3 integers: {\bf 4 6 6}\newline
+6 is the median\newline
+\end{tt}
+
+\begin{verbatim}
+import java.util.Scanner;
+public class MedianFinder {
+  public static void main (String[] args) {
+    Scanner key = new Scanner(System.in);
+    // START ANSWER HERE
+\end{verbatim}
+
+\begin{solution}[4.5in]
+\begin{verbatim}
+    System.out.print("Enter 3 integers: ");
+    int a = keyboard.nextInt();
+    int b = keyboard.nextInt();
+    int c = keyboard.nextInt();
+    
+    if ( (a <= b && a >= c) || (a >= b && a <= c) ) {
+      System.out.println( a + " is the median");
+    } else {
+      if ( (b <= a && b >= c) || (b >= a && b <= c) ) {
+        System.out.println( b + " is the median");
+      } else {
+        System.out.println( c + " is the median");
+      }
+    }
+\end{verbatim}
+\end{solution}
+
+\begin{verbatim}
+    // END OF ANSWER
+  }
+}
+\end{verbatim}
+
+
+\end{questions}
+
+\end{document}
+

@@ -1,0 +1,32 @@
+Enter operation: + * c e
+Enter numerator and denominator:
+1/2 = 0.5
+Enter operation: + * c e
+Enter numerator and denominator:
+3/4 = 0.75
+Enter operation: + * c e
+Enter numerator and denominator:
+13/12 = 1.0833333333333333
+Enter operation: + * c e
+Enter numerator and denominator:
+29/12 = 2.4166666666666665
+Enter operation: + * c e
+Enter numerator and denominator:
+11/4 = 2.75
+Enter operation: + * c e
+0/1 = 0.0
+Enter operation: + * c e
+Enter numerator and denominator:
+3/4 = 0.75
+Enter operation: + * c e
+Enter numerator and denominator:
+1/2 = 0.5
+Enter operation: + * c e
+Enter numerator and denominator:
+1/1 = 1.0
+Enter operation: + * c e
+Enter numerator and denominator:
+65/64 = 1.015625
+Enter operation: + * c e
+0/1 = 0.0
+Enter operation: + * c e

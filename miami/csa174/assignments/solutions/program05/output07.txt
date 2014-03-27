@@ -1,0 +1,2 @@
+Enter QB statistics: games, completions, attempts, yards, interceptions, TDs
+QB Rating: 118.8 (Hall of fame)

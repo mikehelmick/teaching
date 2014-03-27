@@ -1,0 +1,218 @@
+\documentclass[10pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2005-09-10.
+%  Copyright (c) 2005 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\setlength{\textheight}{8.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0.25in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.20in}
+\setlength{\oddsidemargin}{-.19in}
+\setlength{\parindent}{1pc}
+\setlength{\parskip}{.5pc}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\sloppy
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{\bf\Large Program 03}{\bf\Large
+  2006-03-07 }
+\runningheader{CSA 274 Spring 2006}{Miami University}{Program 03}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+      CSA274 A - Spring 2006 - Program 03 \newline
+      Assigned: Tuesday March 7th, 2006 \newline
+      Electronic Material Due: Monday March 27th, 2006 - 11:50pm \newline
+      Printed Material Due: Tuesday March 28th, 2006 - At the start of class \newline
+      
+      This project is worth 100 points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section{Instructions}
+\begin{enumerate}
+   \item Carefully read this ENTIRE document before beginning.
+   \item {\bf Some instructions are significantly different than the previous assignments.}
+   \item Follow instructions EXACTLY as written, failure to do so will effect your grade negatively.
+\end{enumerate}
+
+\section{Introduction}
+In this assignment, we will implement a simple web search engine that allows a user to perform simple queries against the search database (which you will build) and get meaningful results and ranks those results.   The search engine should be started with two command line parameters (1) the starting URL and (2) the number of pages deep to index from the starting URL (if we were to build a tree of pages with the starting page as the root).
+
+\begin{verbatim}
+java uniqueid.Search http://www.muohio.edu/ 5
+\end{verbatim}
+
+This command will tell the web crawler to start with {\tt http://www.muohio.edu/} and index at most 5 total pages when they are on the same server ({\tt www.muohio.edu} in this case) and to not follow any links to any other servers.   You can assume links are to the same server if they are the same through the third ``/'' character.   The crawler should accept a maximum of 1000 pages, though you will want to start testing with only 2 or 3.  
+
+\par
+The search engine should output pages that is traversing, indicating the depth (level in the crawl tree):
+\begin{verbatim}
+   0 - http://www.users.muohio.edu/helmicmt/miami/Home.html 
+   1 - http://www.users.muohio.edu/helmicmt/miami/Courses.html
+...
+ 999 - http://www.users.muohio.edu/helmicmt/miami/Talks/Talks.html
+ ... 
+
+done building search index
+
+enter search:
+\end{verbatim}
+
+\par
+The search engine then accepts a user search and returns the results (as shown below)
+
+\begin{verbatim}
+enter search: talks
+found 2 pages
+score - url
+  120 - http://whatever
+   29 - http://whatever/2.html
+
+enter search:	
+\end{verbatim}
+
+\par
+The search engine also accepts a few other commands
+
+\begin{verbatim}
+enter search: --list
+\end{verbatim}
+If the user types {\tt --list} then the search engine should list all of the pages that it contains.
+
+\begin{verbatim}
+enter search: --exit
+\end{verbatim}
+The search engine should now exit
+
+
+\section{IMPORTANT}
+The information contained in this section is of paramount importance, failure to follow these instructions could result in a severe  reduction of your grade.   Please read this section and seek clarification on any points that are unclear.
+
+\subsection{Java Collections}
+You may use (and are encouraged to) Java collections classes.   What we have learned about {\tt java.util.ArrayList<E>}, {\tt java.util.LinkedList<E>} and {\tt java.util.TreeSet<E>} will be beneficial in this project.   Whenever you use one of this classes, please make sure to appropriately use Java generics and specify a type parameter.
+
+\subsection{Class Names}
+You are to implement all of your classes such that they are in a package whose name is {\it youruniqueid} (all lowercase).  So, for instance, if you are writing a class called {\tt Monkey} and your unique ID is {\tt studentiam}, then your class would be accessible by the name {\tt studentiam.Monkey} and to construct one you would import {\tt import studentiam.Monkey} and instantiate with {\tt new Monkey()}.  When your turn it in, your files should be in a directory that is {\bf exactly your uniqueID} and {\bf all lowercase characters}.
+\par
+For some of the classes, there are particular class names that you will be required to use.   Failure to use the appropriate naming will result in that data structure not being graded.  You will most likely need other classes which are up to your design and naming, but those classes should also be in the same package.
+\par
+Reasoning behind this - in addition to hand grading, your code will be exercised by several JUnit test cases (of my writing).   If your classes are not named correctly, they will not be found and not be tested (i.e. not graded).  Your code is graded by computer only for {\it functionality}, I still go through your code and make style and efficiency remarks.
+
+\subsection{Testing}
+You MUST write JUnit test cases for your code.   If you are not sure of exactly sure on how or what to test, just ask.
+
+\subsection{Turning In}
+You {\bf must} use Subversion to manage your code for this assignment.  When you are finished with the project, you must copy your development trunk in Subversion to a release branch.   You will want to do this on the command line, with the Subversion copy command (the below should all be on the same line).  
+
+\begin{verbatim}
+svn copy --username uniqueid \
+  http://svn.sanclass.org/helmict/2006S/csa274/project3/dev \
+  http://svn.sanclass.org/helmict/2006S/csa274/project3/release
+\end{verbatim}
+
+This takes your current development code and copies a snapshot of it.   This way if you continue working in your development area the files you have turned in will not be affected.
+\par
+Please see me if you need to make a second release copy.
+
+\subsection{What to turn in}
+\subsubsection{Electronic Copies}
+Electronic copies are due at the time specified at the beginning of this document.  {\bf You will need to check everything into Subversion}, turnins to the EAS turnins folder will NOT be accepted.
+\begin{enumerate}
+   \item Your java source files for the project and tests (just the .java files - {\bf no .class files please})
+   \item Your time log (online - same as last time) - failure to turn in a time log will reduce your grade
+   \item Your java source files for your JUnit tests
+\end{enumerate}
+
+\subsubsection{Printed Copies}
+In the class period immediately following the due date for electronic materials you are required to turn in printouts of your Java source code for everything but your JUnit tests (to save paper).  All of your pages {\bf must} be stapled together.  
+\newline
+Also - please ensure that your name is included in EVERY document (time log, test plan, and source code for classes and test cases).  Always be proud of the work you produce and claim ownership of it - a general good rule for programmers.
+
+\section{Provided Code}
+Code that is provided will be available in binary form as a Java Archive (JAR) file.   JavaDoc documentation is also provided.  
+
+\section{What to develop}
+
+\begin{enumerate}
+	\item A heap structure that implements {\tt edu.muohio.csa.csa274.IHeap<E extends Comparable>} with a class name of {\tt uniqueid.Heap<E extends Comparable>}.   This heap should operate in the traditional manner with the lowest valued item at the top of the heap.
+	
+	\item A max heap structure that extends your heap described above, with the max heap ordering the tree such that the largest value is stored at the root.  If you design this correctly do this you should only need to override 2 protected methods from the min heap.   The class name should be called {\tt uniqueid.MaxHeap<E extends Comparable>} and, if you do not extend your Heap class, must implement the same interface described above. 
+	
+	\item Implement a class called {\tt uniqueid.WordFrequencyList} that {\bf extends } the {\tt edu.muohio.csa.csa274.AbstractFrequencyList } class.   When you call {\tt build} your word frequency list, you will get a callback to the {\tt buildWordFrequencyList} method that contains the raw html of the page.  The word frequency list needs to, at its core, contain a list of {\tt edu.muohio.csa.csa274.WordFrequency } objects.   This is a pairing of a word to the number of times it appears in a document.  You can use the HTML parser included with Java (HIGHLY RECOMMENDED), and there is a brief tutorial here: {\tt http://java.sun.com/products/jfc/tsc/articles/bookmarks/index.html }.   Additionally, you should lowercase all words and remove the following punctuation characters {\tt \" , . ! ? } and should ignore words that return true to {\tt ignoreWord} (a method on the abstract frequency list).
+	
+	\item A class called {\tt uniqueid.SearchEngine} that contains a main that takes 2 command line parameters, a starting URL and.   The class must also implement the {\tt edu.muohio.csa.csa274.ISearchEngine} interface, this will allow your search engine to be tested without being run on the command line (hint, hint).   Note that this interface uses a return type which is a class that I have also provided.   The SearchEngine class strings together the word frequency lists and executes the search commands as well.
+	\par
+	When executing a search, you should search all documents for each term, assign a score to each document and then insert the documents into a priority queue (your MaxHeap).   You may use my {\tt edu.muohio.csa.csa274.SearchResult} class as an item to insert into your heap, and this class is already comparable and should work correctly with your max heap.
+	
+\end{enumerate}
+
+\subsection{How to score queries}
+Each individual term is scored by it's inverse document frequency (IDF).   IDF(term) is defined as $IDF_{term} = log ( \frac{ total documents}{documents containing term})$
+\par
+A score for a term for a documents is that term's IDF times the number of times the word appears in that document.
+\par
+So, if there are $100$ documents, and $10$ contain the word ``hello'' and document {\tt A.html} contains ``hello'' 5 times, then the score for the term ``hello'' in document {\tt A.html} is: $score = 5 * log{ \frac{100}{10} }$.
+\par
+When searching for multiple terms, we want the term that appears in the least documents to be worth the most.   So if we have the search terms ``hello'', ``to'', ``everyone''.  Then we would weight according to the following chart.
+
+\begin{tabular}{lll}
+	word & num docs & weight \\ \hline
+	hello & 10 & $1 - \frac{10}{65}$ \\ 
+	to & 50 & $1 - \frac{50}{65}$ \\
+	everyone & 5 & $1 - \frac{5}{65}$ \\
+\end{tabular}
+
+\par
+Obtain a document's final score for a query by multiplying the term weight by the term's score for each document, adding up all of the terms.
+
+\section{Scoring}
+
+\begin{enumerate}
+	\item D Level: Correct Heap and MaxHeap implementations that can store any Comparable objects
+	\item C Level: Correct building of an individual word frequency list
+	\item B Level: Correct building of the search index and handling of user queries (including correct scoring)
+	\item A Level: Extend the project in a interesting way, some suggestions
+	\begin{enumerate}
+		\item Allow the user to select AND versus OR in the search (defaulting to AND), be sure to indicate this on your command prompt.
+		\item Add NOT to the queries
+		\item Implement query caching
+		\item Suspend the search index to disk so the web crawler doesn't need to operate on each startup
+	\end{enumerate}
+\end{enumerate}
+
+\end{document}
+

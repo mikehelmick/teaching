@@ -1,0 +1,126 @@
+!SESSION 2007-10-28 09:33:23.524 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/mhelmick/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/mhelmick/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2007-10-28 09:34:05.690
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2007-10-31 16:41:18.014 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/mhelmick/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/mhelmick/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.ui.workbench 2 0 2007-10-31 16:57:04.923
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2007-10-31 16:57:04.923
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowGlobalVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@dc19a8),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@dc19a8)),sourcePriority=4210688)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowClassVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@dc19a8),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@dc19a8)),sourcePriority=4210688)
+!SESSION 2007-11-16 10:51:16.636 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/mhelmick/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/mhelmick/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.ui.workbench 2 0 2007-11-16 14:22:24.763
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2007-11-16 14:22:24.763
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowClassVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@4bc02d),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@4bc02d)),sourcePriority=4210688)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowGlobalVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@4bc02d),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@4bc02d)),sourcePriority=4210688)
+!SESSION 2007-11-29 11:17:46.090 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/mhelmick/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/mhelmick/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.ui.workbench 2 0 2007-11-29 15:13:15.635
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2007-11-29 15:13:15.635
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowGlobalVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@17353b),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17353b)),sourcePriority=4210688)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowClassVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@17353b),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@17353b)),sourcePriority=4210688)
+
+!ENTRY org.eclipse.ui 4 0 2007-11-29 15:19:54.419
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.selectionChanged(RunOnServerActionDelegate.java:726)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.launch(ServerLaunchShortcut.java:38)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.launch(LaunchShortcutExtension.java:429)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.showShortcutSelectionDialog(ContextRunner.java:298)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:174)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:82)
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:80)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:256)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:229)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:546)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:490)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:443)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1495)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1519)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1504)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1295)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3350)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2954)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+!SESSION 2007-11-29 19:44:53.145 -----------------------------------------------
+eclipse.buildId=M20070921-1145
+java.version=1.5.0_13
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/mhelmick/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -keyring /Users/mhelmick/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.ui.workbench 2 0 2007-11-29 19:57:11.397
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2007-11-29 19:57:11.398
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowClassVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@c93bea),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c93bea)),sourcePriority=4210688)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.dltk.debug.ui.VariableViewActions/org.eclipse.dltk.debug.ui.variableViewActions.ShowStatic,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.dltk.debug.ui.actions.ToggleShowGlobalVariablesActionDelegate),
+	expression=AndExpression(LegacyViewContributionExpression(org.eclipse.debug.ui.VariableView,org.eclipse.ui.internal.WorkbenchWindow@c93bea),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c93bea)),sourcePriority=4210688)

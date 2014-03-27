@@ -1,0 +1,119 @@
+How many students? How many tests? Enter 25 test scores for student number 1.
+----------
+Enter 25 test scores for student number 2.
+----------
+Enter 25 test scores for student number 3.
+----------
+Enter 25 test scores for student number 4.
+----------
+Enter 25 test scores for student number 5.
+----------
+Enter 25 test scores for student number 6.
+----------
+Enter 25 test scores for student number 7.
+----------
+Enter 25 test scores for student number 8.
+----------
+Enter 25 test scores for student number 9.
+----------
+Enter 25 test scores for student number 10.
+----------
+Enter 25 test scores for student number 11.
+----------
+Enter 25 test scores for student number 12.
+----------
+Enter 25 test scores for student number 13.
+----------
+Enter 25 test scores for student number 14.
+----------
+Enter 25 test scores for student number 15.
+----------
+Enter 25 test scores for student number 16.
+----------
+Enter 25 test scores for student number 17.
+----------
+Enter 25 test scores for student number 18.
+----------
+Enter 25 test scores for student number 19.
+----------
+Enter 25 test scores for student number 20.
+----------
+Enter 25 test scores for student number 21.
+----------
+Enter 25 test scores for student number 22.
+----------
+Enter 25 test scores for student number 23.
+----------
+Enter 25 test scores for student number 24.
+----------
+Enter 25 test scores for student number 25.
+----------
+Enter 25 test scores for student number 26.
+----------
+Enter 25 test scores for student number 27.
+----------
+Enter 25 test scores for student number 28.
+----------
+Enter 25 test scores for student number 29.
+----------
+Enter 25 test scores for student number 30.
+----------
+****************************************
+Average test scores:
+Test #1 = 60.22
+Test #2 = 41.55
+Test #3 = 47.54
+Test #4 = 46.78
+Test #5 = 53.00
+Test #6 = 46.11
+Test #7 = 37.93
+Test #8 = 50.79
+Test #9 = 47.67
+Test #10 = 43.89
+Test #11 = 47.58
+Test #12 = 54.48
+Test #13 = 48.53
+Test #14 = 43.85
+Test #15 = 51.82
+Test #16 = 49.95
+Test #17 = 47.90
+Test #18 = 52.29
+Test #19 = 50.82
+Test #20 = 42.81
+Test #21 = 45.43
+Test #22 = 53.78
+Test #23 = 53.17
+Test #24 = 47.98
+Test #25 = 48.82
+Average for students:
+Student #1 = 50.77
+Student #2 = 54.05
+Student #3 = 48.37
+Student #4 = 47.15
+Student #5 = 44.80
+Student #6 = 50.15
+Student #7 = 51.78
+Student #8 = 63.58
+Student #9 = 41.99
+Student #10 = 37.88
+Student #11 = 48.91
+Student #12 = 50.34
+Student #13 = 47.00
+Student #14 = 47.84
+Student #15 = 40.79
+Student #16 = 50.06
+Student #17 = 50.82
+Student #18 = 53.49
+Student #19 = 55.23
+Student #20 = 48.48
+Student #21 = 40.59
+Student #22 = 57.95
+Student #23 = 50.45
+Student #24 = 50.46
+Student #25 = 42.55
+Student #26 = 53.07
+Student #27 = 46.45
+Student #28 = 46.37
+Student #29 = 44.70
+Student #30 = 41.52
+Overall average for the class: 48.59

@@ -1,0 +1,105 @@
+%
+%  objectives
+%
+%  Created by Mike Helmick on 2007-05-09.
+%  Copyright (c) 2007 Mike Helmick. All rights reserved.
+%
+\documentclass[10pt]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+\usepackage{url}
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyheadings}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+\title{CSA174 - Fall 2007 \\ Learning Objectives \& Outcomes}
+\author{ Mike Helmick, PhD \thanks{mike.helmick@muohio.edu - https://my.csi.muohio.edu} \\
+Visiting Assistant Professor \\
+Department of Computer Science and Systems Analysis \\
+Miami University \\ Oxford, Ohio 45056 }
+
+\date{}
+
+\begin{document}
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\maketitle
+
+\section{Learning Objectives \& Outcomes}
+
+The standard syllabus for this class is available at \newline
+\url{http://csa.muohio.edu/courseDescriptions/174.html}
+
+\begin{enumerate}
+	\item To provide students with experience developing computer programs in a modern programming language.
+	\begin{enumerate}
+		\item The student can identify and describe the different representations of a program and the compilation process.
+		\item The student can create a project and execute a program in a modern development environment.
+		\item The student can debug their own and other's program code.
+		\item The student can test their code for correct behavior. 
+		
+	\end{enumerate}
+	\item To provide student with a foundation for problem solving, and expressing solutions as computer programs.
+	\begin{enumerate}
+		\item The student can define and describe the role of algorithms.
+		\item The student can create a program solving a problem that is sequential in nature.
+		\item The student can create a program solving a problem using conditional logic.
+		\item The student can create a program solving a problem that uses repetition.
+		\item The student can create a program that uses combinations of sequential, conditional, and repetitive logic.
+		\item The student can represent program elements using primitive data types.
+		\item The student can develop programs that interact with the user using text based input and output.
+		\item The student can create and use custom data types.
+		\item The student can design custom data types that solve specified problems.
+	\end{enumerate}
+	\item To provide the student with experience and manipulating multi-dimensional data.
+	\begin{enumerate}
+		\item The student can create a program that uses both one and two-dimensional arrays of both primitive and complex data types.
+		\item The student can implement algorithms for searching two-dimensional data.
+		\item The student can implement algorithms for sorting two-dimensional data.
+	\end{enumerate}
+\end{enumerate}
+
+\bibliography{}
+\end{document}

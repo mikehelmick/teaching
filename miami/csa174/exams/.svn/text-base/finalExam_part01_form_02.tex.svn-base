@@ -1,0 +1,437 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+% exam settings
+%\boxedpoints
+%\pointsinmargin
+%\printanswers 
+\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CSA174}{\bf\Large FINAL EXAM - Part 1}{\bf\Large
+  2007-12-11 }
+\runningheader{CSA 174 FINAL EXAM}{Miami University}{Part 1, Form 2}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CSA174 - Fall 2007 - Final Exam \newline
+	Miami University \newline
+	\newline
+	There are 105 possible points on this exam.\newline
+	Your grade will be calculated out of 100 points.\newline
+ 	In this part there are \numquestions\  questions for a total of  \numpoints\ points.
+}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Java,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+
+\section*{Instructions}
+\begin{itemize}
+ \item This exam is being administered in two parts - the scantron type answer section and programming questions
+ \item This exam is closed book - you may have 1 piece of 8.5” x 11” paper that you have prepared in advance.
+ \item No electronic devices may be used during the exam: this includes calculators, iPods, PDAs, and cellular phones. 
+ \item You have 120 minutes (2 hours and 0 minutes) to complete BOTH sections of the exam. 
+ \item Do not mark answer on this testing booklet - they will not be graded.   You may use the space in this booklet for computations and working through problems.
+\end{itemize}
+
+\section*{On your Miami Testing form}
+\begin{enumerate}
+	\item {\bf Write your name, course, section, instructor AND bubble in your UNIQUEID (computer login ID) on the right side of the page}
+	\item {\bf Bubble in your form number (yes, there are different tests)}
+	\item {\bf Make sure you completely fill in the appropriate circle and completely erase all stray marks}
+\end{enumerate}	
+
+\section*{Form Number}
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+	{\huge{{\bf TEST FORM NUMBER 2 (TWO)}}}
+	}}}
+\end{center}
+
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\section*{True False}
+\uplevel{Fill in either “A” (True) or “B” (False) on your answer sheet}
+
+\question[1] True or False: In java, {\tt 13/4} is exactly equal to {\tt 3}.
+
+\question[1] True or False: The and {\tt \&\&} and or {\tt ||} operators can only be applied to boolean expressions that appear in {\tt if} statements.
+
+\question[1] True or False: The Java {\it for} loop always executes the loop body at least one time.
+
+\question[1] True or False: int, float, boolean, and String are examples of Java's primitive types.
+
+\question[1] True or False:  If your program contains a syntax error, it will compile and run, but might crash while running.
+
+\question[1] True or False:  Copy constructors should have exactly one parameter.
+
+\question[1] True or False:  Strings have a {\it public accessor method} named length() and arrays have a {\it public instance variable} named length.
+
+\question[1] True or False:  If the class Book has an instance variable {\tt isbn} of type {\tt int}, and a static variable of type {\tt int}, and you create 100 objects of type {\tt Book}, this will result in 100 instance variables, but only one static variable being allocated in memory.
+
+\question[1] True of False:  In a class, if you do not define any constructors, then a default, no-argument constructor will be automatically generated for you.
+
+\question[1] True or False:  In a class, if you define a constructor for a class, but you don't define a no-argument (default) constructor, then a no-argument constructor will be automatically generated for you.
+
+\question[1] True or False:   A two-dimensional array is an array of one-dimensional arrays in which the lengths of each of the one-dimensional arrays must be equal.
+
+\question[1] True or False:In the array defined below, each of the elements in the array is initialized to a value of null: \newline
+\begin{tt}
+char[] c = new char[15];
+\end{tt}
+
+\question[1] True or False: In the code below, bodyTemperature is initialized to the value null. \newline
+\begin{tt}
+double[] bodyTemperature;
+\end{tt}
+
+\question[1] True or False: The following code will produce a syntax error: \newline
+\begin{tt}
+double x = 3; \newline
+int y = x; \newline
+System.out.println(x + y);
+\end{tt}
+
+\question[1] True or False: The program that converts source code into Java byte-code instructions is referred to as the java compiler.
+
+\newpage
+\section*{Multiple Choice}
+\uplevel{Select the {\bf BEST} answer.  All questions have exactly 1 answer.}
+
+\uplevel{Questions 16 through 20 use the following declarations: \newline
+  \begin{tt}
+    \hspace{.5in} int[][] a = new int[5][10];\newline
+    \hspace{.5in} Airplane[][] b = new Airplane[5][10];\newline
+    \hspace{.5in} boolean[] c = new boolean[2];	\newline
+  \end{tt}
+}
+
+\question[1] What is the value of {\tt b[2][3]}? \newline
+\begin{oneparchoices}
+ \choice -1 \choice 0 \choice null \choice Some instance of the Airplane class	
+\end{oneparchoices}
+
+\question[1] What is the value of {\tt c[2]}? \newline
+\begin{oneparchoices}
+ \choice true \choice false \choice error
+\end{oneparchoices}
+
+\question[1] What is the value of {\tt a.length}? \newline
+\begin{oneparchoices}
+ \choice 0 \choice 5 \choice 10 \choice error	
+\end{oneparchoices}
+
+\question[1] What is the value of {\tt a[2][3]}? \newline
+\begin{oneparchoices}
+ \choice -1 \choice 0 \choice 1 \choice null	
+\end{oneparchoices}
+
+\question[1] What is the value of {\tt a[5].length}? \newline
+\begin{oneparchoices}
+ \choice 0 \choice 5 \choice 10 \choice error	
+\end{oneparchoices}
+
+\question[1] What happens if a program uses an array index that is out of bounds?
+\begin{choices}
+	\choice The compiler will give an error message, and not compile the program
+	\choice The compiler will give a warning, but will still compile the program
+	\choice The program will compile, but Java will given an error message when the program runs
+	\choice The program will compile and run with no error messages, but you might see incorrect results
+\end{choices}
+
+\question[1] When you use the assignment operator with variables of a class type, \newline you are assigning a: \newline
+\begin{oneparchoices}
+	\choice local variable \choice value \choice primitive type \choice reference
+\end{oneparchoices}
+
+\question[1] When you use the assignment operator with variables of any primitive type, \newline you are assigning a: \newline
+\begin{oneparchoices}
+	\choice local variable \choice value \choice primitive type \choice reference
+\end{oneparchoices}
+
+\question[1] Which one of the following lines of code contains a syntax error? \newline
+\begin{oneparchoices}
+  \choice {\tt double a = 3.0;}
+  \choice {\tt double b = 3;}
+  \choice {\tt int c = 3.0;}
+  \choice {\tt int d = 3;}	
+\end{oneparchoices}
+
+\question[1] Default constructors have \makebox[1in]{\hrulefill} parameter(s). \newline
+\begin{oneparchoices}
+	\choice exactly 0 \choice at least 1 \choice exactly 1 \choice at most 1
+\end{oneparchoices}
+
+
+\newpage
+
+
+\uplevel{Questions 26 through 29 use the following code segment.}
+\begin{lstlisting}
+int x = 5;
+int y = 10;
+int z = 0;
+int w = 42;
+for( int i = 0; i < x; i++ ) {
+  for( int j = 0; j < y; j++ ) {
+    int w = x;
+    z = x * y;	
+  }
+}	
+System.out.println( x + " " + y + " " + w + " " + z );
+\end{lstlisting}
+
+\question[1] When the code completes, what is the value of the variable {\tt w}? \newline
+\begin{oneparchoices}
+	\choice 42 \choice 5 \choice 10 \choice 50 \choice error
+\end{oneparchoices}
+
+\question[1] When the code completes, what is the value of the variable {\tt z}? \newline
+\begin{oneparchoices}
+	\choice 49 \choice 36 \choice 10 \choice 50 \choice 14
+\end{oneparchoices}
+
+\question[1] When the code completes, what is the value of the variable {\tt y}? \newline
+\begin{oneparchoices}
+	\choice 0 \choice 5 \choice 10 \choice 50 \choice error
+\end{oneparchoices}
+
+\question[1] When the code completes, what is the value of the variable {\tt x}? \newline
+\begin{oneparchoices}
+	\choice 0 \choice 5 \choice 10 \choice 50 \choice error
+\end{oneparchoices}
+
+\makebox[4in]{\hrulefill}
+
+\question[1] How many times will this loop body execute? \newline
+\begin{lstlisting}
+int count = 50; 
+while ( count >= 0 ) {
+  System.out.println(count);
+  count = count + 1;
+}	
+\end{lstlisting} 
+\begin{oneparchoices}
+	\choice 0 \choice 1 \choice 49 \choice 50 \choice more than 50
+\end{oneparchoices}
+
+\newpage
+\section*{Code Analysis}
+
+\uplevel{Use this code to answer questions 31 through 43.  It is probably best to calculate all positions for the arrays first, then answer the questions.}
+\begin{lstlisting}
+public static void doubleIt( int[] a, int v ) {
+  v *= 2;
+  for( int i = 0; i < a.length; i++ ) {
+    a[i] = v;	
+  }	
+}	
+
+public static void doubleIt( int[] a ) {
+  for( int i = 0; i < a.length; i++ ) {
+    a[i] *= 2;	 
+  }
+}
+
+public static void doubleIt( int a ) {
+  a *= 2;	
+}
+
+public static void main( String[] args ) {
+  int[] a = { 1, 2, 3, 4 };
+  int[] b = { 10, 20, 30, 40 };
+  int[] c = { 50, 100, 150, 200, 250 };
+
+  doubleIt( a ); 
+  doubleIt( b[2] );
+  doubleIt( c, c[0] );	
+  // DETERMINE VALUES AT THIS POINT
+}
+\end{lstlisting}
+
+\question[1] What is the value of {\tt b[0]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 10 \choice 20 \choice 30 \choice 40 \choice error
+\end{oneparchoices}
+\question[1] What is the value of {\tt b[1]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 10 \choice 20 \choice 30 \choice 40 \choice error
+\end{oneparchoices}
+\question[1] What is the value of {\tt b[2]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 10 \choice 20 \choice 30 \choice 40 \choice error
+\end{oneparchoices}
+\question[1] What is the value of {\tt b[3]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 10 \choice 20 \choice 30 \choice 40 \choice error
+\end{oneparchoices}
+
+\newpage
+
+\question[1] What is the value of {\tt c[0]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 50 \choice 100 \choice 150 \choice 200 \choice 250
+\end{oneparchoices}
+\question[1] What is the value of {\tt c[1]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 50 \choice 100 \choice 150 \choice 200 \choice 250
+\end{oneparchoices}
+\question[1] What is the value of {\tt c[2]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 50 \choice 100 \choice 150 \choice 200 \choice 250
+\end{oneparchoices}
+\question[1] What is the value of {\tt c[3]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 50 \choice 100 \choice 150 \choice 200 \choice 250
+\end{oneparchoices}
+\question[1] What is the value of {\tt c[4]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 50 \choice 100 \choice 150 \choice 200 \choice 250
+\end{oneparchoices}
+
+\makebox[4in]{\hrulefill}
+
+\question[1] What is the value of {\tt a[0]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 0 \choice 1 \choice 2 \choice 4
+\end{oneparchoices}
+\question[1] What is the value of {\tt a[1]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 2 \choice 4 \choice 0 \choice 8
+\end{oneparchoices}
+\question[1] What is the value of {\tt a[2]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 2 \choice 4 \choice 6 \choice 8
+\end{oneparchoices}
+\question[1] What is the value of {\tt a[3]} at {\bf line 26}? \newline
+\begin{oneparchoices}
+	\choice 2 \choice 8 \choice 1 \choice 4
+\end{oneparchoices}
+
+
+\makebox[4in]{\hrulefill}
+
+
+\question[1] After the first pass of a selection sort, the array {\tt [ 4, 2, 5, 3, 1 ] } will be:
+\begin{choices}
+	\choice {\tt [ 4, 2, 1, 3, 5 ] }
+	\choice {\tt [ 1, 2, 3, 4, 5 ] }
+	\choice {\tt [ 1, 2, 5, 3, 4 ] } 
+	\choice {\tt [ 4, 1, 2, 4, 5 ] }
+\end{choices}
+
+\question[1] Identify the array declaration/initialization that is illegal (i.e., would be flagged by the compiler as a compile-time error).
+\begin{choices}
+	\choice {\tt int [] a = new int [10]; }
+	\choice {\tt double [][] d = new double [10][]; }
+	\choice {\tt char [][][] g = new char [5][5][5]; }
+	\choice {\tt boolean [][] b = new boolean [4]; }
+\end{choices}
+
+
+\newpage
+
+
+\question[1] Which of the following is true of the {\tt String} class?
+\begin{choices}
+	\choice Strings are immutable
+	\choice Strings are mutable
+\end{choices}
+
+
+\question[1] What is the value of {\tt X} after this code executes?
+\begin{lstlisting}
+	String x = "HeLlO";
+	x.toLowerCase();
+\end{lstlisting}
+\begin{oneparchoices}
+	\choice "HeLlO" \choice "HELLO" \choice "hello" \choice "Hello"
+\end{oneparchoices}
+
+\question[1] What is the result of this code on line 3?
+\begin{lstlisting}
+	String x;
+	String y = "x";
+	System.out.println( x.indexOf( y.charAt(0) ) );
+\end{lstlisting}
+\begin{oneparchoices}
+	\choice 1
+	\choice "x"
+	\choice nothing
+	\choice null pointer exception
+\end{oneparchoices}
+
+\question[1] Which for loop statement could be inserted to reverse the characters in a string?
+\begin{lstlisting} 
+public static String reverse( String x ) {
+	char[] y = new char[x.length()];
+	______________________________________ {
+		y[i] = x.charAt( x.length - i );
+	}
+	return new String(y);
+}	
+\end{lstlisting}
+\begin{choices}
+	\choice {\tt for( int i = x.length(); i > 0; i-- )}
+	\choice {\tt for( int i = 0; i < x.length; i++ )}
+	\choice {\tt for( int i = x.length() - 1; i >= 0; i-- )}
+	\choice {\tt for( int i = 0; i < x.length() - 1; i++ )}
+	\choice None of the above will work
+\end{choices}
+
+\question[1] What should the boolean expression be to return the maximum of the two values passed in?
+\begin{lstlisting}
+public int max( int a, int b ) {
+	if ( _____________ ) {
+		return b;
+	} else {
+		return a;
+	}
+}	
+\end{lstlisting}
+\begin{oneparchoices}
+	\choice {\tt a < b} \choice {\tt b < a} \choice {\tt b == a} \choice {\tt b != a}
+\end{oneparchoices}
+
+\end{questions}
+
+\end{document}
+

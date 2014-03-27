@@ -1,0 +1,72 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-07-03.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{\bf\Large Final Presentation}{\bf\Large
+  2007-03-23 }
+\runningheader{CSA 570j Spring 2007}{Miami University}{Final Presentation}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CSA570j - Spring 2007 - Final Presentation \newline
+    Assigned: Friday March 23rd, 2007 \newline
+    Due: Tuesday April 24th, 2007, 11:59pm\newline
+    }}}
+\end{center}
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+{\bf This is for graduate students only - those enrolled on csa570.}
+
+\section{Project Description}
+For your final project you are to investigate an open source framework that can be used in the development of enterprise Java applications (or possibly another language).   You will give a 15 minute presentation, providing an overview of the technology/framework, its uses, example projects, how it relates to the material covered in class, and any other relevant information you care to share.
+\par
+Any PowerPoint (or other files) should be uploaded to the course Web site by the assigned due date.  
+
+\section{Possible Frameworks}
+Here are some frameworks that I consider worthy of being studied, this is not a complete list and you may choose other frameworks if you so desire.   Email me with your preferred framework - each framework can only be covered once, so decide early.    
+
+\begin{enumerate}
+	\item Struts (Web Presentation)
+	\item Tapestry (Web Presentation)
+	\item Spring Framework (Integration/Service Layer Framework)
+	\item Hibernate (Data Mapping) 
+	\item Pico/Nano Container (Inversion of Control)
+	\item HiveMind (Service Layer Framework)
+	\item AspectJ (Aspect Oriented Programming)
+	\item Trails (Web/Service/Data Mapping)
+\end{enumerate}
+
+\end{document}
+

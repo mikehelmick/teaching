@@ -1,0 +1,91 @@
+%
+%  untitled
+%
+%  Created by Mike Helmick on 2006-03-27.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+\documentclass[10pt]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyheadings}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+\title{CSA274 - Exam 2 Study Guide}
+\author{}
+
+\date{2006-03-27}
+
+\begin{document}
+
+
+%\twocolumn
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\maketitle
+
+\section{Particulars}
+You may use a calculator for this exam, although the math that you will be required to do can be done by hand.
+
+\section{Question Breakdown}
+\begin{itemize}
+	\item 14 ``fill in the blank'' questions
+	\item 3 tree manipulation questions
+	\item 2 short answer questions
+	\item 2 theory / applied theory questions
+	\item 3 programming questions
+\end{itemize}
+
+\section{Subjects Covered}
+\begin{itemize}
+	\item Trees - Sections 8.1/8.2
+	\item Binary Search Trees - Sections 8.3/8.4
+	\item Heaps/Priority Queues - Section 8.5
+	\item Sets - Section 9.1
+	\item Maps - Section 9.2
+	\item Hash Tables - Sections 9.3/9.4/9.5
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,10 @@
+What is your full name? What is your 10 digit phone number, with no formatting? What is the name of first product that you bought? What is the cost of one Mints ? How many of Mints did you buy? What is the name of second product that you bought? What is the cost of one iPod ? How many of iPod did you buy? What is the sales tax percent? ----------
+Dorian, John                                       (123) 456-7890
+   Product Name                   Price      Quantity Total
+1) Mints                          $     0.99       20 $     19.80
+2) iPod                           $   299.99        2 $    599.98
+-----------------------------------------------------------------
+                                             Subtotal $    619.78
+                                            Sales Tax $     40.29
+-----------------------------------------------------------------
+                                            Total Due $    660.07

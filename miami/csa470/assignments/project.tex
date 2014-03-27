@@ -1,0 +1,151 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-07-03.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{\bf\Large Course Project}{\bf\Large
+  2007-02-05 }
+\runningheader{CSA 470j/570j Spring 2007}{Miami University}{Course Project}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{
+    CSA470j/540j - Summer 2006 - Programming Project \newline
+    Assigned: Monday February 5th, 2007 \newline
+    Phase Due Dates (Due by 11:59pm on the stated date): \newline
+    \hspace{.5in}  Phase 0: Game Description - Monday, February 12th, 2007 \newline
+	\hspace{.5in}  Phase 1: Domain Model Design - Friday, February 16th, 2007 \newline
+    \hspace{.5in}  Phase 2: Domain Model - Wednesday February 28th, 2007 \newline
+    \hspace{.5in}  Phase 3: Service Layer - Wednesday March 21st, 2007 \newline
+    \hspace{.5in}  Phase 4: Database Mapping - Monday April 9th, 2007 \newline
+    \hspace{.5in}  Phase 5: Web Presentation - Monday April 23rd, 2007 \newline
+    \hspace{.5in}  Phase 6: Web Services - Friday April 27th, 2007
+    }}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+% Questions start here:
+
+
+\section{Introduction}
+This project requires you to develop an enterprise application in Java.   Each group will develop a turn based game of the group's choosing (and my approval).   You may choose any existing game you like, or make up a new game, although no two groups will be allowed to develop the same game.
+\par
+The application will ultimately be limited in scope with a concentration on its design and architecture.
+
+\section{Testing}
+You should make every effort to make your design testable as well as to actually test your design.   For example: Design your domain model such that it can be effectively tested with JUnit on its own.
+
+\section{Functionality}
+Below is a list of functionality and entities that should be implemented in your system.
+
+\subsection*{Features your application must have}
+\begin{enumerate}
+	\item {\bf Authentication} Accept a cookie, and use that cookie to get the user information from a central authentication service that I will develop.
+	\item {\bf Domain Model/Service Layer} A well defined domain model, and a service layer that will provide an API for the application.
+\end{enumerate}
+
+\subsection{Functions for the web services front end} 
+{\it I will try my best to make this easy to do without having to know too much about XML.  If the services are implemented correctly from the beginning - then this should be easy for you to do.}
+\par
+Your Web services should allow someone else to write a GUI for your application.
+
+\section{Toolset}
+There are a number of tools that we could use for this project, but  in the interest of time and simplicity we will be writing almost everything on our own.  In the end, this will lead to a better understanding of how Java frameworks function, and make them easier to learn on your own.
+\par
+\subsection{Tools that are approved}
+If you find yourself wanting to use something not on this list - please talk to me about it before you do.
+\begin{enumerate}
+	\item Eclipse
+	\item Java 1.5 (Required)
+	\item HSQLDB (provided in project setup)
+	\item Velocity
+	\item Apache Tomcat
+\end{enumerate}
+
+\subsection{Tools that we may be using}
+\begin{enumerate}
+	\item Javassist
+	\item AspectJ
+\end{enumerate}
+
+
+\section{Turnin}
+All turnins are to be done using Subversion.  Use the course Web site to set up the repository. \newline
+All items are due by 11:59pm on their prescribed due date, Items must be submitted to the course Web site, and not just committed to Subversion.   For each phase, you will create a release snapshot in the repository (the course Web site can do this for you).
+
+\par
+Throughout the project, you must keep individual journals of your progress, although the turn-ins are shared.
+
+\par
+The project is turned in in phases - as we complete layers.  Each phase has two scores - the score for that phase, and a score for the overall project at that point.
+
+\begin{tabular}{|l||r|r|} \hline
+{\bf Phase} & {\bf Phase Points} & {\bf Integration Points} \\ \hline \hline
+Phase 0 &  50 & 0 \\ \hline
+Phase 1 & 100 & 25 \\ \hline 
+Phase 2 & 100 & 50 \\ \hline
+Phase 3 & 100 & 75 \\  \hline
+Phase 4 & 100 & 100 \\ \hline
+Phase 5 &  75 & 125 \\ \hline
+Phase 6 &  50 & 150 \\ \hline \hline
+Total:  & 575 & 525 \\ \hline
+\end{tabular}
+For 1100 total possible points.
+
+\subsection{Phase 0: Game Description - Monday, February 12th, 2007}
+Each group is to submit a text document describing your game and the rules of the game.   This document is essentially the requirements document for your project, it is to your advantage to be as detailed as possible describing what will need to be done at each phase of the game.   Extra detail here will help keep you on task and keep perspective as we progress.
+
+\subsection{Phase 1: Domain Model Design - Friday, February 16th, 2007}
+In order to facilitate a quick coding phase for your domain model I would like you do design it ahead of time.   Identify all of the entities and relationships that you will need and think about how you will implement the business logic within your domain model.   A UML diagram is optional for this phase, what you do need is a textual description of each class, including the fields and methods on those classes.
+
+\subsection{Phase 2: Domain Model - Wednesday February 28th, 2007}
+For this phase, you must turn-in the Java code for your Domain Model objects.   The domain model objects should contain their business logic implementations.   For both phases 1 and 0, think about additional entities that you might need to make everything work (configuration for example).
+\par
+You should have JUnit tests created for this code to ensure that it works.   Don't worry about getting every last bug out, but the more solid this layer is the less time you will have to spend debugging it later.  
+
+\subsection{Phase 3: Service Layer - Wednesday March 21st, 2007 }
+The service layer for your application should be implemented with POJO objects.   For this phase, you still don't need to worry about transaction control or database binding, but your interface needs to be well defined as it will be the API used by your GUI and web services.
+\par
+I suggest defining Java interfaces (as well as classes) for your service layer.   This will probably be helpful later and you can use the ``Extract Interface'' function in Eclipse to speed this up.
+
+\subsection{Phase 4: Database Mapping - Monday April 9th, 2007 }
+You will construct a system for mapping your domain model to the database using one of the patterns discussed in class.   It is suggested that you make it configurable and portable (something you could reuse later).   Think about generic, configurable database mapping that can be transported to a totally different application.
+
+\subsection{Phase 5: Web Presentation - Monday April 23rd, 2007 }
+The web presentation portion is a GUI front end, constructed using one or more of the patterns discussed in class.     {\it There are no style guidelines for the look and feel of the HTML other than it must be usable.  Simplicity is the key for an assignment like this.}   You can get a bunch of free design templates on the Web, give one of those a spin.
+
+\subsection{Phase 6: Web Services - Friday April 27th, 2007 }
+Provide all of your services as XML web services.   We will be using an existing framework to power this portion of the assignment, more details to follow.  This should allow someone else to design a presentation layer for your application.
+
+\end{document}
+

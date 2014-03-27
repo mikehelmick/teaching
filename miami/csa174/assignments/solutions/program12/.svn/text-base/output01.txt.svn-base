@@ -1,0 +1,64 @@
+MyString tester
+Enter line 1: 
+Enter line 2: 
+Enter line 3: 
+For the MyString 'hello':
+**There are 5 characters
+**h e l l o **
+Testing the .equals method.
+** Test 1...passed!
+** Test 2...passed!
+Testing indexOf() method:.....passed!
+Testing lastIndexOf() method:.....passed!
+Testing toCharArray: 
+.....passed!
+Testing toUpperCase(): passed!
+Testing toLowerCase(): passed!
+Testing substring(s):.....passed!
+Testing substring(s,e):..........passed!
+Invoking sameCharacters
+'hello' same as 'olleh' ==> true
+'hello' same as 'world' ==> false
+Testing toCharArray...
+passed!
+***************************************************
+For the MyString 'olleh':
+**There are 5 characters
+**o l l e h **
+Testing the .equals method.
+** Test 1...passed!
+** Test 2...passed!
+Testing indexOf() method:.....passed!
+Testing lastIndexOf() method:.....passed!
+Testing toCharArray: 
+.....passed!
+Testing toUpperCase(): passed!
+Testing toLowerCase(): passed!
+Testing substring(s):.....passed!
+Testing substring(s,e):..........passed!
+Invoking sameCharacters
+'olleh' same as 'hello' ==> true
+'olleh' same as 'world' ==> false
+Testing toCharArray...
+passed!
+***************************************************
+For the MyString 'world':
+**There are 5 characters
+**w o r l d **
+Testing the .equals method.
+** Test 1...passed!
+** Test 2...passed!
+Testing indexOf() method:.....passed!
+Testing lastIndexOf() method:.....passed!
+Testing toCharArray: 
+.....passed!
+Testing toUpperCase(): passed!
+Testing toLowerCase(): passed!
+Testing substring(s):.....passed!
+Testing substring(s,e):..........passed!
+Invoking sameCharacters
+'world' same as 'hello' ==> false
+'world' same as 'olleh' ==> false
+Testing toCharArray...
+passed!
+***************************************************

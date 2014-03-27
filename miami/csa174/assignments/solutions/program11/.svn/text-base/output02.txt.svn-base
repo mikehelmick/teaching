@@ -1,0 +1,9 @@
+Vote Counter 2007
+How many voting booths? Enter all votes (machine yes or no), -1 to stop.
+** Voting stats by booth
+Booth #0 Yes=  16 ( 55.17%) No=  13 ( 44.83%)
+Booth #1 Yes=  15 ( 57.69%) No=  11 ( 42.31%)
+Booth #2 Yes=   6 ( 33.33%) No=  12 ( 66.67%)
+Booth #3 Yes=  14 ( 51.85%) No=  13 ( 48.15%)
+** Overall voting stats
+Yes=  51 ( 51.00%) No=  49 ( 49.00%)

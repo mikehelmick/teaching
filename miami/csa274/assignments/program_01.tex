@@ -1,0 +1,197 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+\lstset{language=Java}
+
+%
+%  Created by Mike Helmick on 2005-08-23.
+%  Copyright (c) 2005 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{CSA274 - Spring 2006 - Miami University \\ \bf\Large Program 01}{\bf\Large January 10, 2006 }
+\runningheader{CSA 274}{Miami University}{Program 01}
+\addpoints
+
+\begin{document}
+
+	\begin{center} 
+	  \fbox{\fbox{\parbox{5.5in}{\centering 
+	      {\bf Assigned: } Tuesday, January 10th, 2006 \newline
+	      {\bf Electronic Material Due:} Monday January 23rd, 2006 - 11:50pm \newline
+	      {\bf Printed Material Due:} Tuesday January 24th, 2006 - At the start of class \newline
+	      
+	      \numquestions\  phases for a total of  \numpoints\ points.}}}
+	\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+%\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section*{Description}
+The purpose of this assignment is to review your Java programming skills and make sure you are familiar with the development environment.  
+\par
+{\tt Monopoly} is a popular board game that is now over 70 years old.   There are several questions that we can ask about the game.   Many of these questions can be answered through mathematical analysis, but since we are computer scientists, we will write a simulation program instead.
+\par
+Our simulation will involve one player, repeatedly rolling the dice.   If the square landed on if a ``chance'' or ``community chest'' card, then we must draw the card from the deck and see if they send us to another square (12 cards in the deck to this).
+\par
+Throughout the program, practice well thought out object-oriented design and programming.
+
+\subsubsection*{Electronic Copies}
+Electronic copies are due at the time specified at the beginning of this document.
+\begin{enumerate}
+   \item Your (well-documented) java source files (just the .java files - no .class files please)
+   \item Time Logs (using online courseware linked from BlackBoard)
+   \item Your java source files for tests
+   \item Your test plan (this is a textual description at lest $1$ of a page in length - but a good test plan will be longer).  Your test plan needs to include your approach to testing as well as your results.
+\end{enumerate}
+{\bf Acceptable formats} You may turn in the test plan in the following formats: PDF, plain text, OpenOffice/NeoOfficeJ, Apple Pages (iWork), Microsoft Word, Microsoft Excel.  Other formats are not acceptable. 
+
+\subsubsection*{Printed Copies}
+In the class period immediately following the due date for electronic materials you are required to turn in printouts of:
+\begin{enumerate}
+	\item Your Java source code
+	\item Your Test plan
+\end{enumerate}
+Also - please ensure that your name is included in EVERY document.  Always be proud of the work you produce and claim ownership of it - a general good rule for programmers.
+
+\section*{Phases and Scoring}
+% Questions start here:
+\begin{questions}
+\question[70] Phase I (Minimum to receive a D)
+Phase I starts simply, and provides a minimal simulation.  Begin by representing a simple game board of 40 squares and run a simulation that rolls dice to go around this board without considering any square to have {\it any} special features.
+\par
+For each square on the board, tally the number of times it is landed on as the game progresses.   The total number of turns in the game should be a {\bf command line} parameter given by the user when the program is run.  After than many runs, output the number of times each square was landed on (sorted by the number of times landed on - highest to lowest).   You should test your program several times, running at least 10,000 turns each time.
+\par
+A single turn involves rolling two 6 sided dice (don't just generate 1 random number between 1 and 12), summing the, and them moving the players token to the appropriate square.
+\par
+After coding this phase, you should see that each square has around the same number of hits as all of the other squares.
+
+\question[10] Phase II (Minimum to receive a C)
+For Phase II, add the appropriate action when landing on the ``Go To Jail'' square.  If you want to be really general in your design, add a feature to your board that tells you which square to jump to if you land on some square.  Most squares will jump to themselves, but the ``Go To Jail'' square would jump back to square 20 (jail).   Assume that the player pays \$50 to get out of jail so you do not have repeated rolls in order to get out of jail.
+\par
+You will also need to now make a distinction between the ``Just Visiting'' and the ``Jail'' squares, both of witch occupy the same corner on the game board.
+
+\question[10] Phase III (Minimum to receive a B)
+For phase III, we add on the use of the ``community chest'' and ``chance'' cards.
+\par
+Implement a card-deck data structure (separate class) that shuffles cards and deals them one-by-one (when someone lands on the appropriate square).
+\par
+Add the ``Chance'' and ``Community Chest'' cards by using the new card-deck data structure.   You will need to define a way to designate some cards as special (some cards have no effect in our simulation - i.e. cause the player to move to another square).
+
+\question[10] Phase IV (Minimum to receive a A)
+In a regular game of Monopoly, a player who rolls doubles is allowed to continue their turn by rolling again.   If doubles are rolled 3 times in a row, the user goes to Jail.   The results should not be too different, but will add the full level of accuracy.
+
+\end{questions}
+
+\newpage
+\twocolumn
+
+\section*{Spaces on the Game Board}
+\begin{itemize}
+  \item Mediteranean
+  \item Community Chest
+  \item Baltic
+  \item Income Tax
+  \item Reading Railroad
+  \item Oriental
+  \item Chance
+  \item Vermont
+  \item Connecticut
+  \item Jail
+  \item St. Charles
+  \item Electric Utility
+  \item States
+  \item Virginia
+  \item Pennsylvania Railroad
+  \item St. James
+  \item Community Chest
+  \item Tennessee
+  \item New York
+  \item Free Parking
+  \item Kentucky
+  \item Chance
+  \item Indiana
+  \item Illinois
+  \item B \& O Railroad
+  \item Atlantic
+  \item Ventnor
+  \item Water Works Utility
+  \item Marvin Gardens
+  \item Go To Jail
+  \item Pacific
+  \item North Carolina
+  \item Community Chest
+  \item Pennsylvania
+  \item Short Line Railroad
+  \item Chance
+  \item Park Place
+  \item Luxury Tax
+  \item Boardwalk
+  \item Go
+\end{itemize}
+
+\section*{Community Chest cards}
+\begin{itemize}
+	  \item stock sale
+	  \item school tax
+	  \item opera opening
+	  \item income tax refund
+	  \item doctor's fee
+	  \item Advance to Go
+	  \item Xmas fund matures
+	  \item life insurance matures
+	  \item get out of jail free
+	  \item pay hospital
+	  \item bank error
+	  \item receive for services
+	  \item second prize in beauty contest
+	  \item street repairs!
+	  \item inherit \$100
+	  \item Go To Jail
+\end{itemize}
+
+\section*{Chance Cards}
+\begin{itemize}
+	\item Advance to Boardwalk
+	\item building and loan matures
+	\item get out of jail free
+	\item Advance to Nearest Railroad
+	\item bank dividend
+	\item Advance to Nearest Railroad
+	\item Advance to Illinois Ave.
+	\item Advance to Reading Railroad
+	\item Advance to St. Charles Place
+	\item general repairs!
+	\item Go to Jail
+	\item elected chairman
+	\item Go Back 3 Spaces
+	\item pay poor tax
+	\item Advance to Go
+	\item Advance to Nearest Utility
+\end{itemize}
+
+
+\end{document}
+

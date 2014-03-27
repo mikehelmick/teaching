@@ -1,0 +1,12 @@
+You are at (0,0)
+Enter the direction to travel ('exit to quit)
+ERROR: valid directions are N,NE,E,SE,S,SW,W,NW.
+Enter the direction to travel ('exit to quit) 
+Enter the number of steps:
+ERROR: number of steps must be a positive number.
+Enter the number of steps:
+----------------------------------------
+You are now at (0,10)
+Steps Taken (10): *
+Enter the direction to travel ('exit to quit)
+Your final location is (0,10)

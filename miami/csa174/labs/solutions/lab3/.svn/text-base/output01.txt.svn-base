@@ -1,0 +1,6 @@
+For equations of the form a*x + b
+Enter a value for a: Enter a value for b: Calculating coordinates using the equation 22.0 * x + 5.6
+Enter x value: 22.0 * 7.0 + 5.6 = 159.6
+For equations of the form a^2*x + b*x + c
+Enter a value for c: Calculating coordinates using the equation 22.0^2 * x + 5.6 * x + 22.0
+Enter x value: 22.0^2 * 42.0 + 5.6 * 42.0 + 22.0 = 20585.2

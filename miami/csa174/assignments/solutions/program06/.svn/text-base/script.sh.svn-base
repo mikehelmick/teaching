@@ -1,0 +1,10 @@
+java Dates < input01.txt > output01.txt
+java Dates < input02.txt > output02.txt
+java Dates < input03.txt > output03.txt
+java Dates < input04.txt > output04.txt
+java Dates < input05.txt > output05.txt
+java Dates < input06.txt > output06.txt
+java Dates < input07.txt > output07.txt
+java Dates < input08.txt > output08.txt
+java Dates < input09.txt > output09.txt
+java Dates < input10.txt > output10.txt

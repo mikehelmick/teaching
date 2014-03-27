@@ -1,0 +1,102 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2005-10-29.
+%  Copyright (c) 2005 . All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CSA274}{\bf\Large Miami University}{\bf\Large
+  Final Project }
+\runningheader{CSA274}{Miami University}{Final Project}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+  Assigned: March 23rd, 2006 \newline
+  Due: Monday April 24th, 2006 - 11:50pm \newline
+  Group presentations: April 25th and 27th 
+  }}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section{Introduction}
+For this project you will work in groups of 3 or 4 to complete the implementation of one of the data structures discussed this semester in the Ruby programming language.   Each group will work on a different data structure.
+\par
+You will also complete and individual research paper as part of this assignment.   You may discuss the individual portion of the assignment with your group, but the final product must be an individual effort.
+
+\section{Ruby}
+Ruby (http://www.ruby-lang.org/en/) is an object-oriented programming language that has simple syntax that is also very expressive.  We will discussing some introductory Ruby in class, but part of this assignment is using resources available (the web, books) in order obtain the knowledge necessary to complete the assignment.
+
+\section{Group Project}
+\subsection{Data Structures}
+You may choose from the following data structures for the project:
+\begin{itemize}
+   \item Linked List
+   \item Stack
+   \item Queue
+   \item Binary Search Tree
+   \item Heap
+   \item Graph
+   \item Hash Table 
+   \item Sorting (Implement 4 sorting algorithms)
+\end{itemize}
+
+\subsection{What to do:}
+Design, implement, and test a Ruby class for the data structure that you have chosen.  Your implementation should be complete and well designed.
+\par
+During the last week of class, each group will give a (no longer than) 10 minute presentation showing their implementation of the data structure and discussing what about Ruby helped you (or hindered you) in implementing this data structure.   
+
+\subsection{Turning in:}
+Each group should turn in any Ruby source code that you have written (.rb files), your group report, and any slides (PowerPoint, PDF) that you will use for your class presentation.   No printed material needs to be turned in for this assignment.
+\par
+Each group member must submit a 1 page discussion of your experience with the Ruby language.   Items to consider:
+\begin{itemize}
+	\item How easy/hard was it to lean the basic of a new language?
+	\item How easy/hard was it for you to program in Ruby rather than Java?
+	\item other feelings?
+\end{itemize}
+\par
+I will create directories for each group on the EAS turnins drive.
+
+\section{Individual Project}
+Each of you must (individually) research a real-world (business system, simulation, games, etc...) problem where the data structure your group has selected would be appropriate in solving that problem.  
+\par
+Write a 2 to 3 page paper on:
+\begin{itemize}
+	\item the problem which your data structure can solve
+	\item how your data structure solves the problem
+	\item why your data structure is a better choice than $X$?
+\end{itemize}
+\par
+Submit your individual paper to the EAS turnins drive.
+
+
+\end{document}

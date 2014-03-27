@@ -1,0 +1,2 @@
+Enter QB statistics: games, completions, attempts, yards, interceptions, TDs
+yards must be in the range [-99*completions, 99*completions]

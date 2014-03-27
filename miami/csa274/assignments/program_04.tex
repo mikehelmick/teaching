@@ -1,0 +1,172 @@
+\documentclass[11pt]{article}
+\usepackage{listings}
+
+%
+%  Created by Mike Helmick on 2005-11-27.
+%  Copyright (c) 2005 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\setlength{\textheight}{8.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0.25in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.20in}
+\setlength{\oddsidemargin}{-.19in}
+\setlength{\parindent}{1pc}
+\setlength{\parskip}{.5pc}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\sloppy
+
+%
+%  Update these values for running headers
+%
+%\firstpageheader{\bf\Large }{\bf\Large Program 04}{\bf\Large
+%  04/06/2006 }
+%\runningheader{CSA 274 Spring 2006}{Miami University}{Program 04}
+
+
+
+\begin{document}
+
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+      CSA274 A - Spring 2006 - Program 04 \newline
+      Assigned: Thursday April 6th, 2006 \newline
+      Electronic Material Due: Wednesday April 26th, 2006 - 11:50pm \newline
+      Printed Material Due: Thursday April 27th, 2006 - At the start of class \newline
+      
+      This assignment is worth 100 points.} }}
+\end{center} 
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section*{Introduction}
+In this assignment you will implement a graph structure and two important graph algorithms, Dijkstra's shortest path algorithm and Prim's minimum spanning tree algorithm.
+
+\section*{Instructions}
+\subsection*{Java Classes}
+For this assignment, you are free to use any class that is part of the Java 1.5 standard edition distribution.  
+
+\subsection*{Class Names}
+You are to implement all of your classes such that they are in a package whose name is {\it youruniqueid} (all lowercase).  So, for instance, if you are writing a class called {\tt Monkey} and your unique ID is {\tt studentiam}, then your class would be accessible by the name {\tt studentiam.Monkey} and to construct one you would import {\tt import studentiam.Monkey} and instantiate with {\tt new Monkey()}.
+\par
+For some of the classes, there are particular class names that you will be required to use.   Failure to use the appropriate naming will result in that data structure not being graded.
+\par
+Reasoning behind this - in addition to hand grading, your code will be exercised by several JUnit test cases.   If the classes are not named correctly, they will not be found and not be tested (i.e. not graded).
+
+\subsection*{Testing}
+You must write JUnit tests and turn those in to demonstrate that you have adequately tested the functionality in your data structures.   The more your test, the more confident you will be in your code.  Failure to test can lead to a situation where one tiny bug causes your entire class implementation to not function correctly - this can be avoided by testing early and testing often.
+\par
+{\bf Your test cases must be in a package youruniquetd.test.}
+
+\subsection*{Turning in}
+You {\bf must} use Subversion to manage your source code for this assignment.   When you are finished with the project, you must copy your source code to a release branch in Subversion.
+\par
+I recommend creating these directories with the following Subversion commands.  If you used this structure, with program 3, you may skip the first two.
+\begin{verbatim}
+svn mkdir -m "setup" http://svn.sanclass.org/UNIQUEID/2006S
+svn mkdir -m "setup" http://svn.sanclass.org/UNIQUEID/2006S/csa274
+svn mkdir -m "setup" http://svn.sanclass.org/UNIQUEID/2006S/csa274/project4
+\end{verbatim}
+\par
+Then, when you share your project in Eclipse {\tt Team -> Share}, browse to this directory, and add 'dev' on the end.   Remember when you set up your project to select {\it Create separate source and output folders}.
+\par
+When turning in, you should copy {\bf just your source package} to the release directory, using these two Subversion commands (Different from last time).  Each command must be all on the same line.
+\begin{verbatim}
+svn mkdir -m "setup" http://svn.sanclass.org/UNIQUEID/2006S/csa274/project4/release
+svn copy \
+  http://svn.sanclass.org/UNIQUEID/2006S/csa274/project4/dev/src/helmicmt \
+  http://svn.sanclass.org/UNIQUEID/2006S/csa274/project4/release/helmicmt
+\end{verbatim}
+
+\subsection*{Compilation}
+Code that fails to compile will be given a score of zero.
+
+\subsection*{What to turn in}
+\subsubsection*{Electronic Copies}
+Electronic copies are due at the time specified at the beginning of this document.
+\begin{enumerate}
+   \item All of your .java files - turned in using Subversion.
+\end{enumerate}
+
+\subsubsection*{Printed Copies}
+In the class period immediately following the due date for electronic materials (also displayed at the top of this assignment) you are required to turn in printouts of:
+\begin{enumerate}
+   \item Your Java source files for your classes (You do NOT need to print out your JUnit tests.  I will be looking at the electronic copies, but will not provide specific feedback on them.  Note that failure to turn in JUnit tests will reduce your grade.)
+   \item A description of your graph implementation and reasoning for making the design decisions that you made.
+\end{enumerate}
+  All of your documents {\bf must} be stapled together (or bound together in some other way: binder clip, folder, etc.).  
+
+\section*{Provided Code}
+Code that is provided will be available in binary form as a Java Archive (JAR) file at: \newline   
+\hspace{.5in} http://www.users.muohio.edu/helmicmt/2006/s/csa274/p4jd/p4.jar \newline
+The JavaDoc for this code is available at: \newline
+\hspace{.5in} http://www.users.muohio.edu/helmicmt/2006/s/csa274/p4jd/
+
+\section*{Phases and Scoring}
+
+
+\subsection*{Phase I - Minimum to receive an D}
+\par
+Implement a class called {\tt NamedGraph} that implements the {\tt edu.muohio.csa.csa274.Graph} interface.  This interface defines a basic graph structure.   This interface defines the methods necessary to build and inspect a graph.
+\par
+To complete this class, you will need to write a class that implements the {\tt edu.muohio.csa.csa274.Vertex} interface.   The name of this class is not important as the outside user will never instantiate it directly (you can even make it a private inner class of your {\tt NamedGraph} class).
+\par
+In addition to the vertex class, you will need to have a class that implements the {\tt edu.muohio.csa.csa274.Edge} interface.   As with the vertex class, the name and location (inner or public class) is not important. 
+
+\subsection*{Phase II - Minimum to receive an C}
+\par
+Implement a class called {\tt NamedGraphIO} that implements the {\tt edu.muohio.csa.csa274.GraphIO} interface.   This interface defines a method to load a graph from a string and a method to export a graph to a string.   I recommend that you write a small routine to load a file to a a string (and one for the reverse) in your testing code.
+\par
+The graph format that we are going to be using is the dot file format (defined for GraphViz).   Here is an example of a graph in dot format:
+\begin{verbatim}
+digraph {
+	  host0;
+	  host1;
+	  host2;
+	  host0 -> host1 [weight=60];
+	  host0 -> host2 [weight=79];
+	  host1 -> host2 [weight=352];
+	  host2 -> host0;
+}
+\end{verbatim}
+
+You can be assured that all of the vertices will be listed first with {\tt label} followed by a semicolon `;'.  Each edge will be listed in the format of {\tt vertexLabel -> vertexLabel}, the weight (format {\tt [weight=x]}).   Note that the weight is optional (as shown in the example).  
+\par
+All dot files are for directed graphs (for our purposes).   So when exporting an undirected graph, you should export it as if it was a directed graph.  Any imported graph will be directed.
+
+\subsection*{Phase III - Minimum to receive an B}
+\par
+Modify your {\tt NamedGraph} class to implement both the {\tt edu.muohio.csa.csa274.Graph} and the {\tt edu.muohio.csa.csa274.ShortestPath} interfaces.
+\par
+For the shortest path implementation, you should implement Dijkstra's shortest path algorithm, based on the starting vertex label passed in.  
+
+\subsection*{Phase IV - Minimum to receive an A}
+\par
+Modify your {\tt NamedGraph} class to implement a third interface, {\tt edu.muohio.csa.csa274.MinimumSpanningTree}.  
+\par
+For your minimum spanning tree implementation, you should implement Prim's minimum spanning tree algorithm, based on the starting vertex label passed in.
+
+
+\end{document}
+

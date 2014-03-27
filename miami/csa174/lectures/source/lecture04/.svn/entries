@@ -1,0 +1,53 @@
+8
+
+dir
+47
+https://mikehelmick.com/svn/teaching/trunk/miami/csa174/lectures/source/lecture04
+https://mikehelmick.com/svn/teaching
+
+
+
+2007-09-05T13:50:56.686628Z
+20
+mhelmick
+
+
+svn:special svn:externals svn:needs-lock
+
+Lab3.java
+file
+
+
+
+
+2007-09-04T18:04:33.000000Z
+5a2a695c0d7587aea41458e48edc0f62
+2007-09-05T13:50:56.686628Z
+20
+mhelmick
+
+UserInput.class
+file
+
+
+
+
+2007-09-04T13:47:01.000000Z
+6731d3c2f9813211bc4fc75322c55501
+2007-09-05T13:50:56.686628Z
+20
+mhelmick
+has-props
+
+UserInput.java
+file
+
+
+
+
+2007-09-04T13:46:57.000000Z
+463f7ec2d92b9056090da41a6800a537
+2007-09-05T13:50:56.686628Z
+20
+mhelmick
+

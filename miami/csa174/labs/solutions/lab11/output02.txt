@@ -1,0 +1,6 @@
+How many test scores?
+Enter score 1: Enter score 2: Enter score 3: There are 3 test scores.
+The minimum score is: 33.00
+The maximum score is: 99.00
+   The mean score is: 66.00
+ The median score is: 66.00

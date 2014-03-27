@@ -1,0 +1,75 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2005-09-06.
+%  Copyright (c) 2005 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{\bf\Large Program 04}{\bf\Large }
+\runningheader{CSA274 - Spring 2006}{Miami University}{Program 05}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+  CSA274 - Spring 2006 - Miami University \newline
+  \newline
+  This project is worth \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+% Questions start here:
+\begin{questions}
+
+\question Phase I \makebox[.5in]{\hrulefill}/70
+\begin{parts}
+  \part[40] Named Graph implementation \makebox[.5in]{\hrulefill}/40
+  \vspace{1.5in}
+  
+  \part[30] Unit Tests, Code Readability, Time Log, etc... \makebox[.5in]{\hrulefill}/30
+  \vspace{1.5in}
+  
+\end{parts}
+
+\question[10] NamedGraphIO implementation \makebox[.5in]{\hrulefill}/10
+\vspace{1.5in}
+
+\question[10] Shortest path implementation \makebox[.5in]{\hrulefill}/10
+\vspace{1.5in}
+
+\question[10] Minimum spanning tree implementation \makebox[.5in]{\hrulefill}/10
+\vspace{1.5in}
+
+
+
+\end{questions}
+
+\end{document}
+

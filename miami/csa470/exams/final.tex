@@ -1,0 +1,125 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+\textwidth = 6.5 in
+\textheight = 8.5 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.25 in
+\parskip = 0.15in
+\parindent = 0.0in
+
+\clubpenalty=10000
+\widowpenalty=10000
+\sloppy
+
+%
+%  Created by Mike Helmick on 2006-07-31.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large Miami University}{\bf\Large CSA470j/570j Final}{\bf\Large
+  2007-05-04 }
+\runningheader{Miami University}{}{Enterprise Application Architecture}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+	  Miami University - CSA470j/570j Enterprise Application Architecture \newline
+	  Spring 2007 - Final Exam \newline
+      \newline
+      \numquestions\  questions for a total of  \numpoints\ points. \newline
+      {\it Please answer only 4 questions, which will be graded for a total of 100 possible points.} }}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section*{Instructions}
+
+Please read through this entire exam very carefully before starting.
+\par
+You are to complete 4 of the 6 questions on this exam - clearly indicating which question(s) you do not want graded by putting a large {\tt X} through the entire page.
+\par
+This exam is closed notes and closed books.
+\par
+All work must be written on the exam pages in order to be graded.   If you run out of room for an answer, use the back of the page to continue your answer. 
+\par
+No electronic devices may be used during the exam: this includes iPods, PDAs, and cellular phones.
+\par
+You have 120 minutes to complete the exam.  
+\par
+{\bf Good Luck!}
+
+
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\question[25] Consider the both the {\it Transition Script} and {\it Domain Model}.  When should one be used over the other?  What are the advantages / disadvantages of using either pattern?
+\newpage
+{\it additional space answer for question 1}
+\newpage
+
+\question[25] Compare the two data source architectural patterns {\it Active Record} and {\it Data Mapper}.  What are the advantages of using one over the other?
+\newpage
+{\it additional space answer for question 2}
+\newpage
+
+\question[25] Describe a method for ensuring that if the same record is read and used at 2 different part of a transition, then changes made in both places are saved?  Which pattern is this?
+\newpage
+{\it additional space answer for question 3}
+\newpage
+
+%\question[25] Describe a design for {\it Lazy Load}.   Make sure to consider how coupled your domain objects are to the data source layer, try to minimize this dependency.   Describe how you would keep track of which items have/have not been loaded and how you will load them when required.
+
+%\question[25] Considering an object hierarchy for a company that wants to track their employees and their skills.   There are three levels of employees: {\bf directors}, {\bf managers}, {\bf associates}.   Associates work for a manager, managers work for directors, and assume that directors report to nobody - but in the end, they are all employees.   Each employe also has a number of skills which they possess.  For example: Java for programmers, Excel for accountants.
+%\par
+%Design an object hierarchy for this system.   Explain how you would handle mapping the inheritance in the employee hierarchy to a database table(s).
+
+\question[25] Describe the difference between the view patterns: {\it Page Controller} and {\it Front Controller}.  When would you use one over the impact? What are the tradeoffs?
+\newpage
+{\it additional space answer for question 4}
+\newpage
+
+\question[25] Describe the difference between {\it Optimistic Offline Lock} and {\it Pessimistic Offline Lock}.   Also provide high level details of how each of these could be implemented.
+\newpage
+{\it additional space answer for question 5}
+\newpage
+
+\question[25] Describe how the {\it Unit of Work} pattern works to keep track of all changes in a transaction.  How would this need to be implemented and integrated with the domain model, service, and/or database mapping layers?
+\newpage
+{\it additional space answer for question 6}
+
+\end{questions}
+
+\end{document}
+

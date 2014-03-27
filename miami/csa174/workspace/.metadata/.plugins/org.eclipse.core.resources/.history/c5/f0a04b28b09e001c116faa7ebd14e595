@@ -1,0 +1,18 @@
+
+public class Padle {
+
+	private int score;
+	private int y;
+	
+	public Padle() {
+		score = 0;
+		y = 0;
+	}
+	
+	public void addScore() {
+		score++;
+	}
+	
+	public int getScore();
+	
+}

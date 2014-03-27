@@ -1,0 +1,210 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+% exam settings
+%\boxedpoints
+%\pointsinmargin
+\printanswers 
+%\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CSA174}{\bf\Large Quiz 01}{\bf\Large
+  2007-10-22 }
+\runningheader{CSA 174}{Miami University}{Quiz 01}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CSA174 - Fall 2007 - Quiz 01 \newline
+	Miami University \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points.
+}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Java,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+Please circle your section : Section A - 10:00am Lab, Section C - 12:00pm Lab, Section D - 01:00pm Lab
+
+\begin{center} 
+\gradetable[h][questions] 
+\end{center}
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice and True/False}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+	
+\part[2] Which one of these is not a Java loop keyword:
+\begin{choices}
+  \choice {\tt do} \choice {\tt while} \choice {\tt for} \choice {\tt if}	
+\end{choices}
+\begin{solution} D - if \end{solution}
+
+\part[2] True or false, a {\tt while} loop always executes at least once:
+\begin{choices}
+ \choice true \choice false 
+\end{choices}
+\begin{solution} B - false \end{solution}
+	
+\part[2] A loop that never exits is called an
+\begin{choices}
+  \choice Continuous loop
+  \choice Infinite loop
+  \choice Never-ending loop
+  \choice Crazy Loop
+\end{choices}
+\begin{solution} B - Infinite loop \end{solution}
+
+\part[2] How many times does this loop execute? \newline
+	{\tt for( int i = 1; i <= 100; i = i * 3 ) }
+\begin{choices}
+	\choice 33
+	\choice 5
+	\choice 1
+\end{choices}
+\begin{solution} B - 5 \end{solution}
+
+\part[2] True or false, variables {\it declared } inside a loop are visible {\it outside} the loop.
+\begin{choices}
+ \choice true \choice false 
+\end{choices}
+\begin{solution} B - false \end{solution}
+
+\end{parts}
+	
+\newpage
+
+\section*{Code Analysis}
+
+\question Examine the following code segment and answer the questions below.
+\begin{lstlisting}
+Scanner keyboard = new Scanner( System.in );	
+int x = keyboard.nextInt();
+int y = keyboard.nextInt();
+
+for( int i = 0; i < x; i++ ) {
+	System.out.print("Line " + i + ": ");
+	int j = i;
+	while( j < y ) {
+		System.out.print( j + " " );
+		j++;
+	}
+	System.out.println("");
+}
+\end{lstlisting}
+
+\begin{parts}
+	
+	
+\part[5] What is the output of this code if the user enters {\tt 3} (stored in $x$) and {\tt 2} (stored in $y$)?
+\begin{solution}[1.0in]
+	\newline
+Line 0: 0 1\newline
+Line 1: 1 \newline
+Line 2:\newline
+\end{solution}
+
+\part[5] What is the output of this code if the user enters {\tt 1} and {\tt 2}?
+\begin{solution}[1.0in]
+	\newline
+Line 0: 0 1\newline
+\end{solution}
+
+\part[5] What is the output of this code if the user enters {\tt 5} and {\tt 5}?
+\begin{solution}[1.0in]
+	\newline
+Line 0: 0 1 2 3 4\newline 
+Line 1: 1 2 3 4 \newline
+Line 2: 2 3 4 \newline
+Line 3: 3 4 \newline
+Line 4: 4\newline
+\end{solution}
+	
+\end{parts}
+
+\newpage
+\section*{Programming Question}
+
+\question[15] Write a program that reads in one integer from the user and prints a multiplication table for these numbers (0 to the number), formatted to so that each number takes up 3 spaces, plus a space between each number. \newline
+\begin{tt}
+Enter a number: {\bf 5}\newline
+0   0   0   0   0   0 \newline
+0   1   2   3   4   5 \newline
+0   2   4   6   8  10 \newline
+0   3   6   9  12  15 \newline
+0   4   8  12  16  20 \newline
+0   5  10  15  20  25
+\end{tt}
+
+\begin{verbatim}
+import java.util.Scanner;
+public class Payroll {
+  public static void main (String[] args) {
+    Scanner key = new Scanner(System.in);
+    // START ANSWER HERE
+\end{verbatim}
+
+\begin{solution}[4.5in]
+\begin{verbatim}
+System.out.println("Enter a number: ");
+int num = keyboard.nextInt();
+
+for( int i = 0; i <= num; i++ ) {
+    for( int j = 0; j <= num; j++ ) {
+        System.out.printf("%3d ", i*j );
+    }
+    System.out.println("");
+}
+\end{verbatim}
+\end{solution}
+
+\begin{verbatim}
+    // END OF ANSWER
+  }
+}
+\end{verbatim}
+
+
+
+\end{questions}
+
+\end{document}
+

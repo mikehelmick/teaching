@@ -1,0 +1,129 @@
+%
+%  final_study_guide
+%
+%  Created by Mike Helmick on 2005-12-06.
+%  Copyright (c) 2005 Mike Helmick. All rights reserved.
+%
+\documentclass[10pt]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyheadings}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+\twocolumn
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+\title{CSA274-A Spring 2006 - Final Exam Study Guide}
+
+
+\date{ }
+
+\begin{document}
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\maketitle
+
+\section{Exam Details}
+\begin{itemize}
+	\item CSA274-A (TR 12:30 PM) - Wednesday, May 3rd - 12:30 to 2:30pm, Kreger 135
+\end{itemize}
+
+\section{Study Sheet}
+You may bring to the exam, a single $8\frac{1}{2}$" by $11$" piece of paper (double sided) containing whatever material you choose to include.   This sheet must be prepared in advance by you, contain your name on it, and may not be shared with others before or during the exam.  {\it Sharing your study sheet or preparing it with someone else is considered cheating.} All study sheets will be collected with your exam when you turn it in.
+
+\section{Layout of the Exam}
+There are 15 questions total - for 210 points, with the exam being graded out of 200 points.   
+
+\begin{itemize}
+  \item 2 Java syntax questions
+  \item 5.5 programming questions
+  \item 5 short answer questions
+  \item 1 fill in the blank question
+  \item 1.5 theory / applied theory question
+\end{itemize}
+
+\section{Topics}
+The exam is comprehensive, with emphasis on these topics (in no particular order).
+\begin{enumerate}
+	\item Java 5.0 Generics
+	\item Array backed lists
+	\item Linked list structures
+	\item Trees
+	\item Tree Traversals
+	\item Stacks and Queues
+	\item Big-O notation
+	\item Hash tables (including hash maps and hash sets)
+	\item Balance in Binary Search Trees (what balance means)
+	\begin{enumerate}
+		\item AVL Trees
+		\item 2-3 Trees, B-Trees
+	\end{enumerate}
+	\item Graphs and graph algorithms
+	\begin{enumerate}
+		\item BFS
+		\item DFS
+		\item Dijkstra's algorithm (Shortest Path Tree)
+		\item Prim's algorithm (Minimum Spanning Tree)
+	\end{enumerate}
+	\item Iterators
+	\item Sorting Algorithms
+	\begin{enumerate}
+		\item Selection Sort
+		\item Bubble Sort
+		\item Insertion Sort
+		\item Shell Sort
+		\item Merge Sort
+		\item Heap Sort
+	\end{enumerate}
+\end{enumerate}
+
+\section{Excluded Topics}
+Here are some items which are not covered on the exam (to help narrow your study efforts).
+\begin{enumerate}
+	\item Quicksort
+	\item Ruby
+\end{enumerate}
+
+
+\end{document}

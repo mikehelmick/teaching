@@ -1,0 +1,49 @@
+8
+
+dir
+47
+https://mikehelmick.com/svn/teaching/trunk/miami/csa174/lectures/source
+https://mikehelmick.com/svn/teaching
+
+
+
+2007-10-16T20:40:07.695570Z
+43
+mhelmick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a7647e6c-0c30-0410-83e7-80c20989c25a
+
+lecture10
+dir
+
+lecture03
+dir
+
+lecture04
+dir
+
+lecture13
+dir
+
+lecture06
+dir
+
+lecture07
+dir
+
+lecture08
+dir
+

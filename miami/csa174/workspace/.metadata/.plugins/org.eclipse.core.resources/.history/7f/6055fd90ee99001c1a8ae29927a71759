@@ -1,0 +1,10 @@
+import javax.swing.JPanel;
+
+
+public class PushCounterPanel extends JPanel {
+
+	private int count;
+	private JButton push;
+	private JLabel label;
+	
+}

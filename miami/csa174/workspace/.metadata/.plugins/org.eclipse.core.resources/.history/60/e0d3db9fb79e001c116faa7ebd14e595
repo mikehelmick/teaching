@@ -1,0 +1,127 @@
+import java.util.Random;
+
+
+public class Ball {
+	
+	private int x;
+	private int y;
+	private int radius;
+	
+	private int origX;
+	private int origY;
+	
+	private double direction;
+	private int speed;
+	
+	public Ball( int x, int y, int radius ) {
+		origX = x;
+		origY = y;
+		
+		this.radius = radius;
+	
+		resetBall();
+	}
+	
+	public void resetBall() {
+		this.x = origX;
+		this.y = origY;
+	
+		Random r = new Random();
+		direction = r.nextInt(90) + 45;
+		normalizeDirection();
+	}
+	
+	public int getRadius() {
+		return radius;
+	}
+	
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	public double getDirection() {
+		return direction;
+	}
+
+	public void setDirection(double direction) {
+		this.direction = direction;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+
+
+	public void setSpeed( int speed ) {
+		this.speed = speed;
+	}
+	
+	public void bounce( Paddle p ) {
+		if ( y <= p.getY() + p.getPaddleWidth()/2 && y >= p.getY() - p.getPaddleWidth()/2 ) {
+			if ( x <= p.getX() + radius + 1 && x >= p.getPaddleWidth() - radius/2 ) {
+				direction = 0 - direction;
+			} else if ( x >= p.getX() - radius - 1 && x <= p.getPaddleWidth() + radius/2  ) {
+				direction = 0 + 360 - direction;
+			}
+		} 
+		
+		normalizeDirection();
+		move();
+	}
+	
+	public void bounce( int minY, int maxY ) {
+		if ( y <= minY ) {
+			if ( direction > 0 && direction <= 90) {
+				direction = 90 + (90 - direction);
+			} else if ( direction < 360 && direction >= 270 ) {
+				direction = 270 - (direction - 270);
+			}
+		} else if ( y >= maxY ) {
+			if ( direction >= 90 && direction <= 180 ) {
+				direction = 180 - direction;
+			} else if ( direction > 180 && direction <= 270 ) {
+				direction = 180 - direction;
+			}
+		}
+		
+		normalizeDirection();
+		move();
+	}
+	
+	public boolean offTable( int minX, int maxX ) { 
+		if ( x < minX || x > maxX ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public void move() {
+		double rads = Math.toRadians(direction);
+		x = x + (int)(Math.round( speed * Math.cos( rads )); 
+		y = y + (int)Math.sin( rads );
+	}
+	
+	private void normalizeDirection() {
+		while( direction >= 360.0 ) {
+			direction -= 360.0;
+		}
+		while( direction < 0 ) {
+			direction += 360.0;
+		}
+	}
+
+}

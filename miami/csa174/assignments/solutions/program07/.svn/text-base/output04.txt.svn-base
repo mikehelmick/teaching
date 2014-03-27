@@ -1,0 +1,35 @@
+Enter a date in the form month day year ('exit' to quit): 
+2000 is a leap year.
+February 28, 2000
+is day #59 of the year.
+there are 307 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2000 is a leap year.
+February 29, 2000
+is day #60 of the year.
+there are 306 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+Invalid day entered, must be between 1 and 29
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2000 is a leap year.
+March 1, 2000
+is day #61 of the year.
+there are 305 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2000 is a leap year.
+March 2, 2000
+is day #62 of the year.
+there are 304 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2000 is a leap year.
+December 31, 2000
+is day #366 of the year.
+there are 0 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+goodbye!

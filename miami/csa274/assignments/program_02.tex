@@ -1,0 +1,187 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2005-09-10.
+%  Copyright (c) 2005 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\setlength{\textheight}{8.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0.25in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.20in}
+\setlength{\oddsidemargin}{-.19in}
+\setlength{\parindent}{1pc}
+\setlength{\parskip}{.5pc}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\sloppy
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{\bf\Large Program 02}{\bf\Large
+  2006-01-31 }
+\runningheader{CSA 274 Spring 2006}{Miami University}{Program 02}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+      CSA274 A - Spring 2006 - Program 02 \newline
+      Assigned: Tuesday January 31st, 2006 \newline
+      Electronic Material Due: Wednesday February 15th, 2006 - 11:50pm \newline
+      Printed Material Due: Thursday February 16th, 2006 - At the start of class \newline
+      
+      \numquestions\  phases for a total of  \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section*{Instructions}
+\begin{enumerate}
+   \item Carefully read this ENTIRE document before beginning.
+   \item Follow instructions EXACTLY as written, failure to do so will effect your grade negatively.
+\end{enumerate}
+
+\section*{Introduction}
+Collection structures are an essential part of programming in any programming language.   While in most circumstances we use the provided collections API for a language, it is important to understand the underlying data structures in both how they function and how they preform in various applications.
+\par
+In this assignment you will implement two {\tt List} based data structures in the form of an {\tt ArrayList} and a {\tt LinkedList} (doubly-linked).    In addition, you will implement {\tt Stack} and {\tt Queue} data structures (which should be simple adaptations of your list structures).
+\par
+In order to verify the correctness of your code, you will also be responsible for writing JUnit\footnote{http://www.junit.org/} test cases for each for each of the data structures.
+
+\section*{IMPORTANT}
+The information contained in this section is of paramount importance, failure to follow these instructions could result in a severe  reduction of your grade.   Please read this section and seek clarification on any points that are unclear.
+
+\subsection*{Java Collections}
+The use of any Java collections \underline{classes} is strictly prohibited.   While you will be {\it implementing} interfaces from the Java Collections API, you can not use the existing data structures from the API to aid in your implementation.  {\bf Using a provided collections class will result in a score of zero for that data structure.}  This rule also applies to any support code that you may write.
+\par
+{\bf However}, you may use the Java collections classes in your JUnit tests.  They can be helpful for (1) verifying that your collection can accept ``add all'' requests that come from different data structures and that (2) your data structure can be fed into an existing one as an ``add all'' request.
+
+\subsection*{Class Names}
+You are to implement all of your classes such that they are in a package whose name is {\it youruniqueid} (all lowercase).  So, for instance, if you are writing a class called {\tt Monkey} and your unique ID is {\tt studentiam}, then your class would be accessible by the name {\tt studentiam.Monkey} and to construct one you would import {\tt import studentiam.Monkey} and instantiate with {\tt new Monkey()}.  When your turn it in, your files should be in a directory that is {\bf exactly your uniqueID} and {\bf all lowercase characters}.
+\par
+For some of the classes, there are particular class names that you will be required to use.   Failure to use the appropriate naming will result in that data structure not being graded.
+\par
+Reasoning behind this - in addition to hand grading, your code will be exercised by several JUnit test cases (of my writing).   If your classes are not named correctly, they will not be found and not be tested (i.e. not graded).  Your code is graded by computer only for {\it functionality}, I still go through your code and make style and efficiency remarks.
+
+\subsection*{Testing}
+A sample JUnit test cases will be provided for you.   This testis only serve just as assurance to you that your code will be executed correctly by the auto grader after you turn it in.  Appropriate files will be made available on Blackboard and the course web site. 
+\par
+You {\bf must write additional JUnit tests} and turn those in to demonstrate that you have adequately tested the functionality in your data structures.
+
+\subsection*{Turning in}
+Since your code will be in a package that is your unique ID, you must put the code in a folder that is your unique ID (all lowercase).  If you need to turn in multiple versions of your code, crease a directory called with your unique ID, underscore, 2 (for the second, 3 for the third, etc).   You should wait until your are completely finished before turning things in so that you can avoid this problem.
+\par
+Your source code (.java files only) should be placed directly in this directory - not in any other sub-directory or any sort of compressed file/archive (zip or tar/gz).   Electronic copies of your other documentation (allowable formats described below) should also be placed in this directory.
+
+\subsection*{What to turn in}
+\subsubsection*{Electronic Copies}
+Electronic copies are due at the time specified at the beginning of this document.
+\begin{enumerate}
+   \item Your java source files (just the .java files - {\bf no .class files please})
+   \item Your time log (online - same as last time) - failure to turn in a time log will reduce your grade
+   \item Your java source files for your JUnit tests
+   \item Your test plan (this is a textual description at lest $\frac{1}{2}$ of a page in length - but a good test plan will be longer).  Your test plan needs to include your approach to testing as well as sample inputs.  {\bf Put some serious thought into the testability of your code, it will make your life easier. }
+\end{enumerate}
+{\bf Acceptable formats} You may turn in the time log and test plan in the following formats: PDF, plain text, OpenOffice/NeoOfficeJ, Apple Pages (iWork), Microsoft Word, Microsoft Excel.  Other formats are not acceptable.   {\bf PDF and plain text are the preferred formats.}
+
+\subsubsection*{Printed Copies}
+In the class period immediately following the due date for electronic materials you are required to turn in printouts of your java source code (just the 1st item from above).  All of your pages {\bf must} be stapled together.  
+\newline
+Also - please ensure that your name is included in EVERY document (time log, test plan, and source code for classes and test cases).  Always be proud of the work you produce and claim ownership of it - a general good rule for programmers.
+
+\section*{Provided Code}
+Code that is provided will be available in binary form as a Java Archive (JAR) file.   JavaDoc documentation is also provided.
+
+\section*{Phases and Scoring}
+% Questions start here:
+\begin{questions}
+
+\question Phase I - Minimum to receive an D
+\begin{parts}
+  \part[35] Implement a {\tt List} data structure backed by an array (ArrayList). 
+  \par
+  For this part of the program, you must implement a class called {\tt ArrayList<E>} that implements the {\tt java.util.List<E>} interface and uses an array of type {\tt E} (the generic type specified at declaration/instantiation time).   The Java List interface extends {\tt Collection<E>} and {\tt Iterable<E>}, so you need to be aware that you must implement the methods from all three interfaces.  All of the methods you need to implement have their functionality described here: \newline http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html .  Some methods are listed as ``optional,'' but for purposes of this assignment, all methods must be implemented.
+  \par
+  In addition to implementing this interface your list implementation must be dynamically resizable.   In other words, if your internal storage array is at capacity, then you must allocate more space - or more generally, there should be no limit on the number of elements storable in your data structure imposed by the structure itself.   
+  \par
+  You will want to read through all of the methods in this interface before you begin coding.   There are implementation hints contained on this documentation page and taking those into account early will be to your advantage.
+  \par
+  Constructors:  Your must have a no parameter (default) constructor that initializes the array to a default size (of your choosing, 10 is a good default).   All elements of the array will initially be null.  {\it Hint: use the code I provided in class to create an array of the generic type.}
+  \par
+  In order to complete this implementation, you will need to write a class that implements the {\tt Iterator<E>} interface as well as a class that implements the {\tt ListIterator<E>} interface.
+  \par
+  Your class name for this data structure must be {\bf {\tt ArrayList}} in a package that is your unique ID, such that the class can be instantiated by invoking {\tt new youruniqueud.ArrayList<T>()} where your unique ID is represented with all lowercase letters and digits.
+  
+  \part[35] Implement a {\tt List} data structures backed by (bidirectional) linked list.
+  \par
+  For this part of the program, you must implement a class called {\tt LinkedList<E>} that implements the {\tt java.util.List<E>} interface and uses a doubly-linked list for internal storage.  The Java List interface extends {\tt Collection<E>} and {\tt Iterable<E>}, so you need to be aware that you must implement the methods from all three interfaces.  All of the methods you need to implement have their functionality described here: \newline http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html .  Some methods are listed as ``optional,'' but for purposes of this assignment, all methods must be implemented.
+  \par
+   Your linked list structures should not restrict the number of objects that can be stored in the structures.
+   \par
+   Constructors:  Your linked list class should have a single constructor that takes no parameters and initializes the list to be empty.
+   \par
+   In order to complete this implementation, you will need to write classes that implement the {\tt Iterator<E>} interface as well as  classes that implement the {\tt ListIterator<E>} interface.   The iterators for linked list must pay attention to the internal structure of the linked list and the nodes.
+   \par
+   Your class name for this data structure must be {\bf {\tt LinkedList<E>}} in a package that is your unique ID, such that the class can be instantiated by invoking {\tt new youruniqueud.LinkedList<T>()}  where your unique ID is represented with all lowercase letters and digits.     
+  
+  \part[0] Other Items - Hints
+  You will be graded on the quality and structure of your code with special attention to use of whitespace, comments, and general code readability.
+  \par 
+   Seriously think about your design - you can save a lot of time by implementing an abstract list class as the Java implementation does.
+  
+\end{parts}
+
+\question[10] Phase II - Minimum to receive a C
+Implement a {\tt Stack} data structure. 
+  \par
+ You are to implement a class that implements the {\tt edu.muohio.csa.csa274.Stack<E>} interface.  
+ \par
+ You may use {\bf your} {\tt ArrayList} or {\tt LinkedList} classes for the internal storage of your stack class, write an alternate implementation, or extend one of your already written classes.   The choice is totally up to you and I will not provide implementation hints in this particular area.
+ \par
+ The operation of the stack should be constant time regardless of which data structure you use as an adaptor class.
+
+\question[10] Phase III - Minimum to receive an B
+ For this part of the program, you are to modify both your {\tt LinkedList<E>} and {\tt ArrayList<E>} classes from phase I to implement the {\tt edu.muohio.csa.csa275.InvertableList<E>} interface (provided) instead of {\tt java.util.List<E>}.   This interface extends {\tt java.util.List<E>} and adds one new method.
+ \par
+ There is a good set of common functionality here.   You should be able to write this function a single time and apply it to both lists (assuming you have an abstract list that they both extend) and utilizing your stack class from phase II will speed things up as well.
+ \par
+ Taken from {\underline The Art of Computer Programming} Volume 1, by Donald E. Knuth.  Section 2.2.3, exercise \#7.
+
+\question[10] Phase IV - Minimum to receive an A
+For this phase of the program you will write a class that exercises functionality of some of the collection classes that you have written so far.   You will do this by writing a class that implements the {\tt edu.muohio.csa.csa274.ListInteger } interface.   Your class should be name {\tt uniqueid.LargeInteger }.
+\par
+The large integer class allows us to store arbitrarily large integers since each digit is a separate entry in a list.   All mathematical operations must be carried out digit by digit.
+\par
+This phase is made easier by make full use of what you have written.   For example, use your invertible list functionality on the set value method.   I suggest storing the digits from the ones place on up, rather than how we would traditionally store numbers.
+
+\end{questions}
+
+\end{document}
+

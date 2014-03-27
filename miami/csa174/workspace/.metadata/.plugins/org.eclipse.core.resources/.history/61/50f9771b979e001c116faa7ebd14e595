@@ -1,0 +1,21 @@
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class Pong {
+	
+	public static final int WIDTH = 800;
+	public static final int HEIGHT = 600;
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Pong");
+		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		frame.setPreferredSize( new Dimension(WIDTH,HEIGHT) );
+		
+		frame.getContentPane().add( new PongPanel() );
+		
+		frame.pack();
+		frame.setVisible( true );
+	}
+
+}

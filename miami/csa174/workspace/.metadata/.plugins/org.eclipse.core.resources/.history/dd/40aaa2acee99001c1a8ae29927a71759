@@ -1,0 +1,26 @@
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+public class PushCounterPanel extends JPanel {
+
+	private int count;
+	private JButton push;
+	private JLabel label;
+	
+	// constructor
+	public PushCounterPanel() {
+		count = 0;
+		
+		push = new JButton("Push Me!");
+		push.addActionListener( new ButtonListener() );
+		
+		label = new JLabel("Pushes: " + count );
+		
+		this.add( push );
+		add( label );
+		
+	}
+	
+}

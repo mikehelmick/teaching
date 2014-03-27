@@ -1,0 +1,422 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\lstset{language=Java}
+\usepackage{pdfsync}
+
+\textwidth = 6.5 in
+\textheight = 8.5 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.25 in
+\parskip = 0.15in
+\parindent = 0.0in
+
+\clubpenalty=10000
+\widowpenalty=10000
+\sloppy
+
+%\pointsinmargin
+%\boxedpoints
+
+%
+%  Created by Mike Helmick on 2005-09-26.
+%  Copyright (c) 2005-2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large Miami University}{\bf\Large EXAM 01}{\bf\Large
+  2006-02-23 }
+\runningheader{CSA274 Spring 2006}{Miami Univeristy}{Exam 01}
+\addpoints
+
+\begin{document}
+
+\vspace{3.0in}
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+      Miami University - CSA274 - Spring 2006 - Exam 1 
+\par
+      There are \numquestions\  questions for a total of  \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section*{Instructions}
+Please read through this entire exam very carefully before starting.
+\par
+This exam is closed notes and closed books.
+\par
+All work must be written on the exam pages in order to be graded.   Any scrap paper used, must be the scrap paper provided during the exam period.
+\par
+For programming questions: Please be as accurate as possible with your Java syntax: this includes appropriate use of braces, semicolons, and the proper use of upper/lowercase letters.  
+\par
+No electronic devices may be used during the exam: this includes calculators, iPods, PDAs, and cellular phones.
+\par
+You have 75 minutes (1 hour and 15 minutes) to complete the exam.  
+\par
+There are \numpoints\ possible points, but the exam will be graded out of 150 points.
+\par
+{\bf Good Luck!}
+
+
+\pagebreak
+
+% Questions start here:
+\begin{questions}
+
+\section*{Definitions / Fill in the blank}
+
+\question[2] What does ADT stand for? \makebox[2in]{\hrulefill}
+\question[2] \makebox[2in]{\hrulefill} abstraction is the separation of what is to be achieved, from how it is achieved
+\question[2] In Java: \makebox[2in]{\hrulefill} define only methods signatures and constants.
+\question[2] In Java: \makebox[2in]{\hrulefill} define method signatures, methods (optionally) and data members, but cannot be instantiated.
+\question[2] Exceptions in Java come in two flavors: \makebox[2in]{\hrulefill} and \makebox[2in]{\hrulefill} (in regards to differentiating factor of which must be declared that they are thrown.)
+\question[2] When writing a class, \makebox[2in]{\hrulefill} is the keyword for explicitly calling a constructor on the class that your class extends.
+\question[2] When writing a class, \makebox[2in]{\hrulefill} is the keyword for explicitly calling another constructor on your class.
+\question[2] Defining two methods with the same name, but different parameters is called method \makebox[2in]{\hrulefill}.
+\question[2] When you define a method with the same name and same parameters as a method defined in your parent class, this is called method \makebox[2in]{\hrulefill}.
+\question[2] Finding the correct method to execute at runtime is called: \makebox[2in]{\hrulefill}.
+\question[2] If a type parameter is not specified when instantiating a generic collection, what type is that collection then given? \makebox[2in]{\hrulefill}
+\question[2] When accessing every item in a linked list, if it better to use a for loop and the get method, or the collection's iterator? \makebox[2in]{\hrulefill}
+\question[2] When class A extends class B, we would say that class A \makebox[2in]{\hrulefill} class B.
+\question[2] When class C has a private data member of type class D, we would say that class C \makebox[2in]{\hrulefill} class D.
+\question[2] The process of converting a primitive {\tt int} to the class type {\tt Integer} is called: \makebox[2in]{\hrulefill}
+
+\newpage
+\question Provide the name of each of these running time growth rate classifications:
+\begin{parts}
+  \part[2] $O(n^3)$ \makebox[2in]{\hrulefill}   
+  \part[2] $O( 1 )$ \makebox[2in]{\hrulefill}   
+  \part[2] $O(n!)$ \makebox[2in]{\hrulefill} 
+  \part[2] $O( \log{n} )$ \makebox[2in]{\hrulefill}  
+  \part[2] $O(n^2)$ \makebox[2in]{\hrulefill}
+  \part[2] $O( n )$ \makebox[2in]{\hrulefill}   
+  \part[2] $O(2^n)$ \makebox[2in]{\hrulefill}
+  \part[2] $O( n * \log{n} )$ \makebox[2in]{\hrulefill} 
+\end{parts}
+
+\question Put the above growth rate classifications in order, starting with the slowest growth rate:
+\begin{parts}
+  \part[2] \makebox[2in]{\hrulefill}
+  \part[2] \makebox[2in]{\hrulefill}
+  \part[2] \makebox[2in]{\hrulefill}
+  \part[2] \makebox[2in]{\hrulefill}
+  \part[2] \makebox[2in]{\hrulefill}
+  \part[2] \makebox[2in]{\hrulefill}
+  \part[2] \makebox[2in]{\hrulefill}
+  \part[2] \makebox[2in]{\hrulefill}
+\end{parts}
+
+\newpage
+\section*{Multiple Choice}
+\uplevel{Please circle the best answer(s), you may select more than one answer for any given question.   The code listing below applies for the multiple choice questions.   In this situation each player on the team is mentored by one of the captains, and the team has multiple captains.}
+\begin{lstlisting}
+public class Player extends java.lang.Object {
+   private String name;
+   private int number;
+   private Captain mentor;
+   
+   // assume get and set methods for each of the properties defined
+}
+
+private class Captain extends Player {
+   private List<Player> players = new ArrayList<Player>();
+
+   public List<Player> getMentoredPlayers() { return players; }
+   public void addMentoringResponsibility( Player e ) { players.add( e ); }
+   public boolean removeMentoringRespondibility( Player e ) { 
+      return players.remove( e ); 
+   }
+}
+\end{lstlisting}
+
+\question[2] A variable of type {\tt Object} can be assigned instances of type(s):
+ \begin{parts}
+ \part {\tt Player}
+ \part {\tt Captain}
+ \part neither
+ \end{parts}
+ 
+\question[2] A variable of type {\tt Player} can be assigned instances of type(s):
+  \begin{parts}
+  \part {\tt Player}
+  \part {\tt Captain}
+  \part neither
+  \end{parts}
+ 
+\question[2] A variable of type {\tt Captain} can be assigned instances of type(s):
+   \begin{parts}
+   \part {\tt Player}
+   \part {\tt Captain}
+   \part neither
+   \end{parts}
+
+\newpage
+
+
+\section*{Short Answer}
+\uplevel{Provide a short answer to the following questions.   Please use complete sentences when answering.}
+
+\question[4] What is the difference between {\tt size} and {\tt capacity} for a list structure that is backed by an array?  What happens when an {\tt add( E elem )} operation is invoked and size is equal to capacity?
+\vspace{1.5in}
+
+\question For {\tt ArrayList}:
+\begin{parts}
+   \part[3] Why do we by default insert at the end?  What is the running time?
+   \vspace{1.5in}
+   \part[3] When we insert in the middle of the list, how is room made?  What is the running time?
+   \vspace{1.5in}
+\end{parts}
+
+\question[6] For linked lists, why is it more efficient to use an iterator instead of {\tt get(int)} to traverse a list?  What is the running time of each of these methods to traverse all of the elements in the list?
+\vspace{1.5in}
+
+\question[4] What is the acronym to describe the order in which items are added to and removed from a stack?  What does it mean?
+\vspace{1.5in}
+
+\question[4] What is the acronym to describe the order in which items are added to and removed from a queue? What does it mean?
+\vspace{1.5in}
+
+\question[6] Use a stack to show how the following postfix expression would be evaluated.   Please show the stack at each stage of the evaluation. \newline {\tt 1 2 + 3 4 - 5 6 + * +}
+\vspace{4in}
+
+\newpage
+\section*{Short Programming \& Evaluation}
+
+\question[10] Write a new queue method called {\tt moveToRear} that moves the element currently at the front of the queue to the rear of the queue.   Do this using the methods {\tt Queue.offer} and {\tt Queue.remove}.  You may assume that the Queue is defined in a generic fashion and that you have a type defined of name {\tt E}.  This method should to nothing if the queue is empty, and should not throw an exception in the event that it is.
+\begin{verbatim}
+public class Queue<E> {
+  
+  /**
+   * Insert a new element in the queue
+   */
+  public void offer( E element ) { /* ... */ }
+  
+  /**
+   * remove the first element from the queue
+   * @throws NoSuchElementException if the queue is empty
+   */
+  public E remove() throws NoSuchElementException { /* ... * / }
+
+  public void moveToRear() {
+      // BEGIN ANSWER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // END ANSWER
+  }
+}
+\end{verbatim}
+
+\newpage
+\question Answer the following questions using the code listing provided below.
+\begin{lstlisting}
+   private static long calculate( long i, long j ) {
+      if ( j == 1 ) {
+         return i;
+      } else {
+         return i * calculate( i, j - 1 );
+      }
+   }
+   
+   public static long calculate( long i ) {
+      return calculate( i, i );
+   }
+\end{lstlisting}
+
+\begin{parts}
+   \part[2] What is the result when {\tt calculate( 3 ) } is called?
+   \vspace{1in}
+   \part[2] What is the result when {\tt calculate( 5 ) } is called?
+   \vspace{1in}
+   \part[6] Textually, what does this code calculate?
+   \vspace{1.5in}
+\end{parts}
+
+\newpage
+\question[10] Complete the following section of code.   You are to write the appropriate assignment statements to assure that the new node is added to the list {\bf before} the node that {\tt curNode} points to, and that no part of the list is lost in the operation.   The start of the function takes care of advancing the {\tt curNode} local variable to the correct position in the code.
+
+\begin{verbatim}
+public class LinkedList<E> implements java.util.List<E> {
+
+    private Node<E> head;
+    private Node<E> tail;
+
+    private static class Node<E> {
+        private E data;
+        private Node<E> prev;
+        private Node<E> head;
+    }
+
+    private void add( int i, E element ) {
+        checkIndex( i ); 
+	   
+        Node<E> curNode = head;
+        for( int idx = 0; idx < i; idx++ ) {
+            curNode = curNode.next;
+        } 
+	
+        Node<E> newNode = new Node<E>( element );
+	
+        // write the code to insert in the middle of the linked list here
+        // use only curNode and newNode to complete this task
+	
+        // BEGIN ANSWER
+
+
+
+
+
+
+
+
+
+
+
+        // END ANSWER
+   }
+}
+\end{verbatim}
+
+
+\newpage
+\question[16] Write a recursive method to determine which coins are given as change.  For example, if 65 is the input, the string {\tt "quarter quarter dime nickel "} should be returned.  The function should work for {\it any} amount passed in (i.e. not just amounts less than 100), but should only return the change in the coins: quarter (25), dime (10), nickel (5), and penny (1).
+
+\begin{verbatim}
+public static String calculateChange( int amount ) {
+    // BEGIN ANSWER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // END ANSWER
+}
+\end{verbatim}
+
+\newpage
+\question[16] Write a recursive method to perform binary search on an array.   The incoming array will already be sorted and the method should return $-1$ in the event that the target is not found in the array.
+
+\begin{verbatim}
+public int binarySearch( int[] array, int target ) {
+  return binarySearch( array, target, 0, array.length - 1 );
+}
+
+private int binarySearch( int[] array, int target, int first, int last ) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}	
+\end{verbatim}
+
+
+
+% node definition for double linked list
+
+%\vspace{2in}
+%\question  Given the following stuff answer :
+%
+%\begin{parts}
+%\part[5]  part one
+%\part[5]  part two
+%\end{parts}
+
+\end{questions}
+
+\end{document}
+

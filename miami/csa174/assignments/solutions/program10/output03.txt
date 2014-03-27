@@ -1,0 +1,6 @@
+Enter operation: + * c e
+Enter numerator and denominator:
+1/2 = 0.5
+Enter operation: + * c e
+0/1 = 0.0
+Enter operation: + * c e

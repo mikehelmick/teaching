@@ -1,0 +1,43 @@
+
+public class Paddle {
+
+	private int score;
+	private int y;
+	private int x;
+	
+	public Paddle( int x ) {
+		score = 0;
+		y = 0;
+		this.x = x;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+	public int getY() {
+	}
+	
+	public void addScore() {
+		score++;
+	}
+	
+	public int getScore() {
+		return score;
+	}
+	
+	public void movePaddle( int distance ) {
+		y += distance;
+	}
+	
+	public void autoMovePaddle( int ballY, int speed ) {
+		if ( ballY == y ) {
+			y += speed/2;
+		} else if ( ballY > y ) {
+			y += speed;
+		} else {
+			y -= speed;
+		}
+	}
+	
+}

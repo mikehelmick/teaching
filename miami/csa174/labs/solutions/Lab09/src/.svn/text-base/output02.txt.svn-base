@@ -1,0 +1,601 @@
+How many temps? 
+Temperature and scale?
+-------#1--------
+ As Fahrenheit: 1.00000
+ As Celsius: -17.22222
+ Getters: 1.00000 F
+ toString: Temperature = 1.0 F
+Temperature and scale?
+-------#2--------
+ As Fahrenheit: 35.60000
+ As Celsius: 2.00000
+ Getters: 2.00000 C
+ toString: Temperature = 2.0 C
+Temperature and scale?
+-------#3--------
+ As Fahrenheit: 3.00000
+ As Celsius: -16.11111
+ Getters: 3.00000 F
+ toString: Temperature = 3.0 F
+Temperature and scale?
+-------#4--------
+ As Fahrenheit: 39.20000
+ As Celsius: 4.00000
+ Getters: 4.00000 C
+ toString: Temperature = 4.0 C
+Temperature and scale?
+-------#5--------
+ As Fahrenheit: 5.00000
+ As Celsius: -15.00000
+ Getters: 5.00000 F
+ toString: Temperature = 5.0 F
+Temperature and scale?
+-------#6--------
+ As Fahrenheit: 42.80000
+ As Celsius: 6.00000
+ Getters: 6.00000 C
+ toString: Temperature = 6.0 C
+Temperature and scale?
+-------#7--------
+ As Fahrenheit: 7.00000
+ As Celsius: -13.88889
+ Getters: 7.00000 F
+ toString: Temperature = 7.0 F
+Temperature and scale?
+-------#8--------
+ As Fahrenheit: 46.40000
+ As Celsius: 8.00000
+ Getters: 8.00000 C
+ toString: Temperature = 8.0 C
+Temperature and scale?
+-------#9--------
+ As Fahrenheit: 9.00000
+ As Celsius: -12.77778
+ Getters: 9.00000 F
+ toString: Temperature = 9.0 F
+Temperature and scale?
+-------#10--------
+ As Fahrenheit: 50.00000
+ As Celsius: 10.00000
+ Getters: 10.00000 C
+ toString: Temperature = 10.0 C
+Temperature and scale?
+-------#11--------
+ As Fahrenheit: 11.00000
+ As Celsius: -11.66667
+ Getters: 11.00000 F
+ toString: Temperature = 11.0 F
+Temperature and scale?
+-------#12--------
+ As Fahrenheit: 53.60000
+ As Celsius: 12.00000
+ Getters: 12.00000 C
+ toString: Temperature = 12.0 C
+Temperature and scale?
+-------#13--------
+ As Fahrenheit: 13.00000
+ As Celsius: -10.55556
+ Getters: 13.00000 F
+ toString: Temperature = 13.0 F
+Temperature and scale?
+-------#14--------
+ As Fahrenheit: 57.20000
+ As Celsius: 14.00000
+ Getters: 14.00000 C
+ toString: Temperature = 14.0 C
+Temperature and scale?
+-------#15--------
+ As Fahrenheit: 15.00000
+ As Celsius: -9.44444
+ Getters: 15.00000 F
+ toString: Temperature = 15.0 F
+Temperature and scale?
+-------#16--------
+ As Fahrenheit: 60.80000
+ As Celsius: 16.00000
+ Getters: 16.00000 C
+ toString: Temperature = 16.0 C
+Temperature and scale?
+-------#17--------
+ As Fahrenheit: 17.00000
+ As Celsius: -8.33333
+ Getters: 17.00000 F
+ toString: Temperature = 17.0 F
+Temperature and scale?
+-------#18--------
+ As Fahrenheit: 64.40000
+ As Celsius: 18.00000
+ Getters: 18.00000 C
+ toString: Temperature = 18.0 C
+Temperature and scale?
+-------#19--------
+ As Fahrenheit: 19.00000
+ As Celsius: -7.22222
+ Getters: 19.00000 F
+ toString: Temperature = 19.0 F
+Temperature and scale?
+-------#20--------
+ As Fahrenheit: 68.00000
+ As Celsius: 20.00000
+ Getters: 20.00000 C
+ toString: Temperature = 20.0 C
+Temperature and scale?
+-------#21--------
+ As Fahrenheit: 21.00000
+ As Celsius: -6.11111
+ Getters: 21.00000 F
+ toString: Temperature = 21.0 F
+Temperature and scale?
+-------#22--------
+ As Fahrenheit: 71.60000
+ As Celsius: 22.00000
+ Getters: 22.00000 C
+ toString: Temperature = 22.0 C
+Temperature and scale?
+-------#23--------
+ As Fahrenheit: 23.00000
+ As Celsius: -5.00000
+ Getters: 23.00000 F
+ toString: Temperature = 23.0 F
+Temperature and scale?
+-------#24--------
+ As Fahrenheit: 75.20000
+ As Celsius: 24.00000
+ Getters: 24.00000 C
+ toString: Temperature = 24.0 C
+Temperature and scale?
+-------#25--------
+ As Fahrenheit: 25.00000
+ As Celsius: -3.88889
+ Getters: 25.00000 F
+ toString: Temperature = 25.0 F
+Temperature and scale?
+-------#26--------
+ As Fahrenheit: 78.80000
+ As Celsius: 26.00000
+ Getters: 26.00000 C
+ toString: Temperature = 26.0 C
+Temperature and scale?
+-------#27--------
+ As Fahrenheit: 27.00000
+ As Celsius: -2.77778
+ Getters: 27.00000 F
+ toString: Temperature = 27.0 F
+Temperature and scale?
+-------#28--------
+ As Fahrenheit: 82.40000
+ As Celsius: 28.00000
+ Getters: 28.00000 C
+ toString: Temperature = 28.0 C
+Temperature and scale?
+-------#29--------
+ As Fahrenheit: 29.00000
+ As Celsius: -1.66667
+ Getters: 29.00000 F
+ toString: Temperature = 29.0 F
+Temperature and scale?
+-------#30--------
+ As Fahrenheit: 86.00000
+ As Celsius: 30.00000
+ Getters: 30.00000 C
+ toString: Temperature = 30.0 C
+Temperature and scale?
+-------#31--------
+ As Fahrenheit: 31.00000
+ As Celsius: -0.55556
+ Getters: 31.00000 F
+ toString: Temperature = 31.0 F
+Temperature and scale?
+-------#32--------
+ As Fahrenheit: 89.60000
+ As Celsius: 32.00000
+ Getters: 32.00000 C
+ toString: Temperature = 32.0 C
+Temperature and scale?
+-------#33--------
+ As Fahrenheit: 33.00000
+ As Celsius: 0.55556
+ Getters: 33.00000 F
+ toString: Temperature = 33.0 F
+Temperature and scale?
+-------#34--------
+ As Fahrenheit: 93.20000
+ As Celsius: 34.00000
+ Getters: 34.00000 C
+ toString: Temperature = 34.0 C
+Temperature and scale?
+-------#35--------
+ As Fahrenheit: 35.00000
+ As Celsius: 1.66667
+ Getters: 35.00000 F
+ toString: Temperature = 35.0 F
+Temperature and scale?
+-------#36--------
+ As Fahrenheit: 96.80000
+ As Celsius: 36.00000
+ Getters: 36.00000 C
+ toString: Temperature = 36.0 C
+Temperature and scale?
+-------#37--------
+ As Fahrenheit: 37.00000
+ As Celsius: 2.77778
+ Getters: 37.00000 F
+ toString: Temperature = 37.0 F
+Temperature and scale?
+-------#38--------
+ As Fahrenheit: 100.40000
+ As Celsius: 38.00000
+ Getters: 38.00000 C
+ toString: Temperature = 38.0 C
+Temperature and scale?
+-------#39--------
+ As Fahrenheit: 39.00000
+ As Celsius: 3.88889
+ Getters: 39.00000 F
+ toString: Temperature = 39.0 F
+Temperature and scale?
+-------#40--------
+ As Fahrenheit: 104.00000
+ As Celsius: 40.00000
+ Getters: 40.00000 C
+ toString: Temperature = 40.0 C
+Temperature and scale?
+-------#41--------
+ As Fahrenheit: 41.00000
+ As Celsius: 5.00000
+ Getters: 41.00000 F
+ toString: Temperature = 41.0 F
+Temperature and scale?
+-------#42--------
+ As Fahrenheit: 107.60000
+ As Celsius: 42.00000
+ Getters: 42.00000 C
+ toString: Temperature = 42.0 C
+Temperature and scale?
+-------#43--------
+ As Fahrenheit: 43.00000
+ As Celsius: 6.11111
+ Getters: 43.00000 F
+ toString: Temperature = 43.0 F
+Temperature and scale?
+-------#44--------
+ As Fahrenheit: 111.20000
+ As Celsius: 44.00000
+ Getters: 44.00000 C
+ toString: Temperature = 44.0 C
+Temperature and scale?
+-------#45--------
+ As Fahrenheit: 45.00000
+ As Celsius: 7.22222
+ Getters: 45.00000 F
+ toString: Temperature = 45.0 F
+Temperature and scale?
+-------#46--------
+ As Fahrenheit: 114.80000
+ As Celsius: 46.00000
+ Getters: 46.00000 C
+ toString: Temperature = 46.0 C
+Temperature and scale?
+-------#47--------
+ As Fahrenheit: 47.00000
+ As Celsius: 8.33333
+ Getters: 47.00000 F
+ toString: Temperature = 47.0 F
+Temperature and scale?
+-------#48--------
+ As Fahrenheit: 118.40000
+ As Celsius: 48.00000
+ Getters: 48.00000 C
+ toString: Temperature = 48.0 C
+Temperature and scale?
+-------#49--------
+ As Fahrenheit: 49.00000
+ As Celsius: 9.44444
+ Getters: 49.00000 F
+ toString: Temperature = 49.0 F
+Temperature and scale?
+-------#50--------
+ As Fahrenheit: 122.00000
+ As Celsius: 50.00000
+ Getters: 50.00000 C
+ toString: Temperature = 50.0 C
+Temperature and scale?
+-------#51--------
+ As Fahrenheit: 51.00000
+ As Celsius: 10.55556
+ Getters: 51.00000 F
+ toString: Temperature = 51.0 F
+Temperature and scale?
+-------#52--------
+ As Fahrenheit: 125.60000
+ As Celsius: 52.00000
+ Getters: 52.00000 C
+ toString: Temperature = 52.0 C
+Temperature and scale?
+-------#53--------
+ As Fahrenheit: 53.00000
+ As Celsius: 11.66667
+ Getters: 53.00000 F
+ toString: Temperature = 53.0 F
+Temperature and scale?
+-------#54--------
+ As Fahrenheit: 129.20000
+ As Celsius: 54.00000
+ Getters: 54.00000 C
+ toString: Temperature = 54.0 C
+Temperature and scale?
+-------#55--------
+ As Fahrenheit: 55.00000
+ As Celsius: 12.77778
+ Getters: 55.00000 F
+ toString: Temperature = 55.0 F
+Temperature and scale?
+-------#56--------
+ As Fahrenheit: 132.80000
+ As Celsius: 56.00000
+ Getters: 56.00000 C
+ toString: Temperature = 56.0 C
+Temperature and scale?
+-------#57--------
+ As Fahrenheit: 57.00000
+ As Celsius: 13.88889
+ Getters: 57.00000 F
+ toString: Temperature = 57.0 F
+Temperature and scale?
+-------#58--------
+ As Fahrenheit: 136.40000
+ As Celsius: 58.00000
+ Getters: 58.00000 C
+ toString: Temperature = 58.0 C
+Temperature and scale?
+-------#59--------
+ As Fahrenheit: 59.00000
+ As Celsius: 15.00000
+ Getters: 59.00000 F
+ toString: Temperature = 59.0 F
+Temperature and scale?
+-------#60--------
+ As Fahrenheit: 140.00000
+ As Celsius: 60.00000
+ Getters: 60.00000 C
+ toString: Temperature = 60.0 C
+Temperature and scale?
+-------#61--------
+ As Fahrenheit: 61.00000
+ As Celsius: 16.11111
+ Getters: 61.00000 F
+ toString: Temperature = 61.0 F
+Temperature and scale?
+-------#62--------
+ As Fahrenheit: 143.60000
+ As Celsius: 62.00000
+ Getters: 62.00000 C
+ toString: Temperature = 62.0 C
+Temperature and scale?
+-------#63--------
+ As Fahrenheit: 63.00000
+ As Celsius: 17.22222
+ Getters: 63.00000 F
+ toString: Temperature = 63.0 F
+Temperature and scale?
+-------#64--------
+ As Fahrenheit: 147.20000
+ As Celsius: 64.00000
+ Getters: 64.00000 C
+ toString: Temperature = 64.0 C
+Temperature and scale?
+-------#65--------
+ As Fahrenheit: 65.00000
+ As Celsius: 18.33333
+ Getters: 65.00000 F
+ toString: Temperature = 65.0 F
+Temperature and scale?
+-------#66--------
+ As Fahrenheit: 150.80000
+ As Celsius: 66.00000
+ Getters: 66.00000 C
+ toString: Temperature = 66.0 C
+Temperature and scale?
+-------#67--------
+ As Fahrenheit: 67.00000
+ As Celsius: 19.44444
+ Getters: 67.00000 F
+ toString: Temperature = 67.0 F
+Temperature and scale?
+-------#68--------
+ As Fahrenheit: 154.40000
+ As Celsius: 68.00000
+ Getters: 68.00000 C
+ toString: Temperature = 68.0 C
+Temperature and scale?
+-------#69--------
+ As Fahrenheit: 69.00000
+ As Celsius: 20.55556
+ Getters: 69.00000 F
+ toString: Temperature = 69.0 F
+Temperature and scale?
+-------#70--------
+ As Fahrenheit: 158.00000
+ As Celsius: 70.00000
+ Getters: 70.00000 C
+ toString: Temperature = 70.0 C
+Temperature and scale?
+-------#71--------
+ As Fahrenheit: 71.00000
+ As Celsius: 21.66667
+ Getters: 71.00000 F
+ toString: Temperature = 71.0 F
+Temperature and scale?
+-------#72--------
+ As Fahrenheit: 161.60000
+ As Celsius: 72.00000
+ Getters: 72.00000 C
+ toString: Temperature = 72.0 C
+Temperature and scale?
+-------#73--------
+ As Fahrenheit: 73.00000
+ As Celsius: 22.77778
+ Getters: 73.00000 F
+ toString: Temperature = 73.0 F
+Temperature and scale?
+-------#74--------
+ As Fahrenheit: 165.20000
+ As Celsius: 74.00000
+ Getters: 74.00000 C
+ toString: Temperature = 74.0 C
+Temperature and scale?
+-------#75--------
+ As Fahrenheit: 75.00000
+ As Celsius: 23.88889
+ Getters: 75.00000 F
+ toString: Temperature = 75.0 F
+Temperature and scale?
+-------#76--------
+ As Fahrenheit: 168.80000
+ As Celsius: 76.00000
+ Getters: 76.00000 C
+ toString: Temperature = 76.0 C
+Temperature and scale?
+-------#77--------
+ As Fahrenheit: 77.00000
+ As Celsius: 25.00000
+ Getters: 77.00000 F
+ toString: Temperature = 77.0 F
+Temperature and scale?
+-------#78--------
+ As Fahrenheit: 172.40000
+ As Celsius: 78.00000
+ Getters: 78.00000 C
+ toString: Temperature = 78.0 C
+Temperature and scale?
+-------#79--------
+ As Fahrenheit: 79.00000
+ As Celsius: 26.11111
+ Getters: 79.00000 F
+ toString: Temperature = 79.0 F
+Temperature and scale?
+-------#80--------
+ As Fahrenheit: 176.00000
+ As Celsius: 80.00000
+ Getters: 80.00000 C
+ toString: Temperature = 80.0 C
+Temperature and scale?
+-------#81--------
+ As Fahrenheit: 81.00000
+ As Celsius: 27.22222
+ Getters: 81.00000 F
+ toString: Temperature = 81.0 F
+Temperature and scale?
+-------#82--------
+ As Fahrenheit: 179.60000
+ As Celsius: 82.00000
+ Getters: 82.00000 C
+ toString: Temperature = 82.0 C
+Temperature and scale?
+-------#83--------
+ As Fahrenheit: 83.00000
+ As Celsius: 28.33333
+ Getters: 83.00000 F
+ toString: Temperature = 83.0 F
+Temperature and scale?
+-------#84--------
+ As Fahrenheit: 183.20000
+ As Celsius: 84.00000
+ Getters: 84.00000 C
+ toString: Temperature = 84.0 C
+Temperature and scale?
+-------#85--------
+ As Fahrenheit: 85.00000
+ As Celsius: 29.44444
+ Getters: 85.00000 F
+ toString: Temperature = 85.0 F
+Temperature and scale?
+-------#86--------
+ As Fahrenheit: 186.80000
+ As Celsius: 86.00000
+ Getters: 86.00000 C
+ toString: Temperature = 86.0 C
+Temperature and scale?
+-------#87--------
+ As Fahrenheit: 87.00000
+ As Celsius: 30.55556
+ Getters: 87.00000 F
+ toString: Temperature = 87.0 F
+Temperature and scale?
+-------#88--------
+ As Fahrenheit: 190.40000
+ As Celsius: 88.00000
+ Getters: 88.00000 C
+ toString: Temperature = 88.0 C
+Temperature and scale?
+-------#89--------
+ As Fahrenheit: 89.00000
+ As Celsius: 31.66667
+ Getters: 89.00000 F
+ toString: Temperature = 89.0 F
+Temperature and scale?
+-------#90--------
+ As Fahrenheit: 194.00000
+ As Celsius: 90.00000
+ Getters: 90.00000 C
+ toString: Temperature = 90.0 C
+Temperature and scale?
+-------#91--------
+ As Fahrenheit: 91.00000
+ As Celsius: 32.77778
+ Getters: 91.00000 F
+ toString: Temperature = 91.0 F
+Temperature and scale?
+-------#92--------
+ As Fahrenheit: 197.60000
+ As Celsius: 92.00000
+ Getters: 92.00000 C
+ toString: Temperature = 92.0 C
+Temperature and scale?
+-------#93--------
+ As Fahrenheit: 93.00000
+ As Celsius: 33.88889
+ Getters: 93.00000 F
+ toString: Temperature = 93.0 F
+Temperature and scale?
+-------#94--------
+ As Fahrenheit: 201.20000
+ As Celsius: 94.00000
+ Getters: 94.00000 C
+ toString: Temperature = 94.0 C
+Temperature and scale?
+-------#95--------
+ As Fahrenheit: 95.00000
+ As Celsius: 35.00000
+ Getters: 95.00000 F
+ toString: Temperature = 95.0 F
+Temperature and scale?
+-------#96--------
+ As Fahrenheit: 204.80000
+ As Celsius: 96.00000
+ Getters: 96.00000 C
+ toString: Temperature = 96.0 C
+Temperature and scale?
+-------#97--------
+ As Fahrenheit: 97.00000
+ As Celsius: 36.11111
+ Getters: 97.00000 F
+ toString: Temperature = 97.0 F
+Temperature and scale?
+-------#98--------
+ As Fahrenheit: 208.40000
+ As Celsius: 98.00000
+ Getters: 98.00000 C
+ toString: Temperature = 98.0 C
+Temperature and scale?
+-------#99--------
+ As Fahrenheit: 99.00000
+ As Celsius: 37.22222
+ Getters: 99.00000 F
+ toString: Temperature = 99.0 F
+Temperature and scale?
+-------#100--------
+ As Fahrenheit: 212.00000
+ As Celsius: 100.00000
+ Getters: 100.00000 C
+ toString: Temperature = 100.0 C

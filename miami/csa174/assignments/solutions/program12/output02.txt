@@ -1,0 +1,64 @@
+MyString tester
+Enter line 1: 
+Enter line 2: 
+Enter line 3: 
+For the MyString 'This is a sentence, a longer line of text.':
+**There are 42 characters
+**T h i s   i s   a   s e n t e n c e ,   a   l o n g e r   l i n e   o f   t e x t . **
+Testing the .equals method.
+** Test 1...passed!
+** Test 2...passed!
+Testing indexOf() method:..........................................passed!
+Testing lastIndexOf() method:..........................................passed!
+Testing toCharArray: 
+..........................................passed!
+Testing toUpperCase(): passed!
+Testing toLowerCase(): passed!
+Testing substring(s):..........................................passed!
+Testing substring(s,e):.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................passed!
+Invoking sameCharacters
+'This is a sentence, a longer line of text.' same as 'Hope everything is working.' ==> false
+'This is a sentence, a longer line of text.' same as 'this aenc,logrfx.' ==> false
+Testing toCharArray...
+passed!
+***************************************************
+For the MyString 'Hope everything is working.':
+**There are 27 characters
+**H o p e   e v e r y t h i n g   i s   w o r k i n g . **
+Testing the .equals method.
+** Test 1...passed!
+** Test 2...passed!
+Testing indexOf() method:...........................passed!
+Testing lastIndexOf() method:...........................passed!
+Testing toCharArray: 
+...........................passed!
+Testing toUpperCase(): passed!
+Testing toLowerCase(): passed!
+Testing substring(s):...........................passed!
+Testing substring(s,e):...............................................................................................................................................................................................................................................................................................................................................................passed!
+Invoking sameCharacters
+'Hope everything is working.' same as 'This is a sentence, a longer line of text.' ==> false
+'Hope everything is working.' same as 'this aenc,logrfx.' ==> false
+Testing toCharArray...
+passed!
+***************************************************
+For the MyString 'this aenc,logrfx.':
+**There are 17 characters
+**t h i s   a e n c , l o g r f x . **
+Testing the .equals method.
+** Test 1...passed!
+** Test 2...passed!
+Testing indexOf() method:.................passed!
+Testing lastIndexOf() method:.................passed!
+Testing toCharArray: 
+.................passed!
+Testing toUpperCase(): passed!
+Testing toLowerCase(): passed!
+Testing substring(s):.................passed!
+Testing substring(s,e):........................................................................................................................................passed!
+Invoking sameCharacters
+'this aenc,logrfx.' same as 'This is a sentence, a longer line of text.' ==> true
+'this aenc,logrfx.' same as 'Hope everything is working.' ==> false
+Testing toCharArray...
+passed!
+***************************************************

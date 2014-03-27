@@ -1,0 +1,55 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large Homework 05}{CSA274 - Spring 2006 - Miami University \\ \bf\Large }{\bf\Large  March 2nd, 2006 }
+\runningheader{CSA 274}{Miami University}{Homework 05}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+      {\bf Assigned: } Thursday, March 2nd, 2006 \newline
+      {\bf Due: } Thursday, March 9th, 2006 - At the beginning of class \newline
+      \numquestions\  questions for a total of  \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Java,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+% Questions start here:
+\begin{questions}
+
+\uplevel{Since this homework is due the last class period before spring break, no late submissions will be accepted.}
+
+\question[10] Show the resultant binary search tree if the following numbers are inserted (in this order). \newline
+{\tt 7, 15, 47, 9, 44, 14, 22, 47, 6, 24, 32, 2, 14, 22, 17, 8, 45, 23, 45, 14}
+
+\vspace{5.5in}
+\question[10] Show the result of a pre-order traversal on the tree you just created.
+
+\end{questions}
+\end{document}
+

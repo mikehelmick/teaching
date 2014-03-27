@@ -1,0 +1,5 @@
+Enter an integer: Sum of even numbers from 2 to 22 = 132
+Enter any word: char 0:t
+char 1:e
+char 2:s
+char 3:t

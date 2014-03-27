@@ -1,0 +1,44 @@
+How many students? How many tests? Enter 10 test scores for student number 1.
+----------
+Enter 10 test scores for student number 2.
+----------
+Enter 10 test scores for student number 3.
+----------
+Enter 10 test scores for student number 4.
+----------
+Enter 10 test scores for student number 5.
+----------
+Enter 10 test scores for student number 6.
+----------
+Enter 10 test scores for student number 7.
+----------
+Enter 10 test scores for student number 8.
+----------
+Enter 10 test scores for student number 9.
+----------
+Enter 10 test scores for student number 10.
+----------
+****************************************
+Average test scores:
+Test #1 = 45.24
+Test #2 = 52.26
+Test #3 = 35.44
+Test #4 = 63.69
+Test #5 = 57.32
+Test #6 = 48.20
+Test #7 = 46.91
+Test #8 = 39.53
+Test #9 = 51.67
+Test #10 = 53.90
+Average for students:
+Student #1 = 47.47
+Student #2 = 43.22
+Student #3 = 49.11
+Student #4 = 51.29
+Student #5 = 40.82
+Student #6 = 67.35
+Student #7 = 38.34
+Student #8 = 45.12
+Student #9 = 54.55
+Student #10 = 56.89
+Overall average for the class: 49.42

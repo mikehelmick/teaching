@@ -1,0 +1,31 @@
+How many temps? 
+Temperature and scale?
+-------#1--------
+ As Fahrenheit: 32.00000
+ As Celsius: 0.00000
+ Getters: 32.00000 F
+ toString: Temperature = 32.0 F
+Temperature and scale?
+-------#2--------
+ As Fahrenheit: 32.00000
+ As Celsius: 0.00000
+ Getters: 0.00000 C
+ toString: Temperature = 0.0 C
+Temperature and scale?
+-------#3--------
+ As Fahrenheit: 100.00000
+ As Celsius: 37.77778
+ Getters: 100.00000 F
+ toString: Temperature = 100.0 F
+Temperature and scale?
+-------#4--------
+ As Fahrenheit: 212.00000
+ As Celsius: 100.00000
+ Getters: 100.00000 C
+ toString: Temperature = 100.0 C
+Temperature and scale?
+-------#5--------
+ As Fahrenheit: 0.00000
+ As Celsius: -17.77778
+ Getters: 0.00000 F
+ toString: Temperature = 0.0 F

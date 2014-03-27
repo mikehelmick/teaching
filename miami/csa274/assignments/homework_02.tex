@@ -1,0 +1,51 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{CSA274 - Spring 2006 - Miami University \\ \bf\Large Homework 02}{\bf\Large January 12th, 2005 }
+\runningheader{CSA 274}{Miami University}{Homework 02}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+      {\bf Assigned: } Thursday, January 12, 2006 \newline
+      {\bf Due: } Thursday, January 19, 2006 - At the beginning of class \newline
+      \numquestions\  questions for a total of  \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+% Questions start here:
+\begin{questions}
+
+\question[15] Read the article {\it OO in One Sentence} and summarize the key points of the article.  (The article is linked from BlackBoard) 
+
+
+\end{questions}
+
+\end{document}
+

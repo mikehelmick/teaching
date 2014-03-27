@@ -1,0 +1,8 @@
+Enter the number of hours: Enter the number of minutes: Enter the number of seconds: Total seconds = 3661
+Enter the amount of money you have: 0 ten dollar bills
+0 five dollar bills
+1 one dollar bills
+1 quarters
+1 dimes
+1 nickels
+1 pennies

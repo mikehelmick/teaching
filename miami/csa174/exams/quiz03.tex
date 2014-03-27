@@ -1,0 +1,212 @@
+\documentclass[10pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+% exam settings
+%\boxedpoints
+%\pointsinmargin
+%\printanswers 
+\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CSA174}{\bf\Large Quiz 03}{\bf\Large
+  2007-11-19 }
+\runningheader{CSA 174}{Miami University}{Quiz 03}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CSA174 - Fall 2007 - Quiz 03 \newline
+	Miami University \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points.
+}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Java,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+Please circle your section:
+\begin{itemize}
+	\item Section A - 10:00am Lab
+	\item Section C - 12:00pm Lab
+	\item Section D - 01:00pm Lab
+\end{itemize} 
+
+\begin{center} 
+\gradetable[h][questions] 
+\end{center}
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice and True/False}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+	
+\part[2] True or false, An array can hold values of any type, i.e. holding {\tt int}s and {\tt double}s at the same time.
+\begin{choices}
+  \choice true \choice false	
+\end{choices}
+\begin{solution}[0.5in] b - false \end{solution}
+
+\part[2] True or false, an array can be resized after creation.
+\begin{choices}
+ \choice true \choice false 
+\end{choices}
+\begin{solution}[0.5in] b - false \end{solution}
+	
+\part[2] The first element of an array is at index 
+\begin{choices}
+  \choice -1
+  \choice 1
+  \choice 0
+\end{choices}
+\begin{solution}[0.5in] c - zero (0) \end{solution}
+
+\end{parts}
+	
+\newpage
+
+\section*{Short Answer}
+
+\question[5] Describe two (2) programs that would be harder to write without arrays.
+\begin{solution}[3.0in]
+	// todo
+\end{solution}
+
+\question[6] Describe what problem (or problems) occur(s) in the following code.   What modification(s) should be made to correct the code?
+\begin{lstlisting}
+int[] numbers = { 3, 2, 3, 6, 9, 10, 12, 32, 3, 12, 6 };
+for( int index = 1; index <= numbers.length; index++ ) {
+    System.out.println( numbers[index] );
+}	
+\end{lstlisting}
+\begin{solution}
+The starting and ending index are incorrect - the first element is missed, and it goes past the last element.
+\par
+Fix by doing \newline
+  \begin{lstlisting}
+  for( int index = 0; index < numbers.length; index++ ) {	
+  \end{lstlisting}
+\end{solution}
+
+\newpage
+
+\section*{Code Analysis}
+
+\question Examine the following code segment and answer the questions below.
+\begin{lstlisting}
+public class ArrayMe {
+	public static void arrayStuff( int[] list ) {
+		for( int i = 0; i < list.length-1; i += 2 ) {
+			if ( list[i] < list[i+1] ) {
+				list[i] = list[i+1];
+			}
+		}
+	}
+}
+\end{lstlisting}
+This method will be called somewhere else, assuming the list array is set to one set of values, what will be the result of the list array after the method executes?
+
+\begin{parts}
+	
+\part[4] If the list array is {\tt \{ 2, 3, 4, 5, 6, 7, 8 \}} ?
+\begin{solution}[2.0in]
+3, 3, 5, 5, 7, 7, 8
+\end{solution}
+
+\part[4] If the list array is {\tt \{ 3, 2, 2, 3, 1, 4, 9, 4 \}} ?
+\begin{solution}[1.0in]
+3, 2, 3, 3, 4, 4, 9, 4
+\end{solution}
+	
+\end{parts}
+
+\newpage
+\section*{Programming Question}
+
+\question[15] Write a method that takes in an array of integer values (assume the values are all between 1 and 100) and prints a histogram of the values.   You should print 1 asterisk for value in the array.   Do {\it not} make assumptions about the size of the array \newline
+\begin{tt}
+1  - 10  : ***\newline
+11 - 20  : *******\newline
+21 - 30  : *\newline
+31 - 40  : ****\newline
+41 - 50  : ******\newline
+51 - 60  : **\newline
+61 - 70  : ***********\newline
+71 - 80  : ***************\newline
+81 - 90  : *************\newline
+91 - 100 : ********\newline
+\end{tt}
+
+\begin{verbatim}
+public class Payroll {
+  public static void main (String[] args) {
+    int[] scores = SomewhereElse.getScores();
+    printHistogram( scores );
+  }
+  
+  public static void printHistogram( int[] scores ) {
+    // START ANSWER HERE
+\end{verbatim}
+\begin{solution}[3.5in]
+\begin{verbatim}
+
+  for( int i = 1; i <= 91; i+= 10 ) {
+    System.out.printf("%2d - %3d : ", i, (i+9) );
+    for( int j = 0; j < scores.length; j++ ) {
+      if ( scores[j] >= i || scores[j] <= j + 9 ) {
+        System.out.print("*");
+      }
+    }
+    System.out.println("");
+  }
+
+\end{verbatim}
+\end{solution}
+\begin{verbatim}
+    // END OF ANSWER
+  }
+}
+\end{verbatim}
+
+
+
+\end{questions}
+
+\end{document}
+

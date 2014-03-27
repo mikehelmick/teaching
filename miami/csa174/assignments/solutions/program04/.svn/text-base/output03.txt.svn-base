@@ -1,0 +1,10 @@
+What is your full name? What is your 10 digit phone number, with no formatting? What is the name of first product that you bought? What is the cost of one Paper ? How many of Paper did you buy? What is the name of second product that you bought? What is the cost of one Notebook ? How many of Notebook did you buy? What is the sales tax percent? ----------
+Levinson, Jan                                      (213) 487-8942
+   Product Name                   Price      Quantity Total
+1) Paper                          $     4.95     1444 $   7147.80
+2) Notebook                       $     1.29     3000 $   3870.00
+-----------------------------------------------------------------
+                                             Subtotal $  11017.80
+                                            Sales Tax $    771.25
+-----------------------------------------------------------------
+                                            Total Due $  11789.05

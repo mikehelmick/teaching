@@ -1,0 +1,2 @@
+Enter QB statistics: games, completions, attempts, yards, interceptions, TDs
+attempts must be >= 0

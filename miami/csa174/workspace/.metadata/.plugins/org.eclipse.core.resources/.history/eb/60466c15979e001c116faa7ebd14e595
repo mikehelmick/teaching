@@ -1,0 +1,15 @@
+import javax.swing.JFrame;
+
+public class Pong {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Pong");
+		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		
+		frame.getContentPane().add( new PongPanel() );
+		
+		frame.pack();
+		frame.setVisible( true );
+	}
+
+}

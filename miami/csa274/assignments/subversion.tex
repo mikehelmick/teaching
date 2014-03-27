@@ -1,0 +1,94 @@
+%
+%  subversion
+%
+%  Created by Mike Helmick on 2006-03-07.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+\documentclass[10pt]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyheadings}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+\title{Subversion for CSA274}
+\author{Mike Helmick - helmicmt@muohio.edu}
+
+\begin{document}
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\maketitle
+
+\section{Subversion}
+All code will be managed in Subversion (a version control system) using the departmental subversion server.   To obtain the Subversion client, download from \newline
+  {\tt http://subversion.tigris.org/project\_packages.html}.  \newline
+I suggest downloading the binary version for your platform, as building subversion can be a tedious process.
+\par
+There is a very good Subversion plugin for Eclipse, which you can get here \newline {\tt http://subclipse.tigris.org/install.html}. \newline
+ If this is your first experience with a version control system (and even if it isn't), I highly suggest working with subversion entirely in Eclipse.
+\par
+Your individual Subversion repository is located at {\tt http://svn.sanclass.org/uniqueid}.   This is a fairly secure mechanism for storing your code.   You are the only person who has write access to your repository, and you and I are the only people with read access.   You access your repository using your Miami username and password and can view your repository by entering the URL in your web browser (how cool is that).
+
+\subsection{What is version control?}
+Version control is like a big undo button for your project.   Each time you commit your changes to the repository, that exact version is saved, allowing you to compare to and/or go back to a previous version at any time.  This version control system also serves as a backup and an easy way to transfer files between computers (you can connect multiple computers to your Subversion repository).
+
+\subsection{Appropriate Trunk}
+Here are the setup commands for your repository (you will need to do this on the command line). You will set up a directory for the semester ({\tt 2006S}), the class ({\tt csa274}), the first project ({\tt project3}), and a development folder ({\tt dev}).
+
+\begin{verbatim}
+svn mkdir --username uniqueid -m "setup" \
+     http://svn.sanclass.org/uniqueid/2006S
+svn mkdir --username uniqueid -m "setup" \
+     http://svn.sanclass.org/uniqueid/2006S/csa274
+svn mkdir --username uniqueid -m "setup" \
+     http://svn.sanclass.org/uniqueid/2006S/csa274/project3
+svn mkdir --username uniqueid -m "setup" \
+     http://svn.sanclass.org/uniqueid/2006S/csa274/project3/dev
+\end{verbatim}
+
+\par
+You will do all of your work in the {\tt dev} directory.   Committing often!  I recommend committing your work every time you complete a task and at a minimum once every coding session.
+
+\end{document}

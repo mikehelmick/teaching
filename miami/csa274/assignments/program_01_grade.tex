@@ -1,0 +1,73 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2005-09-06.
+%  Copyright (c) 2005 Mike Helmick. All rights reserved.
+%
+%
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{\bf\Large Program 01}{\bf\Large }
+\runningheader{CSA274}{}{Program 01}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+  This project is worth \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+% Questions start here:
+\begin{questions}
+
+\question Phase I \makebox[.5in]{\hrulefill}/70 
+\begin{parts}
+  \part[40] Program functions correctly \makebox[.5in]{\hrulefill}/40
+    \vspace{0.9in}
+  \part[10] Program comments \makebox[.5in]{\hrulefill}/10
+    \vspace{0.9in}
+  \part[10] Time log submitted \makebox[.5in]{\hrulefill}/10
+    \vspace{0.9in}
+  \part[10] Test plan \makebox[.5in]{\hrulefill}/10
+    \vspace{0.9in}
+\end{parts}
+
+\question[10] Phase II: program meets phase 2 requirements  \makebox[.5in]{\hrulefill}/10
+\vspace{1.0in}
+
+\question[10] Phase III: program meets phase 3 requirements  \makebox[.5in]{\hrulefill}/10
+\vspace{1.0in}
+
+\question[10] Phase IV: program meets phase 4 requirements  \makebox[.5in]{\hrulefill}/10
+
+
+\end{questions}
+
+\end{document}
+

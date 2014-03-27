@@ -1,0 +1,88 @@
+8
+
+dir
+47
+https://mikehelmick.com/svn/teaching/trunk/miami/csa174/labs/solutions/Lab09/src
+https://mikehelmick.com/svn/teaching
+
+
+
+2007-10-24T14:02:49.298548Z
+47
+mhelmick
+
+
+svn:special svn:externals svn:needs-lock
+
+input02.txt
+file
+
+
+
+
+2007-10-24T13:49:44.000000Z
+acaa610d5fd79e797023efc026302744
+2007-10-24T14:02:49.298548Z
+47
+mhelmick
+
+output01.txt
+file
+
+
+
+
+2007-10-24T13:50:23.000000Z
+2d3a981a762bb56bc460c290778a901a
+2007-10-24T14:02:49.298548Z
+47
+mhelmick
+
+output02.txt
+file
+
+
+
+
+2007-10-24T13:50:28.000000Z
+5cef387cdb9091faeb9ff761ed83b7ea
+2007-10-24T14:02:49.298548Z
+47
+mhelmick
+
+Lab09Main.java
+file
+
+
+
+
+2007-10-24T13:44:00.000000Z
+76f2a39b36899a0c04e35e100871ecd1
+2007-10-24T14:02:49.298548Z
+47
+mhelmick
+
+Temperature.java
+file
+
+
+
+
+2007-10-24T13:44:25.000000Z
+1d126a2b75ea92d95b5436c4b27150f4
+2007-10-24T14:02:49.298548Z
+47
+mhelmick
+
+input01.txt
+file
+
+
+
+
+2007-10-24T13:47:36.000000Z
+a101000ee4ea6a8f076e79b0b0db06b8
+2007-10-24T14:02:49.298548Z
+47
+mhelmick
+

@@ -1,0 +1,68 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large Homework 03}{CSA274 - Spring 2006 - Miami University \\ \bf\Large }{\bf\Large  January 26th, 2006 }
+\runningheader{CSA 274}{Miami University}{Homework 03}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+      {\bf Assigned: } Thursday, January 19, 2006 \newline
+      {\bf Due: } Thursday, January 26, 2006 - At the beginning of class \newline
+      \numquestions\  questions for a total of  \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+% Questions start here:
+\begin{questions}
+
+\question[5] Define the terms {\it procedural abstraction} and {\it data abstraction}.
+\vspace{2in}
+
+\question[5] Explain the role of method preconditions and postconditions.
+\vspace{2in}
+
+\question[5] Fill in the following table: \newline
+\begin{tabular}{|c|c|c|c|} \hline
+	{\bf Property } & {\bf Actual Class} & {\bf Abstract Class} & {\bf Interface } \\ \hline \hline
+	Instances (Objects) of this can be created & & & \\ \hline
+	This can define instance variables and methods & & & \\ \hline
+	This can define constants & & & \\ \hline
+	The number of these a class can extend & & & \\ \hline
+	The number of these a class can implement & & & \\ \hline
+	This can extend another class & & & \\ \hline
+	This can declare abstract methods & & & \\ \hline
+	Variables of this type can be declared & & & \\ \hline
+\end{tabular}
+
+
+\end{questions}
+
+\end{document}
+

@@ -1,0 +1,71 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large Miami University}{\bf\Large Homework 01}{\bf\Large Jan 8, 2007 }
+\runningheader{CSA 470/j570j}{}{Homework 01}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+	  {\bf CSA274-B Homework 01} \newline
+      {\bf Assigned: } Monday, January 8, 2007 \newline
+      {\bf Due: } Wednesday, January 10, 2007 - At the beginning of class 
+      }}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+\section*{Instructions}
+Please fill out this information and bring it with you to class on Wednesday.
+
+% Questions start here:
+\begin{questions}
+
+\question[1] Make sure that you can log on to https://my.csi.muohio.edu/ {\bf TODAY}.   {\it If you enrolled in this class today, then you might have to wait until tomorrow.}
+
+\question  Please fill out the following survey:
+
+\begin{parts}
+\part[1]  Name:
+\part[1]  Email: \hspace{.5in} @muohio.edu
+\part[1]  Major:
+\part[1]  Year (e.g., sophomore):
+\part[1]  Describe something unique about yourself:
+   \vspace{1.0in}
+\part[1]  Describe your programming experience (languages and amount of time):
+   \vspace{1.0in}
+\part[1]  Have you ever used a debugger?
+\part[1]  What do you want to get out of this course?
+   \vspace{1in}
+\part[1]  Other comments?
+\end{parts}
+
+\end{questions}
+
+\end{document}
+

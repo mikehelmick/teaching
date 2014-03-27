@@ -1,0 +1,68 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large }{CSA274 - Spring 2006 - Miami University \\ \bf\Large Homework 01}{\bf\Large January 10th, 2005 }
+\runningheader{CSA 274}{Miami University}{Homework 01}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering 
+      {\bf Assigned: } Tuesday, January 10, 2006 \newline
+      {\bf Due: } Thursday, January 12, 2006 - At the beginning of class \newline
+      \numquestions\  questions for a total of  \numpoints\ points.}}}
+\end{center} 
+
+% setup standard options for the including code fragments
+\lstset{language=Python,numbers=left}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+
+% Questions start here:
+\begin{questions}
+
+\question[1] Make sure that you can access Blackboard {\bf TODAY}. 
+
+\question[4]  Please fill out the following survey:
+
+\begin{parts}
+\part  Name:
+\part  Email: \hspace{.5in} @muohio.edu
+\part  Major:
+\part  Degree:
+\part  Year (e.g., sophomore):
+\part  Describe something unique about yourself:
+   \vspace{.75in}
+\part  Describe your programming experience (languages and amount of time):
+   \vspace{.75in}
+\part  Have you ever used a debugger?
+\part  What do you want to get out of this course?
+   \vspace{1in}
+\part  Other comments?
+\end{parts}
+
+\end{questions}
+
+\end{document}
+

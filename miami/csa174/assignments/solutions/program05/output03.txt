@@ -1,0 +1,2 @@
+Enter QB statistics: games, completions, attempts, yards, interceptions, TDs
+QB Rating: 101.0 (Impressive)

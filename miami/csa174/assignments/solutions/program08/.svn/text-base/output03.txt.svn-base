@@ -1,0 +1,53 @@
+You are at (0,0)
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (0,5)
+Steps Taken (5): *
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (5,5)
+Steps Taken (10): *
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (5,-5)
+Steps Taken (20): **
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (-5,-5)
+Steps Taken (30): ***
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (3,3)
+Steps Taken (40): ****
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (11,-4)
+Steps Taken (50): *****
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (1,7)
+Steps Taken (65): *******
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (-6,0)
+Steps Taken (75): ********
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (94,0)
+Steps Taken (175): ******************
+Enter the direction to travel ('exit to quit)
+Enter the number of steps:
+----------------------------------------
+You are now at (49,0)
+Steps Taken (220): **********************
+Enter the direction to travel ('exit to quit)
+Your final location is (49,0)

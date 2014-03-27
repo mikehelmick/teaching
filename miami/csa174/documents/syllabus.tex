@@ -1,0 +1,328 @@
+%
+%  syllabus
+%
+%  Created by Mike Helmick on 2007-05-23.
+%  Copyright (c) 2007 __MyCompanyName__. All rights reserved.
+%
+\documentclass[]{article}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+\usepackage{url}
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyhdr}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+
+%\newif\ifpdf
+%\ifx\pdfoutput\undefined
+%\pdffalse % we are not running PDFLaTeX
+%\else
+%\pdfoutput=1 % we are running PDFLaTeX
+%\pdftrue
+%\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+\title{Miami University \\ CSA174 Syllabus \\ Fall 2007}
+\author{Dr. Mike Helmick \\ mike.helmick@muohio.edu}
+
+\date{August 20, 2007}
+
+\begin{document}
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\maketitle
+
+\section*{Instructor}
+\begin{itemize}
+	\item Mike Helmick, PhD
+	\item {\bf Office:} Kreger Hall 209-A 
+	\item {\bf E-Mail:} {\tt mike.helmick@muohio.edu}
+	\item {\bf Website:} \url{https://my.csi.muohio.edu}
+	\item {\bf Instant Message:} Miami's IM Service - {\tt helmicmt@muohio.edu}
+	\begin{itemize}
+		\item See Miami Knowledge Base Case 90360 for configuration - \url{http://kb.muohio.edu}
+	\end{itemize}
+	\item {\bf Facebook:} \url{http://www.facebook.com/p/Mike_Helmick/7727426}
+	\item {\bf Phone:} 513.529.1467
+	\item {\bf Office Hours:} M 2:00 - 3:00pm, R 9:30am - 10:30am, 2:00pm - 3:00pm
+	\begin{itemize}
+		\item {\bf Or just stop by - If I’m in and not busy I will be glad to answer your questions.}
+	\end{itemize}
+\end{itemize}
+
+\section*{Important Dates}
+Please mark the following important dates on your calendar. Late work is absolutely not accepted, and missed exams cannot be made up except in extreme circumstances or with the prior permission of the instructor.   Exams for this class are held in the evening (all sections at the same time), so it is possible that you will have a conflict with another class.
+\newline
+\begin{tabular}{ll} 
+Mon, Aug 20 & First day of class \\
+Mon, Sept 3 & Labor Day - {\it no class} \\
+Wed, Oct 3 & {\bf Exam 1 : 7:00pm to 9:00pm} \\
+
+Fri, Oct 19 & Fall Break - {\it no class} \\
+Wed, Nov 7 & {\bf Exam 2 : 7:00pm to 9:00pm} \\
+Wed, Nov 21 & Thanksgiving Break - {\it no class} \\
+Fri, Nov 23 & Thanksgiving Break - {\it no class} \\
+Fri, Dec 7 & Last day of class \\
+Tues, Dec 11 & {\bf Final Exam : 9:45am to 11:45am} {\it Room TBA} \\
+\end{tabular}
+
+
+
+\section*{Course Details}
+{\bf Catalog description:} An introduction to computer programming in a contemporary language.   Algorithm development, refinement, and problem solving approaches.  Data types and control structures. Program debugging and testing. Interactive input/output. Single and multi-dimensional arrays. Simple sorting and searching algorithms. Introduction to classes, objects, and object-oriented programming.
+\par
+{\bf Prerequisites:} Algebra and trigonometry
+\par
+{\bf Required text:} {\underline Java Foundations, Introduction to Program Design \& Data Structures} by John Lewis, Peter J. DePasquale, and Joseph Chase.  Addison-Wesley 2008.  ISBN: 978-0-321-42972-8 {\bf This is NOT the same text that we have been using for the past few years in this course.}
+\par
+{\bf Meeting Times:} There are 3 sections with both common and different meeting times.   All sections are full, so {\bf you must attend the lab section that you are registered for}.   It is possible that you will be able to change your registration.
+\par
+{\bf Weekly Lecture:} All 3 sections have a common weekly lecture - Monday 1:00pm - 1:50pm, Kreger 135 \newline
+{\bf Labs}: All labs take place in Kreger 105
+\begin{itemize}
+	\item {\bf Section A}: Wednesday and Friday, 10:00am - 10:50am
+	\item {\bf Section C}: Wednesday and Friday, 12:00pm - 12:50pm
+	\item {\bf Section D}: Wednesday and Friday, 1:00pm  - 1:50pm
+\end{itemize}
+\par
+{\bf Course Website:} {\it Everything} for this course is managed through \url{https://my.csi.muohio.edu/}.  {\it Will will not be using Blackboard at all.}   The course Web site will contain documents, lectures, podcasts, assignments, RSS feed, course blog, and {\bf where you turn in all of your work}.
+\par
+{\bf Course Objectives:} {\bf TODO}
+
+\section*{Grading}
+The following, standard CSA department grading criteria will be used in this course: \newline
+\begin{table}[h] 
+ \begin{center}
+ \begin{tabular}{|l|l|} \hline 
+	Grade & Criteria \\ \hline \hline
+	A & Complete mastery of essential topics \\ \hline
+	B & Very good knowledge of essential topics \\ \hline
+	C & Knowledge of essential topics, bug major areas of deficiency \\ \hline
+	D & Some familiarity with essential topics, but major areas of deficiency \\ \hline
+	F & Serious incomplete work or little evidence of knowledge of course topics \\ \hline
+ \end{tabular} 
+ \end{center}
+\end{table}
+
+Work in this course is divided into categories, and the categories are weighted as such:
+
+\begin{table}[h] 
+  \begin{center}
+	\begin{tabular}{|l|l|r|} \hline
+		Exams (50\%) & Exam 1     & 15\% \\ \hline	
+		             & Exam 2     & 15\% \\ \hline
+		             & Final Exam & 20\% \\ \hline \hline
+		Quizzes      & 3 Quizzes  & 10\% \\ \hline \hline
+		Course Work (30\%) & Programming Projects & 25\% \\ \hline
+		             & Labs and Homework          &  5\% \\ \hline \hline
+		Other        & Attendance and Participation & 10\% \\ \hline 
+		
+	\end{tabular}
+  \end{center}
+\end{table}
+
+\section*{Course Objectives}
+{\it These are the standard, departmental course objectives for all sections of this course.}
+\begin{itemize}
+	\item Describe the programming environments and the process of program translation from source code to intermediate or executable representation. 
+	\item Specify, design, and implement programs written in a contemporary programming language, currently Java, that solves the stated problem in a clean and robust fashion. 
+	\item Use techniques and tools for debugging programs and develop strategies for testing a program's correctness. 
+	\item Understand and appropriately apply primitive data types control structures (sequence, selection, repetition). 
+	\item Incorporate console input/output into computer programs. 
+	\item Be able to use and implement class definitions in computer programs. 
+	\item Be able to design classes, methods, and data members to solve the problem effectively. 
+	\item Describe and implement fundamental algorithms in sorting and searching. 
+	\item Use one-dimensional and two-dimensional arrays. 
+\end{itemize}
+
+\section*{Course Policies, Procedures, Etc...}
+	
+\subsection*{Preparation, Policies, and Participation}
+Reading the assigned sections of the textbook or supplemental reading is an essential part of class preparation. 
+\par
+There are a lot of group/pair assignments in this course.  If groups are not specified, assume the assignment is individual work. 
+\par
+Class participation (or lack of) can affect your grade positively or negatively.   Attendance is required, and will be recorded for most class meetings. 
+{\it If you do have to miss a class - notify me as soon as you can, preferably before the class.}
+
+\subsection*{Exams} 
+The two mid-term exams will be administered at a common time (evening) for all sections of this course.  There 
+will be a make-up test scheduled for those who are excused from the scheduled tests.  The only acceptable 
+excuse for missing the scheduled test is that it conflicts with another course.  We will excuse 
+only those for whom there was no other alternative.  Begin to arrange your schedule now (work, meetings, inter- 
+views, etc.).   The exams will be closed book and closed-note, taking the entire class period. Unexcused missed 
+exams will be recorded as a zero. 
+
+\subsection*{Programming Assignments}
+Take home assignments where the goal is to design and implement a computer program in the Java programming 
+language to solve a specific problem. 
+
+\subsection*{Homework} 
+Written (non-programming) work that varies in scope, relates to class material, and prepares you for program- 
+ming assignments. 
+
+\subsection*{Quizzes} 
+Short quizzes, taken in class, announced in advance.   There may be take home quizzes, which are still considered to be individual work. 
+
+\subsection*{Attendance and Participation}
+A successful classroom is one in which everyone participates. Your class participation grade will be based on your  attendance, your positive contributions to the class by asking and answering questions, your willingness to help  others in the class learn the material, and your completion of classroom exercises. I will take attendance and keep track of classroom exercises. Your positive contributions and willingness to help others will be evaluated subjectively based on your participation and some feedback I will gather at the end of the semester. 
+\par
+{\it Participation in the class discussion boards is a sure way to demonstrate your class participation.}
+
+\subsection*{Programming Projects and other Homework}
+30\% of your grade is based on your programming assignments, labs, and homework.  Begin assignments early to allow yourself plenty of time to run into difficulties, seek help, and get your questions answered.  Programming projects and homework can {\bf not} be turned in late.  Even if you are absent, the assignment must be submit-ted by the time it is due as indicated on the course Web site.  {\it The course Web site will not even let your turn in late work}.  Always be prepared for computer/network failures by making frequent backups of your work.  Programming assignments are graded based not only on whether they correctly solve a given problem, but on the logic used to solve the problem, programming style, and other specifications given for each assignment. 
+\par
+Discussion of course related material is encouraged, but sharing of assignments and/or answers is strictly prohibited. Students are expected to use good judgment with regard to receiving outside help. Programs that are essentially identical are considered to be the work of another, and will be treated as academic dishonesty.  Please refer to the Miami Student Handbook for a description of student expectations. 
+
+\subsection*{Office Hours}
+If you need assistance with homework or programming, do not hesitate to ask for help.  If you are unable to make scheduled office hours, please schedule an appointment with me, or just stop by.  If you need assistance with a programming assignment, please make sure you bring electronic copies and/or printouts of your code. 
+I am easily reachable by email and instant message (using Miami Chat) at times outside of the normal work day.  I frequently answer my email in the evening or on weekends, so if you have a question, ask. 
+
+\subsection*{Email and Announcements}
+The course Web site has a Blog where announcements will be posted.  This information is also available via an RSS feed (see course Web site).  I will also occasionally send announcements by e-mail, using your Miami e-mail address (I will not send announcements directly to alternate email addresses).  It is your responsibility to check your e-mail and the course Web site regularly.  If necessary, you can configure Miami’s e-mail to forward all your incoming messages to an e-mail address of your choice.  For more information about forwarding your e-mail, read case \#98452 in Miami’s knowledge base at http://kb.muohio.edu. 
+
+\subsection*{Podcasts}
+Some course material will be delivered via podcast, you are responsible for viewing/listening to these podcasts.  More information will be given about these in class.
+
+\subsection*{Late Work}
+No assignments are accepted late.  All work is due at the specified time on the course Web site.  Exceptions may occur in emergency situations. You should never assume you have an extension until you have talked to me or have an official correspondence from a doctor or other authority explaining why you need the extension.  Always back up your electronic work to be prepared for computer/network outages. 
+
+\subsection*{Textbook }
+The reading assignments for this course can be found on the week-by-week schedule in this syllabus.  The reading supplements class lectures, podcasts, and activities, and includes important details not covered in class.  Tests, programming projects, and other assignments are given based on the assumption that you are reading the text, and asking questions when there is something you do not understand. 
+
+\subsection*{Makeup Exams}
+Makeup exams/quizzes will be allowed under the following conditions: 1.) An unexpected emergency arises. 2.) The student has a university-scheduled function.  Note, that makeup exams are not guaranteed and require a legitimate excuse. In all cases, students are responsible for informing the instructor at the earliest possible time.
+\par
+Our final exam is scheduled for Tuesday, December 11th, from 9:45-11:45 a.m.  The university policy for the final exam is that no exam may be administered early except with written permission from the Associate Dean of the division.  This permission is typically not given except under extraordinary circumstances.
+
+\subsection*{Classroom Computers}
+Log in when you arrive.  Log out when you leave.  Do not bring food or drinks to the classroom.  This classroom 
+is not an open lab.  If you need a lab, you can use the computers in 204 Kreger or 200 Gaskill.   There are a few Mac OS X computers in the 204 Kreger lab, if you want to keep the interface consistent. 
+
+\subsection*{Miami University Learning Community}
+Miami University is committed to fostering a supportive learning environment for all students irrespective of individual differences in gender, race, national origin, religion, handicapping condition, sexual preference, or age.  Students should expect, and help create, a supportive learning environment free from all forms of prejudice.  Disparaging comments, sexist or racist humor, or questioning the academic commitment of students based upon these individual differences are behaviors that undermine our learning community.  If such behaviors occur in class, please see the assistance of your instructor or department chair. 
+
+\subsection*{Withdrawing / Dropping}
+Withdrawing University Deadline for Withdrawing from a Course:  According to the Student handbook, a student may withdraw from a full-semester course through the ninth calendar week of the semester.   After the end of the ninth week, a student may not withdraw from a course unless a petition is approved by the Interdivisional Committee of Advisers. For the full policy, see: \url{www.miami.muohio.edu/documents_and_policies/handbook} 
+
+\subsection*{Attribution}
+This document is primarily authored by Mike Helmick.   Some portions were written by Norm Krumpe, and other parts by Bo Brinkman.
+
+
+\newpage
+\section*{Approximate Schedule}
+\begin{itemize}
+	\item In this course we will be primarily covering the material in Chapters 1-5 and Chapter 7 of {\it Java Foundations} ({\bf JF}). 
+	\item Homework assignments are roughly listed on the date they are assigned, as are in class lab assignments.  Homework is denoted by {\bf H:} and programs are denoted by {\bf P:}.
+	\item Reading indicates what chapter(s)/section(s) you must read before attending class that day.
+\end{itemize}
+
+\small
+\begin{tabular}{|r|l|l|l|l|} \hline
+{\bf Date} & {\bf Coverage } & Reading & Homework & Labs \\ \hline \hline
+M : Aug 20 & How to make a sandwich      &              & H:1 &  \\ \hline 
+W : Aug 22 & Introduction to Java        & JF:1         &     & Lab 1 \\ \hline
+F : Aug 24 & Basic Strings               & JF:2.1       & P:1 & \\ \hline \hline
+
+M : Aug 27 & What happened / What's next &              &     & \\ \hline
+W : Aug 29 & Variables / Primitive Data  & JF:2.2 - 2.4 &     & Lab 2 \\ \hline
+F : Aug 31 &                             &              & P:2 & \\ \hline \hline
+
+M : Sept 03 & {\bf Labor Day - NO CLASS}  &              &     & \\ \hline
+W : Sept 05 & Data Conversion / Input     & JF:2.5 - 2.6 &     & Lab 3 \\ \hline
+F : Sept 07 &                             &              & P:3 & \\ \hline \hline
+  
+M : Sept 10 & What happened / What's next &               &     & \\ \hline
+W : Sept 12 & Using Predefined Classes    & JF:3.1 \& 3.2 &     & Lab 4 \\ \hline
+F : Sept 14 &                             & JF3.4 \& 3.5  & P:4 & \\ \hline \hline
+
+M : Sept 17 & What happened / What's next &               &     & \\ \hline
+W : Sept 19 & Booleans / Conditionals     & JF:4.1 - 4.2  &     & Lab 5 \\ \hline
+F : Sept 21 &                             &               & P:5 & \\ \hline \hline
+
+M : Sept 24 & What happened / What's next &               &     & \\ \hline
+W : Sept 26 & Obj. Comparison / Switch    & JF:4.3 - 4.4  &     & Lab 6 \\ \hline
+F : Sept 28 &                             &               & P:6 & \\ \hline \hline
+
+M :  Oct 01 & Exam Review                 &               &     & \\ \hline
+W :  Oct 03 & Review / Lab Session        &               &     & \\ 
+            & {\bf EXAM 1 - 7:00 - 9:00pm} &              &     & \\ \hline
+F :  Oct 04 & Loops                       & JF:4.5 - 4.8  & P:7 & \\ \hline \hline
+
+M : Oct 08  & What happened / What's next &               &     & \\ \hline
+W : Oct 10  & Loops Continued             &               &     & Lab 7 \\ \hline
+F : Oct 12  &                             &               & P:8 & \\ \hline \hline
+
+M : Oct 15  & What happened / What's next &               &     & \\ \hline
+W : Oct 17  & Writing Classes             & JF:5.1 - 5.3  &     & Lab 8 \\ \hline
+F : Oct 19  & {\bf Fall Break - no class} &               & P:9 & \\ \hline \hline
+
+M : Oct 22  & What happened / What's next &               &     & \\ \hline
+W : Oct 24  & Writing Methods             & JF:5.4 - 5.5  &     & Lab 9 \\ \hline
+F : Oct 26  &                             &               & P:10 & \\ \hline \hline
+
+M : Oct 29  & What happened / What's next &               &     & \\ \hline
+W : Oct 31  & Relationships / Design      & JF:5.6 - 5.8  &     & Lab 10 \\ \hline
+F : Nov 02  &                             &               & P:11 & \\ \hline \hline
+
+M : Nov 05 & Exam Review                 &               &     & \\ \hline
+W : Nov 07 & Review / Lab Session        &               &     & \\ 
+           & {\bf EXAM 2 - 7:00 - 9:00pm} &              &     & \\ \hline
+F : Nov 07 & Arrays                       & JF:7.1       & P:12 & \\ \hline \hline
+
+M : Nov 12  & What happened / What's next &               &     & \\ \hline
+W : Nov 14  & Arrays                      & JF:7.2 - 7.3  &     & Lab 11 \\ \hline
+F : Nov 16  &                             &               & P:13 & \\ \hline \hline
+
+M : Nov 19  & What happened / What's next &       &     & \\ \hline
+W : Nov 14  & {\bf No Class - Thanksgiving Break} &  &  & \\ \hline
+F : Nov 16  & {\bf No Class - Thanksgiving Break} &  &  & \\ \hline \hline
+
+M : Nov 26  & What happened / What's next &               &     & \\ \hline
+W : Nov 28  & Arrays                      & JF:7.4 - 7.6  &     & Lab 12 \\ \hline
+F : Nov 30  &                             &               & P:14 & \\ \hline \hline
+
+M : Dec 03  & What happened / What's next &               &     & \\ \hline
+W : Dec 05  & Lab                         &               &     & Lab 13 \\ \hline
+F : Dec 07  & Final Exam Review           &               &     & \\ \hline \hline
+
+T : Dec 11  & {\bf Final Exam : 9:45am to 11:45am} & & & \\ \hline \hline
+
+\end{tabular}
+
+
+\end{document}

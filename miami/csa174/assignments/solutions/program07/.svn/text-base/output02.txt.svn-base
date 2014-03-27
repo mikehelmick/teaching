@@ -1,0 +1,80 @@
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+January 1, 2007
+is day #1 of the year.
+there are 364 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+January 2, 2007
+is day #2 of the year.
+there are 363 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+February 1, 2007
+is day #32 of the year.
+there are 333 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+March 1, 2007
+is day #60 of the year.
+there are 305 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+April 1, 2007
+is day #91 of the year.
+there are 274 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+May 1, 2007
+is day #121 of the year.
+there are 244 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+June 1, 2007
+is day #152 of the year.
+there are 213 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+August 1, 2007
+is day #213 of the year.
+there are 152 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+September 1, 2007
+is day #244 of the year.
+there are 121 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+October 1, 2007
+is day #274 of the year.
+there are 91 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+November 1, 2007
+is day #305 of the year.
+there are 60 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+December 1, 2007
+is day #335 of the year.
+there are 30 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+2007 is not a leap year.
+December 31, 2007
+is day #365 of the year.
+there are 0 days remaining in the year.
+----------
+Enter a date in the form month day year ('exit' to quit): 
+goodbye!
