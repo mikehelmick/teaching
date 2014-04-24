@@ -1,0 +1,299 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\pdfoutput=1 % we are running PDFLaTeX
+
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% exam settings
+\boxedpoints
+\pointsinmargin
+\printanswers 
+%\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CS 1022C-001 (CS2)}{\bf\Large Exam 1}{\bf\Large
+  2014-02-07 }
+\runningheader{CS 1022C-001 (CS2)}{University of Cincinnati}{Exam 1 - Spring 2014}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CS 1022C-001 - Spring 2014 - Exam 1 \newline
+	University of Cincinnati \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points.
+}}}
+\end{center}
+
+% setup standard options for the including code fragments
+\lstset{language=C++,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill}
+
+\section*{Instructions}
+\begin{itemize}
+\item Please read through this entire exam very carefully before starting. 
+\item This exam is closed notes and closed books.
+\item All work must be written on the exam pages in order to be graded. Any scrap paper used, must be the scrap paper provided during the exam period.
+\item For programming questions: Please be accurate with your C++ syntax: this includes appropriate use of braces, semicolons, and the proper use of upper/lowercase letters.  
+\item No electronic devices may be used during the exam: this includes (but is not limited to) calculators, phones, tablets, and computers.
+\item You have 55 minutes to complete the exam.  
+\end{itemize}
+
+\begin{center}
+{\Huge DON'T PANIC!}
+\end{center}
+
+\begin{center} 
+	\combinedgradetable[h]
+  %\gradetable[h]
+\end{center}
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice and True/False}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+
+\part[2] What command do you use to initialize your git repository from github.uc.edu?
+\begin{choices}
+  \choice {\tt git clone}
+  \choice {\tt git pull}
+  \choice {\tt git copy}
+  \choice {\tt git fetch}
+\end{choices}
+\begin{solution} A - {\tt git clone} \end{solution}
+  
+\part[2] What is the default type of parameter passing in C++?
+\begin{choices}
+  \choice pass-by-value
+  \choice pass-by-reference
+  \choice pass-by-pointer
+\end{choices}
+\begin{solution} A - pass-by-value \end{solution}
+  
+\part[2] What is value of {\tt x} and {\tt y} after these lines execute?
+\begin{lstlisting}
+  int x = 5;
+  int y = 3 * ++x;
+\end{lstlisting}
+\begin{choices}
+  \choice {\tt x = 5, y = 15}
+  \choice {\tt x = 6, y = 16}
+  \choice {\tt x = 6, y = 18}
+  \choice {\tt x = 5, y = 18}
+\end{choices}
+\begin{solution} C - x incremented to 6 first, then multiplied by 3 for y = 18 \end{solution}
+  
+\part[2] A {\tt for} loop always executes at least one iteration.
+\begin{choices} \choice True \choice False \end{choices}
+\begin{solution} False \end{solution}
+  
+\part[2] All pointers in a program are the same size.
+\begin{choices} \choice True \choice False \end{choices}
+\begin{solution} True \end{solution}
+
+\end{parts}
+
+\newpage
+\section*{Fill in the blank}
+
+\question Fill in the blank with the best answer
+
+\begin{parts}
+  \part[3] The \makebox[1.25in]{\hrulefill} member function is used to find out how many characters are in a C++ string object.
+  \begin{solution}[0.25in] {\tt length()} \end{solution}
+
+  \part[3] Arrays in C++ have a starting index of \makebox[1.25in]{\hrulefill}.
+  \begin{solution}[0.25in] {\tt 0} \end{solution}
+
+  \part[3] With this function signature {\tt void myFun(int \&x)}, {\tt x} uses what type of parameter passing: \makebox[1.25in]{\hrulefill}.
+  \begin{solution}[0.25in] {\tt pass-by-reference} \end{solution}
+    
+  \part[3] Defining multiple functions of the same name is called \makebox[1.25in]{\hrulefill}.
+  \begin{solution}[0.25in] overloading \end{solution}
+    
+  \part[3] \makebox[1.25in]{\hrulefill} are special methods, that are used to initialize the state of an objects.
+  \begin{solution}[0.25in] constructors \end{solution}
+    
+  \part[3] \makebox[1.25in]{\hrulefill} fields and methods on a class can be accessed anywhere you have access to an object.
+  \begin{solution}[0.25in] public \end{solution}
+  
+  \part[3] \makebox[1.25in]{\hrulefill} is the act of hiding implementation details.
+  \begin{solution}[0.25in] encapsulation \end{solution}
+  
+\end{parts}
+
+
+\newpage
+
+\section*{Code Analysis}
+
+\question[15] Examine the following C++ code and identify the 5 syntax errors contained in the code
+\begin{lstlisting}
+#include iostream
+
+int main() {
+  cout << "Enter a character and a number";
+  cin >> ch, num;
+  if (ch == num);
+    cout << "The character entered matches the ascii code entered." << end;
+}
+\end{lstlisting}
+\begin{solution}
+  \begin{enumerate}
+   \item missing angle brackets on line 1
+   \item missing namespace declaration, using namespace std
+   \item variables on line 5 are not declared
+   \item , should be $<<$ on line 5 
+   \item should be endl on line 7
+  \end{enumerate}
+  
+  The extra ; on 6 is not technically a syntax error, but rather a logic error.
+\end{solution}
+
+\newpage
+\section*{Programming Questions}
+
+\question[12] Leap years are years that are evenly divisible by 4, unless it is divisible by 100, unless it is also divisible by 400. For example 1900 was not a leap year, and 2000 was a leap year. Write a function called {\tt isLeap} that accepts an integer and returns {\tt true} if that number is a leap year and {\tt false} if it is not.
+
+\begin{solution}
+ \begin{lstlisting}
+bool leap(int year) {
+  return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+}   
+ \end{lstlisting}
+\end{solution}
+
+\newpage
+\question[12] A liter is 0.264179 gallons. Write a function that takes in the number of liters of gasoline put into a car, and the number of miles that car was driven. The function will return the {\tt miles per gallon} calculation. This often happens when visiting Canada, where gasoline is sold by the liter instead of the gallon.
+
+\begin{solution}
+\begin{lstlisting}
+double mpg(double liters, double miles) {
+  return miles / (liters * 0.264179);
+}
+\end{lstlisting}  
+\end{solution}
+
+\newpage
+\question[30] Write a class, called {\tt Pixel} that represents a pixel as 3 integer values for red, green, and blue. The minimum allowed value for a single color is $0$ and the maximum value allowed for any individual color is $255$. Your constructor should take in integer values for red, green, and blue and make they they are constrained to the 0 to 255 range. If the value is $< 0$, it should be made $0$ and if it is $> 255$, it should be made $255$. Your class must contain the following methods.
+\begin{itemize}
+  \item {\tt int getRed()}
+  \item {\tt int getBlue()}
+  \item {\tt int getGreen()}
+  \item {\tt void brighten(double percent)}
+  \item {\tt void darken(double percent)}
+\end{itemize}
+The {\tt brighten} method should increase the value of each color by the percent passed in, where $0.50$ represents $50\%$ increase. The $darken$ method subtracts that amount. The result of the brighten/darken operation must be made to stay within 0 and 255, so that the pixel is still valid.
+\bonusquestion[15] Add a method called asHex that returns the hex representation of the RGB values with 2 digits for example, if we were to declare a pixel object like this {\tt Pixel p(122, 4, 250);}, the {\tt asHex()} method would return a string containing {\tt 0x7a04fa}. Note that the green value, $4$, is zero padded in the hex output. The leading {\tt 0x} must be added by your code as well.
+
+\begin{solution}
+\begin{lstlisting}
+class Pixel {
+public:
+  Pixel(int nr, int ng, int nb) {
+    r = normal(nr);
+    g = normal(ng);
+    b = normal(nb);
+  }
+  
+  int getRed() {
+    return r;
+  }
+  
+  int getGreen() {
+    return g;
+  }
+  
+  int getBlue() {
+    return b;
+  }
+  
+  void brighten(double percent) {
+    r = brighten(r, percent);
+    g = brighten(g, percent);
+    b = brighten(b, percent);
+  }
+  
+  void darken(double percent) {
+    r = darken(r, percent);
+    g = darken(g, percent);
+    b = darken(b, percent);
+  }
+
+  string asHex() {
+    string s = "0x" + asString(r) + asString(g) + asString(b);
+    return s;
+  }
+
+private:
+  int r;
+  int g;
+  int b;
+
+  static int darken(double val, double percent) {
+    return normal((int) (val - val * percent));
+  }
+    
+  static int brighten(double val, double percent) {
+    return normal((int) (val + val * percent));
+  }
+  
+  static string asString(int val) {
+    char buffer[2];
+    sprintf(buffer, "%2x", val);
+    string s(buffer);
+    return s;
+  }
+
+  static int normal(int val) {
+    if (val < 0) {
+      return 0;
+    } else if (val > 255) {
+      return 255;
+    }
+    return val;
+  }
+};  
+\end{lstlisting}
+\end{solution}
+
+\newpage
+\begin{center}{\tt Continued space for questions 6 and 7} \end{center}
+
+\newpage
+\begin{center}{\tt Continued space for questions 6 and 7} \end{center}
+
+\newpage
+\begin{center}{\tt SCRATCH PAPER} \end{center}
+
+% In the privat above, double height = height; ?
+
+\end{questions}
+
+\end{document}
+

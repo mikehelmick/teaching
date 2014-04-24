@@ -1,0 +1,407 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\pdfoutput=1 % we are running PDFLaTeX
+
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% exam settings
+\boxedpoints
+\pointsinmargin
+\printanswers 
+%\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CS 1022C-001 (CS2)}{\bf\Large Exam 2}{\bf\Large
+  2014-03-14 }
+\runningheader{CS 1022C-001 (CS2)}{University of Cincinnati}{Exam 2 - Spring 2014}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CS 1022C-001 - Spring 2014 - Exam 2 \newline
+	University of Cincinnati \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points. \newline
+  Your total score will be computed out of 100.
+}}}
+\end{center}
+
+% setup standard options for the including code fragments
+\lstset{language=C++,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill}
+
+\section*{Instructions}
+\begin{itemize}
+\item Please read through this entire exam very carefully before starting. 
+\item This exam is closed book
+\begin{itemize}
+  \item You may use a single piece of standard 8.5inch x 11inch US letter paper. You may write whatever you like on all 6 sides of the paper, as long it contains your name somewhere. You must turn this paper in with your exam.
+\end{itemize}
+\item All work must be written on the exam pages in order to be graded. Any scrap paper used, must be the scrap paper provided during the exam period.
+\item For programming questions: Please be accurate with your C++ syntax: this includes appropriate use of braces, semicolons, and the proper use of upper/lowercase letters.  
+\item No electronic devices may be used during the exam: this includes (but is not limited to) calculators, phones, tablets, and computers.
+\item You have 55 minutes to complete the exam.  
+\end{itemize}
+
+\begin{center}
+{\Huge DON'T PANIC!}
+\end{center}
+
+\begin{center} 
+	%\combinedgradetable[h]
+  \gradetable[h]
+\end{center}
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice and True/False}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+
+\part[2] Which of these data types is the largest on a 32-bit architecture?
+\begin{choices}
+  \choice {\tt int}
+  \choice {\tt float}
+  \choice {\tt int*}
+  \choice {\tt they are all the same size}
+\end{choices}
+\begin{solution} D - {\tt they are all 32 bits on a 32 bit architecture} \end{solution}
+
+\part[2] If a method ({\tt foo}) is declared {\tt virtual} in class {\tt A} and class {\tt B} is a subclass of {\tt A}, then the {\tt foo} method is automatically virtual in class {\tt B}.
+\begin{choices} \choice true \choice false \end{choices}
+\begin{solution} A - true\end{solution}
+
+\part[2] The object on which a member function is applied is the implicit parameter named:
+\begin{choices} \choice {\tt this} \choice {\tt self} \choice {\tt that} \choice {\tt object} \end{choices}
+\begin{solution} A - {\tt this} \end{solution}
+
+\part[2] Changing the implementation of a method in a derived class is called
+\begin{choices}
+  \choice overloading \choice extending \choice overloading \choice overdoing
+\end{choices}
+\begin{solution} C - overloading \end{solution}
+  
+\part[2] Using the arrow operator, {\tt ->}, to call a method like {\tt obj->method()} is equivalent to: 
+\begin{choices}
+  \choice {\tt obj*method()}
+  \choice {\tt obj..method()}
+  \choice {\tt *(obj.method())}
+  \choice {\tt (*obj).method()}
+\end{choices}
+\begin{solution} D \end{solution}
+
+\end{parts}
+
+\newpage
+\section*{Fill in the blank}
+
+\question Fill in the blank with the best answer
+
+\begin{parts}
+\part[4] If the class {\tt B} extends the class {\tt A}, and an instance of {\tt B} is created, the constructors are called in this order:  \makebox[1in]{\hrulefill} then \makebox[1in]{\hrulefill}.
+\begin{solution}[.75in] A then B \end{solution}
+
+\part[4] If the class {\tt B} extends the class {\tt A}, and an instance of {\tt B} is destroyed, the destructors are called in this order:  \makebox[1in]{\hrulefill} then \makebox[1in]{\hrulefill}.
+\begin{solution}[.75in] B then A \end{solution} 
+
+\part[4] The termination condition of a recursive function is called the \makebox[1.5in]{\hrulefill}.
+\begin{solution}[.75in] base case\end{solution}
+
+\end{parts}
+
+\newpage
+\section*{Short Answer}
+
+\question Provide a short answer to the following questions, using complete sentences.
+
+\begin{parts}
+\part[5] What is encapsulation? Why is it useful?
+\begin{solution}[2.5in]
+  Encapsulation is the hiding of data to ensure that access to it and modification of it 
+\end{solution}
+
+\part[5] What happens if you forget to delete an object that you obtained from the heap? What happens if you delete it twice?
+\begin{solution}[2.5in]
+  If you forget to delete - memory leak.
+  If you delete it twice - double free / crash
+\end{solution}
+\end{parts}
+
+\newpage
+
+\section*{Code Analysis}
+
+\question{Use the code listed below for all parts of this question. In this scenario each }
+\begin{parts}
+\begin{lstlisting}
+// includes omitted to save space
+class Folder; // forward declaration of Folder so it compiles
+class Document {
+public:
+  Document(string name, int id, Folder* folder)
+      : name(name), idNumber(id), folder(folder) {}
+  virtual void setFolder(Folder* folder) {
+    this->folder = folder;
+  }
+  virtual void print() {
+    cout << "Document id: " << idNumber << " name: " << name << endl;
+  }
+protected:
+  string name;
+  int idNumber;
+  Folder* folder; // parent folder, can be NULL
+};
+
+class Folder : public Document {
+public:
+  Folder(string name, int id, Folder* parent) : Document(name, id, parent) {} 
+  virtual void print() {
+    cout << "Folder: id: " << idNumber << " name: " << name << endl;
+    for (int i = 0; i < documents.size(); i++) {
+      documents.at(i)->print();
+    }
+  }
+  vector<Document*> getDocuments() {
+    return documents;
+  }
+  void addDocument(Document* doc) {
+    doc->setFolder(this);
+    documents.push_back(doc);
+  }
+private:
+  vector<Document*> documents;
+};
+\end{lstlisting}
+\newpage
+\part[4] A variable of type {\tt Document*} can be assigned instances of type
+\begin{choices}
+  \choice {\tt Document*} \choice {\tt Folder*} \choice none of the above \choice all of the above  
+\end{choices}
+\begin{solution} D - all of the above \end{solution}
+
+\part[4] A variable of type {\tt Folder*} can be assigned instances of type
+\begin{choices}
+  \choice {\tt Folder*} \choice {\tt Document*} \choice none of the above \choice all of the above  
+\end{choices}
+\begin{solution} A - {\tt Folder*} only \end{solution}
+
+\part[6] Does the following code compile using only the code provided above?
+\begin{lstlisting}
+  Document d("input.txt", 1, NULL);
+  Folder f("myDir", 2, NULL);
+  f = d;
+\end{lstlisting}
+\begin{choices}
+  \choice {\tt yes} \choice {\tt no}
+\end{choices} \begin{solution} no - they cannot be assigned since not pointers.\end{solution}
+
+\part[6] What is the output of this code, using the classes defined above. {\it This code does compile and run.}
+\begin{lstlisting}
+  Document d("input.txt", 1, NULL);
+  Folder f("myDir", 2, NULL);
+  vector<Document> v;
+  v.push_back(d);
+  v.push_back(f);
+  for (unsigned int i = 0; i < v.size(); i++) {
+    v[i].print();
+  }
+\end{lstlisting}
+\begin{solution}[.75in]
+\begin{verbatim}
+Document id: 1 name: input.txt
+Document id: 2 name: myDir
+\end{verbatim}
+  (All or nothing.)
+\end{solution}
+\newpage
+
+\part[6] What is the output of this code, using the classes defined above?
+\begin{lstlisting}
+  Document* d = new Document("input.txt", 1, NULL);
+  Folder* f = new Folder("myDir", 2, NULL);
+
+  vector<Document*> v;
+  v.push_back(d);
+  v.push_back(f);
+  for (unsigned int i = 0; i < v.size(); i++) {
+    v[i]->print();
+  }
+\end{lstlisting}
+\begin{solution}[1.5in]
+\begin{verbatim}
+Document id: 1 name: input.txt
+Folder: id: 2 name: myDir
+\end{verbatim}
+  (All or nothing.)
+\end{solution}
+
+\part[10] What is the output of the following code, using the classes defined above?
+\begin{lstlisting}
+Folder* root = new Folder("/", 1, NULL);
+Folder* home = new Folder("home", 2, root);
+root->addDocument(home);
+Folder* user = new Folder("student", 3, home);
+home->addDocument(user);
+Document* resume = new Document("resume.txt", 4, user);
+Document* prog = new Document("program.cpp", 5, user);
+user->addDocument(resume);
+user->addDocument(prog);
+    
+root->print();  
+\end{lstlisting}
+\begin{solution}
+\begin{verbatim}
+Folder: id: 1 name: /
+Folder: id: 2 name: home
+Folder: id: 3 name: student
+Document id: 4 name: resume.txt
+Document id: 5 name: program.cp  
+\end{verbatim}
+\end{solution}
+
+\end{parts}
+
+\newpage
+\question Answer the following questions using the code listing provided below.
+\begin{lstlisting}
+long calculate( long i, long j ) {
+  if ( j == 1 ) {
+    return i;
+  } else {
+    return i * calculate( i, j - 1 );
+  }
+}
+   
+long calculate( long i ) {
+  return calculate( i, i );
+}
+\end{lstlisting}
+
+\begin{parts}
+   \part[3] What is the result when {\tt calculate(3) } is called?
+   \begin{solution}[1in] 27 \end{solution}
+   \part[3] What is the result when {\tt calculate(5) } is called?
+   \begin{solution}[1in] 3125 \end{solution}
+   \part[6] Describe what this code calculates:
+   \begin{solution}
+     {\tt calculate(i)} calculations $i$ times itself $i$ times.
+   \end{solution}
+\end{parts}
+
+\newpage
+\section*{Programming Questions}
+
+\question[15] Write a recursive method to perform binary search on an array. The incoming array will already be sorted and the method should return $-1$ in the event that the target is not found in the array. Recall that binary search works by comparing the middle position to the {\tt target} value and narrowing the search space if {\tt target} is higher/lower than the value in the middle.
+
+\begin{verbatim}
+int binarySearch(int arr[], int size, int target) {
+  return binarySearch(arr, target, 0, size - 1);
+}
+
+int binarySearch(int arr[], int target, int first, int last) {
+  // BEGIN ANSWER
+\end{verbatim}
+
+\begin{solution}[4in]
+\begin{verbatim}
+  if (first > last) {
+    return -1;
+  }
+  int mid = (last - first) / 2 + first;
+  if (arr[mid] == target) {
+    return mid;
+  } else if (target < arr[mid]) {
+    return binarySearch(arr, target, first, mid - 1);
+  } else {
+    return binarySearch(arr, target, mid + 1, last);
+  }
+\end{verbatim}
+\end{solution}
+
+\begin{verbatim}
+  // END ANSWER
+}
+\end{verbatim}
+
+\newpage
+\question[20] This is two recursive problems in one. Write the functions necessary to do a "substring reverse" inside a string.
+For example, given the string \newline
+{\tt  "this is super swish."} \newline
+and the "substring" to review of {\tt "is"}, the result would be:\newline
+{\tt  "thsi si super swsih."}
+\par
+The way this works, is the substring passed in, {\tt "is"} in this case, is found in the string passed in. Each occurrence of the substring found is reversed inside the string.
+\par
+Recommendation: write a recursive function to partially reverse a string based on a starting and ending index. Write a recursive function to look for substrings (and trigger the reverse function if found). Write a bootstrap function if necessary. Here is the sample main code, note that the string {\tt str} is reversed in place (i.e. pass-by-reference).
+\begin{lstlisting}
+string str = "this is super swish.";
+string sub = "is";
+subReverse(str, sub);
+cout << "SubReversed: " << str << endl;  
+\end{lstlisting}
+
+\begin{solution}
+\begin{lstlisting}
+void reverseStr(string& str, int s, int e) {
+  if (s >= e) {
+    return;
+  }
+  char tmp = str[e];
+  str[e] = str[s];
+  str[s] = tmp;
+  reverseStr(str, s + 1, e - 1);
+}
+void subReverse(string &str, const string &sub, int start) {
+  if (str.size() - start < sub.size()) {
+    return;
+  }
+  bool reverse = true;
+  for (int i = 0; i < sub.size(); i++) {
+    if (str[start + i] != sub[i]) {
+      reverse = false;
+      break;
+    }    
+  }
+  if (reverse) {
+    reverseStr(str, start, start + sub.size() - 1);
+  }
+  subReverse(str, sub, start + 1);
+}
+void subReverse(string &str, const string &sub) {
+  subReverse(str, sub, 0); }  
+\end{lstlisting}
+\end{solution}
+
+\newpage
+\begin{center}{\it continued space for question 7.}\end{center}
+
+% In the privat above, double height = height; ?
+
+\end{questions}
+
+\end{document}
+

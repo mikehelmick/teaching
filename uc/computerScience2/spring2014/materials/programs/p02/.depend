@@ -1,0 +1,4 @@
+main.o: main.cpp Card.h Deck.h InBetween.h
+Card.o: Card.cpp Card.h
+Deck.o: Deck.cpp Deck.h Card.h
+InBetween.o: InBetween.cpp Card.h Deck.h InBetween.h

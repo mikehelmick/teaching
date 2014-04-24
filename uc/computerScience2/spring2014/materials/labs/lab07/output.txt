@@ -1,0 +1,8 @@
+Sphere: area: 25673.60 volume: 386815.54
+Cylinder: area: 10130.13 volume: 78269.58
+Cube: area: 3174.00 volume: 12167.00
+Sphere: area: 624913.04 volume: 46451869.62
+Cylinder: area: 3619.11 volume: 16286.02
+Cube: area: 62424.00 volume: 1061208.00
+Total area: 729933.89
+Total volume: 48006615.76

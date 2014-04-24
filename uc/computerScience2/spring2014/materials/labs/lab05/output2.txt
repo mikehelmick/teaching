@@ -1,0 +1,10 @@
+ Scores:   340
+Minimum:     3
+Maximum:    99
+Average:    73.79
+Histogram
+ A: ***
+ B: *****
+ C: *******
+ D: ****
+ F: **

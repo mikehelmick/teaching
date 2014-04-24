@@ -1,0 +1,13 @@
+E 10
+S 8
+W 2
+NW 22
+S 16
+NE 22
+w 9
+se 10
+w 10
+ne 5
+s 4
+w 1
+exit

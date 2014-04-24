@@ -1,0 +1,2 @@
+Dictionary.o: Dictionary.cpp Dictionary.h
+boggle.o: boggle.cpp Dictionary.h

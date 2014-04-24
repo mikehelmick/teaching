@@ -1,0 +1,21 @@
+You are now at (0,0)
+Total steps taken: 0 
+Enter the direction to travel ('exit' to quit)
+Enter the number of steps
+You are now at (4,4)
+Total steps taken: 5 
+Enter the direction to travel ('exit' to quit)
+Enter the number of steps
+You are now at (8,0)
+Total steps taken: 10 *
+Enter the direction to travel ('exit' to quit)
+Enter the number of steps
+You are now at (4,-4)
+Total steps taken: 15 *
+Enter the direction to travel ('exit' to quit)
+Enter the number of steps
+You are now at (0,0)
+Total steps taken: 20 **
+Enter the direction to travel ('exit' to quit)
+Final position: 0,0)
+Total steps taken: 20 **

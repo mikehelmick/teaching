@@ -1,0 +1,5 @@
+ne 5
+se 5
+sw 5
+nw 5
+exit

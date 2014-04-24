@@ -1,0 +1,14 @@
+fibanochi - dumb
+fibaochi - memoization?
+
+string reverse
+string permutation
+string palindrome
+string subsets - lab
+string index_of
+
+hanoi - (from, to , n disks)
+
+linked list - max, min, search, length
+
+fibanochi - reverse

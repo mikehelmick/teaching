@@ -1,0 +1,2 @@
+main.o: main.cpp Scores.h
+Scores.o: Scores.cpp Scores.h

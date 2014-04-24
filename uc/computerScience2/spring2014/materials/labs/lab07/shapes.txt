@@ -1,0 +1,16 @@
+6
+sphere
+45.2
+cylinder
+23.4
+45.5
+cube
+23
+sphere
+223
+cylinder
+12
+36
+cube
+102
+
