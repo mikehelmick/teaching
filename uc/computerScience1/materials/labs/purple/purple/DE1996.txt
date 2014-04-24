@@ -1,0 +1,4 @@
+1996 US Presidential Election,Dole,Clinton,Perot,
+Kent,15932,18327,4705,
+New Castle,60943,98837,17748,
+Sussex,22187,23191,6266,

@@ -1,0 +1,2 @@
+main.o: main.cpp Fraction.h
+Fraction.o: Fraction.cpp Fraction.h

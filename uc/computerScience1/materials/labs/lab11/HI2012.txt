@@ -1,0 +1,6 @@
+2012 US Presidential Election,Romney,Obama,Other,
+Hawaii,14753,47224,1477,
+Honolulu,88461,204349,3932,
+Kauai,6121,18641,610,
+Maui,11602,36052,999,
+Overseas,78,392,6,

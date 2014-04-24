@@ -1,0 +1,2 @@
+1988 US Presidential Election,Bush,Dukakis,Other,
+District of Columbia,27590,159407,5880,

@@ -1,0 +1,6 @@
+2000 US Presidential Election,Bush,Gore,Nader,
+Bristol,8375,13424,1283,
+Kent,25291,43265,4140,
+Newport,14258,20790,2427,
+Providence,61378,142469,12352,
+Washington,21253,29560,4850,

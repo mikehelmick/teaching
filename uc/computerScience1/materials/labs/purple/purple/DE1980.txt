@@ -1,0 +1,4 @@
+1980 US Presidential Election,Reagan,Carter,Anderson,
+Kent,14882,12884,1831,
+New Castle,76898,76897,12828,
+Sussex,19472,15973,1629,

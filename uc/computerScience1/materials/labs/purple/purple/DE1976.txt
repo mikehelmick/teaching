@@ -1,0 +1,4 @@
+1976 US Presidential Election,Ford,Carter,Other,
+Kent,12604,16523,301,
+New Castle,80074,87521,2743,
+Sussex,17153,18552,363,

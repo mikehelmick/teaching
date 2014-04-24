@@ -1,0 +1,6 @@
+1976 US Presidential Election,Ford,Carter,Other,
+Bristol,10131,11228,66,
+Kent,34131,35855,227,
+Newport,15155,17768,184,
+Providence,103976,144805,1036,
+Washington,17856,17980,186,

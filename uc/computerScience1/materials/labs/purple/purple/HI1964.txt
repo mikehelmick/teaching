@@ -1,0 +1,5 @@
+1964 US Presidential Election,Goldwater,Johnson,Unpledged,
+Hawaii,4962,20011,0,
+Honolulu,33536,121859,0,
+Kauai,1971,8713,0,
+Maui,3553,12666,0,

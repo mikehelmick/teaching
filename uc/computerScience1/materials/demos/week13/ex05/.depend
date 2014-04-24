@@ -1,0 +1,2 @@
+main.o: main.cpp Song.h
+Song.o: Song.cpp Song.h

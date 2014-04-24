@@ -1,0 +1,6 @@
+1972 US Presidential Election,Nixon,McGovern,Other,
+Bristol,12009,9928,48,
+Kent,40534,29004,115,
+Newport,19142,12844,49,
+Providence,129418,129232,506,
+Washington,19280,13637,62,

@@ -1,0 +1,5 @@
+1988 US Presidential Election,Bush,Dukakis,Other,
+Hawaii,17125,24091,552,
+Honolulu,120258,138971,2348,
+Kauai,8298,11770,198,
+Maui,12944,17532,374,

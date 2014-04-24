@@ -1,0 +1,5 @@
+usa.o: usa.cpp BoundingBox.h Point.h Polygon.h County.h
+BoundingBox.o: BoundingBox.cpp BoundingBox.h Point.h
+Point.o: Point.cpp Point.h
+Polygon.o: Polygon.cpp Point.h BoundingBox.h Polygon.h County.h
+County.o: County.cpp County.h

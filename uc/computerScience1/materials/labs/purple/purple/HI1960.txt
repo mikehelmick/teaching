@@ -1,0 +1,5 @@
+1960 US Presidential Election,Nixon,Kennedy,Unpledged,
+Hawaii,12251,11557,0,
+Honolulu,65541,68915,0,
+Kauai,5655,4636,0,
+Maui,8848,7302,0,

@@ -1,0 +1,2 @@
+2012 US Presidential Election,Romney,Obama,Other,
+District of Columbia,21381,267070,5313,

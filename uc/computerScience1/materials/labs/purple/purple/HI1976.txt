@@ -1,0 +1,5 @@
+1976 US Presidential Election,Ford,Carter,Other,
+Hawaii,15366,15960,439,
+Honolulu,108041,111389,3046,
+Kauai,6278,8105,139,
+Maui,10318,11921,299,

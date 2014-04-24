@@ -1,0 +1,4 @@
+1988 US Presidential Election,Bush,Dukakis,Other,
+Kent,19923,12996,194,
+New Castle,92587,79147,1269,
+Sussex,27129,16504,142,

@@ -1,0 +1,2 @@
+1972 US Presidential Election,Nixon,McGovern,Other,
+District of Columbia,35226,127627,568,

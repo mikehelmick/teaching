@@ -1,0 +1,5 @@
+1996 US Presidential Election,Dole,Clinton,Perot,
+Hawaii,13516,27262,5137,
+Honolulu,85779,143793,17389,
+Kauai,5325,13357,1568,
+Maui,9323,20600,3264,

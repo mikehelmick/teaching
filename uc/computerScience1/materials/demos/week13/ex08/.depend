@@ -1,0 +1,2 @@
+main.o: main.cpp Point.h
+Point.o: Point.cpp Point.h

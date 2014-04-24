@@ -1,0 +1,399 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\pdfoutput=1 % we are running PDFLaTeX
+
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% exam settings
+\boxedpoints
+\pointsinmargin
+\printanswers 
+%\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CS 1021C}{\bf\Large Exam 1}{\bf\Large
+  2014-01-31 }
+\runningheader{CS 1021C-001}{University of Cincinnati}{Exam 1 - Spring 2014}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CS 1021C-001 - Spring 2014 - Exam 1 \newline
+	University of Cincinnati \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points.
+}}}
+\end{center}
+
+% setup standard options for the including code fragments
+\lstset{language=C++,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill}
+
+\section*{Instructions}
+\begin{itemize}
+\item Please read through this entire exam very carefully before starting. 
+\item This exam is closed notes and closed books.
+\item All work must be written on the exam pages in order to be graded. Any scrap paper used, must be the scrap paper provided during the exam period.
+\item For programming questions: Please be accurate with your C++ syntax: this includes appropriate use of braces, semicolons, and the proper use of upper/lowercase letters.  
+\item No electronic devices may be used during the exam: this includes (but is not limited to) calculators, phones, tablets, and computers.
+\item You have 55 minutes to complete the exam.  
+\end{itemize}
+
+\section*{DON'T PANIC!}
+
+\begin{center} 
+	%\combinedgradetable[h]
+  \gradetable[h]
+\end{center}
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice and True/False}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+	
+\part[2] Every C++ Program must contain a function called:
+\begin{choices}
+  \choice {\tt getX} \choice {\tt main}	 \choice {\tt startup} \choice {\tt initialization} 
+\end{choices}
+\begin{solution}[.25in] B - main \end{solution}
+	
+\part[2] The input to the compiler is called
+\begin{choices}
+  \choice Source File \choice Machine Code \choice Library Files \choice Executable program
+\end{choices}
+\begin{solution}[.25in] A - source file \end{solution}
+
+\part[2] True of False: C++ {\it requires} that you initialize variables when they are defined.
+\begin{choices}
+  \choice True \choice False
+\end{choices}
+\begin{solution}[.25in] false, but it is recommend to do so \end{solution}
+	
+\part[2] What is the preferred way to declare a constant in your C++ program?
+\begin{choices}
+  \choice {\tt int MONTHS\_IN\_A\_YEAR = 12;}
+	\choice {\tt \#define MONTHS\_IN\_A\_YEAR 12}
+	\choice {\tt const int MONTHS\_IN\_A\_YEAR = 12;}
+\end{choices}
+\begin{solution}[.25in] C - {\tt const int MONTHS\_IN\_A\_YEAR = 12;} \end{solution}
+
+\part[2] A C-style string (array of {\tt char}), that contains {\tt "Hello, CS1!"} requires how many bytes of memory to be stored correctly?
+\begin{choices}
+  \choice 13 \choice 12 \choice 11 \choice 10
+\end{choices}
+\begin{solution}[.25in] B - 12: 11 bytes for the content, and 1 byte for the null terminator \end{solution}
+  
+\part[2] The value of {\tt (int) 34.67} is
+\begin{choices}
+ \choice 34 \choice 35 \choice None of the above
+\end{choices}
+\begin{solution}[.25in] A - 34, the value is truncated \end{solution}
+% where the best page break is for this font size
+\newpage
+
+\part[2] According to the published coding standards for the class, which is the best choice for a variable name?
+\begin{choices}
+	\choice {\tt pickme} \choice {\tt Pickme} \choice {\tt PickMe} \choice {\tt pickMe}
+\end{choices}
+\begin{solution}[.25in] D - pickMe \end{solution}
+  
+\part[2] Which of the following is a valid identifier for  variable name?
+\begin{choices}
+	\choice \_x19 \choice x\&22 \choice 22x19 \choice none of the above
+\end{choices}
+\begin{solution}[.25in] A) \_x19 is a valid identifier \end{solution}
+
+\part[2] According to good coding style, what should you do on the line of code following a '{\tt \{}' character?
+\begin{choices}
+  \choice add a comment
+  \choice indent
+  \choice use an if statement
+  \choice decrease indentation
+\end{choices}
+\begin{solution}[.25in] B - indent your code \end{solution}
+  
+\part[2] Given the following program definition
+\begin{lstlisting}
+int a;
+int b = 2;
+float c = 4.2;
+a = b * c;
+\end{lstlisting}
+What is the value stored in {\tt a}?
+\begin{choices}
+  \choice 8.4
+  \choice 8
+  \choice 0
+  \choice None of the above
+\end{choices}
+\begin{solution}[.25in] B - 8 \end{solution}
+\end{parts}
+
+\newpage
+
+\section*{Fill in the blank}
+
+\question State the value and type of the following expressions, given the following declarations:
+\begin{lstlisting}
+int length = 10;
+int width = 4;
+int depth = 22;
+double weight = 3.5;
+string label = "Do not bend";	
+\end{lstlisting}
+
+\begin{parts}
+ \part[2] {\tt length + depth \% width } 
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string} 
+	\newline
+	\begin{solution} 12, int \end{solution}
+		
+ \part[2] {\tt depth / length + 2.0 * width}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string} 
+    \newline
+	\begin{solution} 1.0, double \end{solution}
+		
+ \part[2] {\tt weight * width}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline	
+	\begin{solution} 14.0, double \end{solution}
+
+ \part[2] {\tt (width >= 4) || ((length < 11) \&\& (depth <= 22.5))}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline
+	\begin{solution} true, boolean \end{solution}
+
+ \part[2] {\tt !(width == 2)}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline
+	\begin{solution} true, boolean \end{solution}
+ 
+ \part[2] {\tt label[3] // Accesses the character at index 3}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline
+	\begin{solution} 'n', char \end{solution}
+		
+ \part[2] {\tt (int) length + width} 	
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline
+	\begin{solution} 14, int \end{solution}
+		
+ \part[2] {\tt label.length() + length}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline
+	\begin{solution} 21, int \end{solution}
+
+ \part[2] {\tt (int)(weight + width) }
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline
+	\begin{solution} 7, int \end{solution}
+
+ \part[2] {\tt static\_cast<int>(weight)}
+    \newline value: \makebox[2in]{\hrulefill} type: {\tt int   boolean   char    double   string}
+    \newline
+ 	\begin{solution} 3, int \end{solution} 
+
+\end{parts}
+
+
+
+\newpage
+\section*{Short Answer}
+\question{Write a brief response to each question. Please write in complete sentences, using a maximum of 2 sentences.}
+\begin{parts}
+
+\part[5] What is the different between a syntax error and a logic error?
+\begin{solution}[2in]
+Syntax errors are error in the construction of the programming language, and are discovered using the compiler. Logic errors are errors in the algorithm used to construct the program and are discovered when running your program or during unit testing.
+\end{solution}
+
+\part[5] What is the difference between system software and application software?
+\begin{solution}
+Systems software is usually the operating system, which controls the hardware and allows for the execution of application software. Application software are the programs that computer users interact with, like word processors, web browsers, and games.
+\end{solution}
+	
+\end{parts}
+	
+\newpage
+
+\section*{Code Analysis}
+
+\question Examine the following C++ program and answer the questions below.
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x = 40;
+  int y = 60;
+  int z;
+  cout << "x: " << x << " y: " << y << " z: " << z << endl;
+
+  cout << "Enter new values for x, y, and z:" << endl;
+  cin >> x >> y >> z;
+
+  int a = x % z;
+  int b = y % z;
+  int c = a + b;
+  cout << "a: " << a << " b: " << b << " c: " << c << endl;
+  return 0;
+}
+\end{lstlisting}
+
+\begin{parts}
+	
+\part[5] What is the output of this code?, assuming the user types in {\tt 14 27 10} and the presses the {\tt enter} key.
+\begin{solution}[1.0in]
+\begin{tt} \newline
+x: 40 y: 60 z: <randomvalue>\newline
+a: 4 b: 7 c: 11\newline
+\end{tt}
+\end{solution}
+
+\part[5] What happens if the user fails to hit {\tt enter} after inputing the new values for x, y, and z?
+\begin{solution}[1.0in]
+Nothing... it will just sit there.
+\end{solution}
+
+\end{parts}
+
+\newpage
+\question[20] What is the output of this program? Please be accurate with the spacing of the output. I've provided the first line of the output for you, to help with lining up. Use the grid below to ensure proper alignment and formatting of the output.
+
+\begin{lstlisting}
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+  int x = 4;
+  int y = 5;
+  double z = 10;
+  
+  cout << "012345678911234567892123456789" << endl;
+  
+  cout << setw(12) << x << setw(12) << y << endl;
+  cout << setw(12) << left << x << setw(12) << left << y << endl;
+  cout << setw(12) << right << x << setw(12) << right << y << endl;
+  
+  cout << "x*y = " << setw(1) << x * y << endl;
+  
+  double a = y / x;
+  cout << setw(10) << setprecision(5) << a << endl;
+  cout << setw(10) << setprecision(5) << fixed << a << endl;
+  
+  double b = y / z;
+  cout << setw(10) << setprecision(5) << fixed << b << endl;
+  
+  return 0;
+}
+\end{lstlisting}
+
+%  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}  
+%  \hline
+%  0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 1 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 2 & 1 & 2 & 3 \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline
+%    &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+%  \hline  
+%  \end{tabular}  
+
+\begin{solution}
+  solution on next page...
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}  
+  \hline
+0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 1 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 2 & 1 & 2 & 3 \\
+\hline
+  &   &   &   &   &   &   &   &   &   &   & 4 &   &   &   &   &   &   &   &   &   &   &   & 5 \\
+\hline
+4  &   &   &   &   &   &   &   &   &   &   &   &5  &   &   &   &   &   &   &   &   &   &   &  \\
+\hline
+  &   &   &   &   &   &   &   &   &   &   & 4 &   &   &   &   &   &   &   &   &   &   &   & 5 \\
+\hline
+x  &*  &y  &   &=  &   &2  &0  &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+\hline
+  &   &   &   &   &   &   &   &   & 1 &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
+\hline
+  &   &   & 1 & . & 0 & 0 & 0 & 0 & 0 &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
+\hline
+  &   &   & 0 & . & 5 & 0 & 0 & 0 & 0 &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
+\hline
+  \end{tabular}
+  
+\end{solution}
+
+\newpage
+\section*{Programming Questions}
+
+\question Translate the following mathematical equations into valid C++ expressions. Remember that there are some functions in {\tt <cmath>} that you can use: {\tt pow(x, y)}, and {\tt sqrt}.
+
+\begin{parts}
+  
+  \part[5] $ \sqrt{a^2 + b^2} $
+  \begin{solution}[1.5in]
+    {\tt sqrt(pow(a, 2) + pow(b, 2))}
+  \end{solution}
+  
+  \part[5] $t \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$
+  \begin{solution}[1.5in]
+    {\tt t * (1 / sqrt(1 - pow(v,2)/pow(c,2)))}
+  \end{solution}
+  
+  \part[5] Area of a dodecahedron: $3\sqrt{25 + 10\sqrt{5}}a^2$
+  \begin{solution}[1.5in]
+    {\tt 3 * sqrt(25 + 10 * sqrt(5)) * pow(a, 2)}
+  \end{solution}
+  
+  \part[5] Volume of a dodecahedron: $\frac{1}{4}(15 + 7\sqrt{5})a^3$
+  \begin{solution}[1.5in]
+    {\tt 1 / 4.0 * (15 + 7 * sqrt(5)) * pow(a, 3)}
+  \end{solution}
+\end{parts}
+
+
+% In the privat above, double height = height; ?
+
+\end{questions}
+
+\end{document}
+

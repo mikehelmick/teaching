@@ -1,0 +1,6 @@
+2004 US Presidential Election,Bush,Kerry,Other,
+Bristol,9855,14448,429,
+Kent,33699,42830,1489,
+Newport,16622,22992,812,
+Providence,82337,144811,4176,
+Washington,26533,34679,1422,

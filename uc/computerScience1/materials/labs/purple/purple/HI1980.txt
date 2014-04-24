@@ -1,0 +1,6 @@
+1980 US Presidential Election,Reagan,Carter,Anderson,
+Hawaii,14247,17630,3091,
+Honolulu,99596,96472,25331,
+Kauai,5883,9081,1352,
+Maui,10359,12674,2237,
+Overseas,27,22,10,

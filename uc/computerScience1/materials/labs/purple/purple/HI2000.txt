@@ -1,0 +1,6 @@
+2000 US Presidential Election,Bush,Gore,Nader,
+Hawaii,17050,28670,4604,
+Honolulu,101310,139618,13037,
+Kauai,6583,13470,1474,
+Maui,12876,23484,2499,
+Overseas,26,44,9,

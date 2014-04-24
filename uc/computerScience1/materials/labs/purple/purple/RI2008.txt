@@ -1,0 +1,6 @@
+2008 US Presidential Election,McCain,Obama,Other,
+Bristol,9260,16162,483,
+Kent,33780,48406,1888,
+Newport,15717,25479,801,
+Providence,81010,167442,5178,
+Washington,25624,39082,1454,

@@ -1,0 +1,2 @@
+2008 US Presidential Election,McCain,Obama,Other,
+District of Columbia,17367,245800,2686,

@@ -1,0 +1,6 @@
+1984 US Presidential Election,Reagan,Mondale,Other,
+Hawaii,20707,17866,570,
+Honolulu,140323,107444,2470,
+Kauai,9249,8862,221,
+Maui,14720,12966,381,
+Overseas,51,16,0,

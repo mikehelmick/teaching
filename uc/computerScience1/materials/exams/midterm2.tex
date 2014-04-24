@@ -1,0 +1,388 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\pdfoutput=1 % we are running PDFLaTeX
+
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% exam settings
+\boxedpoints
+\pointsinmargin
+\printanswers 
+%\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CS 1021C}{\bf\Large Exam 2}{\bf\Large
+  2014-03-14 }
+\runningheader{CS 1021C-001}{University of Cincinnati}{Exam 2 - Spring 2014}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CS 1021C-001 - Spring 2014 - Exam 2 \newline
+	University of Cincinnati \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points. Your final score will be out of 100.
+}}}
+\end{center}
+
+% setup standard options for the including code fragments
+\lstset{language=C++,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill}
+
+\section*{Instructions}
+\begin{itemize}
+\item Please read through this entire exam very carefully before starting. 
+\item This exam is closed book
+\begin{itemize}
+  \item You may use a single piece of standard 8.5inch x 11inch US letter paper. You may write whatever you like on all 6 sides of the paper, as long it contains your name somewhere. You must turn this paper in with your exam.
+\end{itemize}
+\item All work must be written on the exam pages in order to be graded. Any scrap paper used, must be the scrap paper provided during the exam period.
+\item For programming questions: Please be accurate with your C++ syntax: this includes appropriate use of braces, semicolons, and the proper use of upper/lowercase letters.  
+\item No electronic devices may be used during the exam: this includes (but is not limited to) calculators, phones, tablets, and computers.
+\item You have 55 minutes to complete the exam.  
+\end{itemize}
+
+\section*{DON'T PANIC!}
+
+\begin{center} 
+	%\combinedgradetable[h]
+  \gradetable[h]
+\end{center}
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice and True/False}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+	
+\part[2] The conditional input for an {\tt if} statement must evaluate to this type:
+\begin{choices}
+  \choice {\tt int} \choice {\tt char}	 \choice {\tt float} \choice {\tt bool} 
+\end{choices}
+\begin{solution}D - bool\end{solution}
+	
+\part[2] Which operator joins two conditionals with the {\bf and} relationship?
+\begin{choices}
+  \choice {\tt ||} \choice {\tt \&\&}	 \choice {\tt $!$} \choice {\tt \&} \choice {\tt |} 
+\end{choices}
+\begin{solution}B - {\tt \&\&}\end{solution}
+  
+\part[2] What is printed out if this code is executed?
+\begin{lstlisting}
+int x = 27;
+if (x > 27)
+  cout << "pop";
+  cout << "POP";
+\end{lstlisting}
+\begin{choices}
+  \choice {\tt nothing} \choice {\tt pop}	 \choice {\tt popPOP} \choice {\tt POP} 
+\end{choices}
+\begin{solution}D - POP\end{solution}
+  
+\part[2] It is illegal to use an assignment $=$ as the input to a conditional (i.e. {\tt if}):
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution}B - false, legal but not what you want in most cases\end{solution} 
+
+\newpage  
+\part[2] The operand of the increment and decrement operators ($++$ and $--$) can be any valid mathematical expression.
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution} false \end{solution} 
+  
+\part[2] The {\tt while} loop is a pretest loop
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution} true \end{solution}
+
+\part[2] The {\tt do} loop is a pretest loop
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution} false \end{solution}
+
+\part[2] The {\tt for} loop is a posttest loop
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution} false \end{solution}    
+
+\newpage  
+\part[2] To calculate the total number of iterations of a nested loop, add the number of iterations of all the loops
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution} false \end{solution}  
+  
+\part[2] The {\tt while} loop is a pretest loop
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution} true \end{solution}  
+  
+\part[2] The first element in an array has an index of
+\begin{choices}
+  \choice $0$ \choice $1$ \choice $size$ \choice $size - 1$
+\end{choices}
+\begin{solution} A - zero \end{solution}
+
+\part[2] With this array declaration, {\tt string strArry[10];} What is each element initialized to?
+\begin{choices}
+  \choice random / whatever is in memory \choice {\tt ""} \choice {\tt "0"}
+\end{choices}
+\begin{solution} B - the empty string \end{solution}
+
+\part[2] For function calls in C++, the default type of parameter passing is:
+\begin{choices}
+  \choice pass-by-value \choice pass-by-reference \choice pass-by-pointer
+\end{choices}
+\begin{solution} A - pass-by-value \end{solution}
+
+\part[2] Of the sorting algorithms we studied, wish does less swaps in general?
+\begin{choices}
+  \choice bubble sort \choice selection sort
+\end{choices}
+\begin{solution} B - selection sort \end{solution}
+
+\part[2] All pointer variables are the same size in memory:
+\begin{choices}
+  \choice true \choice false
+\end{choices}
+\begin{solution} true \end{solution}  
+  
+\end{parts}
+  
+\newpage
+
+\section*{Fill in the blank}
+
+\question Fill in the blanks with the correct answer.
+
+\begin{parts}
+ \part[4] The \makebox[1in]{\hrulefill} and \makebox[1in]{\hrulefill} loops will not iterate at all if their test expressions are false to start with.
+ \begin{solution}[.25in] for, while \end{solution}
+   
+ \part[2] A loop that is inside another loop is call a \makebox[1in]{\hrulefill} loop.
+ \begin{solution}[.25in] nested \end{solution}
+   
+ \part[2] The \makebox[1in]{\hrulefill} statement causes a loop to skip the remaining statements in the current iteration.
+ \begin{solution}[.25in] continue \end{solution}   
+
+ \part[2] A return type of \makebox[1in]{\hrulefill} indicates that a function does not return a value.
+ \begin{solution}[.25in] {\tt void} \end{solution}
+
+ \part[2] Having two functions with the same name, but different parameter lists is called \makebox[1in]{\hrulefill}.
+ \begin{solution}[.25in] overloading \end{solution}
+
+ \part[2] The \makebox[1in]{\hrulefill} search algorithm repeatedly divides the portion of an array being searched in half.
+ \begin{solution}[.25in] binary \end{solution}
+   
+ \part[2] \makebox[1in]{\hrulefill} variables are designed to hold memory addresses.
+ \begin{solution}[.25in] pointer \end{solution}
+
+ \part[2] To access the value in memory pointed to by a pointer variable, you must \makebox[1in]{\hrulefill} the pointers.
+ \begin{solution}[.25in] dereference \end{solution}
+   
+ \part[2] \makebox[1in]{\hrulefill} is used to signify that a pointer doesn't point to anything.
+ \begin{solution} NULL \end{solution}
+\end{parts}
+
+\newpage
+\section*{Short Answer}
+\question{Write a brief response to the questions below. You shouldn't need more space than provided.}
+\begin{parts}
+
+\part[5] So far, we have learned three different uses for the {\tt *} operator. What are they?
+\begin{solution}[2.5in]
+  \begin{itemize}
+    \item multiplication
+    \item declare a pointer
+    \item dereference a pointer
+  \end{itemize}
+\end{solution}
+
+\part[5] Describe how a two dimensional array is actually stored in memory.
+\begin{solution}
+  A two dimensional array is stored in memory as a one dimensional array. Where the rows are stored back to back with each having the full number of columns.
+\end{solution}
+
+\end{parts}
+	
+\newpage
+
+\section*{Code Analysis}
+
+\question[20] Examine the code below for a sorting algorithm (a modified selection sort).
+\begin{lstlisting}
+void someKindOfSort(int arr[], int size) {
+  int rounds = size / 2 + 1;
+  for (int it = 0; it < rounds; it++) { // Will be sorted in size/2 rounds
+    int pMi = it;                 // index of smallest value
+    int upperId = size - it - 1;
+    int pMa = upperId;            // index of largest value
+    if (it >= upperId) {
+      continue;
+    }
+    // Find the index of the smallest and largest
+    for(int idx = it; idx < size - it; idx++) {
+      if (arr[idx] < arr[pMi]) {
+        pMi = idx;
+      }
+      if (arr[idx] > arr[pMa]) {
+        pMa = idx;
+      }
+    }
+    // Do some swaps. I hope this is right.
+    if (pMi != it) {
+      swap(arr, it, pMi);
+      if (pMa == it) {
+        pMa = pMi;
+      }
+    }
+    if (pMa != upperId) {
+      swap(arr, upperId, pMa);
+    }
+    print(arr, size);
+  }
+}
+
+int main() {
+  int arr[SIZE] = {10, 1, 9, 2, 8, 3, 7, 4, 6, 5};  
+  print(arr, SIZE);
+  cout << "--sort--" << endl;
+  someKindOfSort(arr, SIZE);
+  cout << "--final--" << endl;
+  print(arr, SIZE);
+  return 0;
+}
+\end{lstlisting}
+\newpage
+What is the output of this program. You should assume the existence of the {\tt print} method that prints out the contents of the array in order and the existence of the {\tt swap} method that correctly swaps two value in the array. I have provided the first 2 and the last 2 lines of the output. Here, more than enough space is provided, don't assume you need to fill it.
+\newline
+\newline
+\begin{verbatim}
+  10  1  9  2  8  3  7  4  6  5
+ --sort--  
+\end{verbatim}
+\begin{solution}[5.5in]
+\begin{verbatim}
+ 1  5  9  2  8  3  7  4  6 10
+ 1  2  6  5  8  3  7  4  9 10
+ 1  2  3  5  4  6  7  8  9 10
+ 1  2  3  4  5  6  7  8  9 10
+ 1  2  3  4  5  6  7  8  9 10
+\end{verbatim}
+\end{solution}
+\begin{verbatim}
+ --final--
+   1  2  3  4  5  6  7  8  9 10 
+\end{verbatim}
+
+
+\newpage
+\section*{Programming Questions}
+
+\question[15] Write a function that takes in a pointer to an array of integers, and the size of that array. Your function should create a dynamic array of the same size and return an array that contains the same elements as the array passed in, except they will be in reverse order.
+
+\begin{verbatim}
+// Allocates a new array and populates it with the elements of arr,
+// but in reverse order.
+int* reverseArray(int *arr, int size) {
+  // BEGIN ANSWER
+\end{verbatim}
+
+\begin{solution}[6in]
+\begin{lstlisting}
+ int* rtn = new int[size];
+ for (int i = 0; i < size; i++) {
+   rtn[size - i - 1] = arr[i]
+ }
+ return rtn;
+\end{lstlisting}
+\end{solution}
+
+\begin{verbatim}
+  // END ANSWER
+}
+\end{verbatim}
+
+\newpage
+\question[20] When dealing with a two dimensional matrix $A$, the transpose operation ($A^T$) is the result of flipping the matrix over the main diagonal. For example, see the original matrix on the left and the transpose of that matrix on the right. Write the necessary code to transpose a square matrix stored in a two dimensional array. The transpose should be done "in place" meaning that a new array is not allocated and the data isn't fully copied.\newline
+\begin{center}
+\begin{tabular}{|rrrrr|c|rrrrr|}
+  \hline
+  \multicolumn{5}{|c|}{$A$} & & \multicolumn{5}{|c|}{$A^T$} \\
+  \hline
+   0 &  1 &  2 &  3 &  4 &  & 0 &  5 & 10 & 15 & 20 \\
+   5 &  6 &  7 &  8 &  9 &  & 1 &  6 & 11 & 16 & 21 \\
+  10 & 11 & 12 & 13 & 14 &  & 2 &  7 & 12 & 17 & 22 \\ 
+  15 & 16 & 17 & 18 & 19 &  & 3 &  8 & 13 & 18 & 23 \\
+  20 & 21 & 22 & 23 & 24 &  & 4 &  9 & 14 & 19 & 24 \\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{verbatim}
+// it doesn't matter what SIZE actually is.
+const int SIZE = ?; 
+// the matrix is always square
+int arr[SIZE][SIZE];
+int counter = 0;
+for (int r = 0; r < SIZE; r++) {
+  for (int c = 0; c < SIZE; c++) {
+    arr[r][c] = counter++;
+  }
+}  
+// BEGIN ANSWER - transpose arr
+\end{verbatim}
+
+\begin{solution}[3.75in]
+ \begin{verbatim}
+   for (int r = 0; r < SIZE; r++) {
+     for (int c = r + 1; c < SIZE; c++) {
+       int tmp = arr[r][c];
+       arr[r][c] = arr[c][r];
+       arr[c][r] = tmp;
+     }
+   }
+ \end{verbatim}
+\end{solution}
+
+\begin{verbatim}
+// END ANSWER - transpose arr  
+\end{verbatim}
+
+\newpage
+\begin{center}{\large THIS PAGE LEFT UNINTENTIONALLY BLANK}\end{center}
+
+\end{questions}
+
+\end{document}
+

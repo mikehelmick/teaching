@@ -1,0 +1,6 @@
+1992 US Presidential Election,Bush,Clinton,Perot,
+Bristol,8208,11414,5132,
+Kent,25217,35934,20690,
+Newport,12386,17584,9366,
+Providence,69579,125358,56575,
+Washington,16211,23009,13282,

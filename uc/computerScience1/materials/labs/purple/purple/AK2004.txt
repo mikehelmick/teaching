@@ -1,0 +1,5 @@
+2004 US Presidential Election,Bush,Kerry,Other,
+Region 1,42344,27531,2919,
+Region 2,100929,56290,4838,
+Region 3,37421,19352,2093,
+Region 4,10219,7861,836,

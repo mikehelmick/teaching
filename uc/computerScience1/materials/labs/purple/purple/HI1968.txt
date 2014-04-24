@@ -1,0 +1,5 @@
+1968 US Presidential Election,Nixon,Humphrey,Wallace,
+Hawaii,9625,15819,283,
+Honolulu,71259,108141,2794,
+Kauai,4140,7051,155,
+Maui,6401,10313,237,

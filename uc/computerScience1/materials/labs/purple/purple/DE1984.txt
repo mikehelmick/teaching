@@ -1,0 +1,4 @@
+1984 US Presidential Election,Reagan,Mondale,Other,
+Kent,21531,11789,83,
+New Castle,102322,76238,517,
+Sussex,28337,13629,126,

@@ -1,0 +1,4 @@
+main.o: main.cpp ExA.h ExB.h ExC.h
+ExA.o: ExA.cpp ExA.h ExB.h ExC.h
+ExB.o: ExB.cpp ExB.h ExC.h
+ExC.o: ExC.cpp ExC.h

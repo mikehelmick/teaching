@@ -1,0 +1,4 @@
+2008 US Presidential Election,McCain,Obama,Other,
+Kent,29827,36392,706,
+New Castle,74608,178768,3245,
+Sussex,47939,40299,832,

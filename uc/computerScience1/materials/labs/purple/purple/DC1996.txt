@@ -1,0 +1,2 @@
+1996 US Presidential Election,Dole,Clinton,Perot,
+District of Columbia,17339,158220,3611,

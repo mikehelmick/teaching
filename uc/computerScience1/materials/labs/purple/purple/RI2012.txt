@@ -1,0 +1,7 @@
+2012 US Presidential Election,Romney,Obama,Other,
+Bristol,9231,14974,471,
+Kent,31567,45564,1792,
+Newport,15202,23463,787,
+Providence,75785,159520,4481,
+Washington,25366,35888,1625,
+Federal,53,268,12,

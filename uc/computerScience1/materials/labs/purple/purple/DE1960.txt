@@ -1,0 +1,4 @@
+1960 US Presidential Election,Nixon,Kennedy,Unpledged,
+Kent,10697,10754,0,
+New Castle,69284,73364,0,
+Sussex,16392,15472,0,

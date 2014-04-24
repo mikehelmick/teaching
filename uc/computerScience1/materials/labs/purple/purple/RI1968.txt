@@ -1,0 +1,6 @@
+1968 US Presidential Election,Nixon,Humphrey,Wallace,
+Bristol,7403,11561,483,
+Kent,22493,35609,2519,
+Newport,10504,16251,1043,
+Providence,70320,169246,10347,
+Washington,11639,13851,1286,

@@ -1,0 +1,6 @@
+1988 US Presidential Election,Bush,Dukakis,Other,
+Bristol,10626,11168,89,
+Kent,34314,37221,266,
+Newport,16923,17597,144,
+Providence,94248,135927,984,
+Washington,21650,23210,202,

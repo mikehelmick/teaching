@@ -1,0 +1,6 @@
+2008 US Presidential Election,McCain,Obama,Other,
+Hawaii,14866,50819,1231,
+Honolulu,88164,214239,4410,
+Kauai,6245,20416,563,
+Maui,11154,39727,908,
+Overseas,137,670,19,

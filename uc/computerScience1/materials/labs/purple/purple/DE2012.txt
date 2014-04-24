@@ -1,0 +1,4 @@
+2012 US Presidential Election,Romney,Obama,Other,
+Kent,32135,35527,1018,
+New Castle,81230,167082,3700,
+Sussex,52119,39975,1135,

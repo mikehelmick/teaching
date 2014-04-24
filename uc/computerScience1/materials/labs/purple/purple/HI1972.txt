@@ -1,0 +1,5 @@
+1972 US Presidential Election,Nixon,McGovern,Other,
+Hawaii,16832,11652,0,
+Honolulu,132844,76957,0,
+Kauai,7571,5401,0,
+Maui,11618,7399,0,

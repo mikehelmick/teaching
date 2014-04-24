@@ -1,0 +1,2 @@
+2004 US Presidential Election,Bush,Kerry,Other,
+District of Columbia,21256,202970,3360,

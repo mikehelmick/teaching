@@ -1,0 +1,4 @@
+1968 US Presidential Election,Nixon,Humphrey,Wallace,
+Kent,11082,9055,4751,
+New Castle,70014,68468,17931,
+Sussex,15618,11671,5777,

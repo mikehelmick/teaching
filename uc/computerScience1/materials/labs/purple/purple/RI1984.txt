@@ -1,0 +1,6 @@
+1984 US Presidential Election,Reagan,Mondale,Other,
+Bristol,11635,9386,63,
+Kent,40427,31352,214,
+Newport,19629,14466,114,
+Providence,116024,124109,765,
+Washington,24365,17793,147,

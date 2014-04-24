@@ -1,0 +1,2 @@
+1992 US Presidential Election,Bush,Clinton,Perot,
+District of Columbia,20698,192619,9681,

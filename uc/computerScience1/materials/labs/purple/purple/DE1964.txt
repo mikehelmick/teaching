@@ -1,0 +1,4 @@
+1964 US Presidential Election,Goldwater,Johnson,Unpledged,
+Kent,9006,12981,0,
+New Castle,54767,91752,0,
+Sussex,14305,17971,0,

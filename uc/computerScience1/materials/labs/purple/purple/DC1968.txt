@@ -1,0 +1,2 @@
+1968 US Presidential Election,Nixon,Humphrey,Wallace,
+District of Columbia,31012,139566,0,

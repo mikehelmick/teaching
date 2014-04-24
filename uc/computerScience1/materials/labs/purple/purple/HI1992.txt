@@ -1,0 +1,5 @@
+1992 US Presidential Election,Bush,Clinton,Perot,
+Hawaii,15460,25725,8889,
+Honolulu,103937,123908,35728,
+Kauai,6274,10715,1756,
+Maui,11151,18962,6630,

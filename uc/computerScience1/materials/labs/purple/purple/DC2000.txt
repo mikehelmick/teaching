@@ -1,0 +1,2 @@
+2000 US Presidential Election,Bush,Gore,Nader,
+District of Columbia,18073,171923,10576,

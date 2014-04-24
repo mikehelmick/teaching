@@ -1,0 +1,6 @@
+1960 US Presidential Election,Nixon,Kennedy,Unpledged,
+Bristol,7537,11099,0,
+Kent,24344,30662,0,
+Newport,11942,15677,0,
+Providence,91028,189014,0,
+Washington,12651,11580,0,

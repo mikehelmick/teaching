@@ -1,0 +1,4 @@
+1972 US Presidential Election,Nixon,McGovern,Other,
+Kent,17712,10463,381,
+New Castle,100681,70190,2085,
+Sussex,21964,11630,410,

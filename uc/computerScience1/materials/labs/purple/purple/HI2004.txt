@@ -1,0 +1,6 @@
+2004 US Presidential Election,Bush,Kerry,Other,
+Hawaii,22032,35116,554,
+Honolulu,144157,152500,1890,
+Kauai,9740,14916,220,
+Maui,18187,28803,440,
+Overseas,75,373,10,

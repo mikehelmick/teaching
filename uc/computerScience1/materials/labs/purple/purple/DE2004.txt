@@ -1,0 +1,4 @@
+2004 US Presidential Election,Bush,Kerry,Other,
+Kent,31578,23875,538,
+New Castle,93079,146179,2269,
+Sussex,47003,30098,651,

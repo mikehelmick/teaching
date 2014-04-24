@@ -1,0 +1,6 @@
+1980 US Presidential Election,Reagan,Carter,Anderson,
+Bristol,8508,9851,3358,
+Kent,28331,31350,10793,
+Newport,14555,13904,5575,
+Providence,86467,126808,32994,
+Washington,16932,16429,7099,

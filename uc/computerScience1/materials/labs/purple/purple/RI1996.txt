@@ -1,0 +1,6 @@
+1996 US Presidential Election,Dole,Clinton,Perot,
+Bristol,6988,12257,1990,
+Kent,19992,41018,9240,
+Newport,11500,18951,3785,
+Providence,49901,134866,22724,
+Washington,16302,25958,5984,

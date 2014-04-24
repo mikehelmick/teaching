@@ -1,0 +1,4 @@
+2000 US Presidential Election,Bush,Gore,Nader,
+Kent,24081,22790,1082,
+New Castle,78587,127539,5767,
+Sussex,34620,29739,1458,

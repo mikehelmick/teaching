@@ -1,0 +1,4 @@
+1992 US Presidential Election,Bush,Clinton,Perot,
+Kent,15562,15364,8916,
+New Castle,66311,91516,37581,
+Sussex,20440,19174,12716,

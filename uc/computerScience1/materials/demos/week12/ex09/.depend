@@ -1,0 +1,2 @@
+main.o: main.cpp Account.h
+Account.o: Account.cpp Account.h
