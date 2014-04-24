@@ -1,0 +1,12 @@
+ Input File: grades_in.txt
+Score count: 400
+       Mean: 49.035
+       Mode: 48
+     stdDev: 28.986
+        Max: 99
+        Min: 0
+          A: 44
+          B: 38
+          C: 37
+          D: 39
+          F: 281

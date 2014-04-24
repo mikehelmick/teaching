@@ -1,0 +1,2 @@
+main.o: main.cpp Gradebook.h
+Gradebook.o: Gradebook.cpp Gradebook.h

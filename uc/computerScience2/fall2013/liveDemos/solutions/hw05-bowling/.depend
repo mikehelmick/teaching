@@ -1,0 +1,3 @@
+main.o: main.cpp Game.h GameRec.h
+Game.o: Game.cpp Game.h
+GameRec.o: GameRec.cpp GameRec.h Game.h
