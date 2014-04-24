@@ -1,0 +1,83 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+
+typedef unsigned char BYTE;
+typedef unsigned short WORD;
+
+typedef struct {
+  // FILE Header
+  BYTE  Identifier;        /* PCX Id Number (Always 0x0A) */
+  BYTE  Version;           /* Version Number */
+  BYTE  Encoding;          /* Encoding Format */
+  BYTE  BitsPerPixel;      /* Bits per Pixel */
+  WORD  XStart;            /* Left of image */
+  WORD  YStart;            /* Top of Image */
+  WORD  XEnd;              /* Right of Image */
+  WORD  YEnd;              /* Bottom of image */
+  WORD  HorzRes;           /* Horizontal Resolution */
+  WORD  VertRes;           /* Vertical Resolution */
+  BYTE  Palette[48];       /* 16-Color EGA Palette */
+  BYTE  Reserved1;         /* Reserved (Always 0) */
+  BYTE  NumBitPlanes;      /* Number of Bit Planes */
+  WORD  BytesPerLine;      /* Bytes per Scan-line */
+  WORD  PaletteType;       /* Palette Type */
+  WORD  HorzScreenSize;    /* Horizontal Screen Size */
+  WORD  VertScreenSize;    /* Vertical Screen Size */
+  BYTE  Reserved2[54];     /* Reserved (Always 0) */
+} PcxHeader;
+
+class PcxFile {
+ public:
+  PcxFile(string filename) : filename(filename) {
+
+    ifstream inFile;
+    inFile.open(this->filename.c_str(), ios::in | ios::binary);
+
+    inFile.read((char*) &header, sizeof(header));
+
+    inFile.close();
+  }
+
+  virtual ~PcxFile() {
+  }
+
+  void printInfo() {
+    cout << "Identifier: " << header.Identifier << endl;
+    cout << "Version: " << header.Version << endl;
+    cout << "Encoding: " << (int) header.Encoding << endl;
+    cout << "BitsPerPixel: " << header.BitsPerPixel << endl;
+    cout << "X: " << header.XStart << " - " << header.XEnd << endl;
+    cout << "Y: " << header.YStart << " - " << header.YEnd << endl;
+    cout << "HorzRes: " << header.HorzRes << endl;
+    cout << "VertRes: " << header.VertRes << endl;
+    cout << "NumBitPlanes: " << (int) header.NumBitPlanes << endl;
+    cout << "BytesPerLine: " << header.BytesPerLine << endl;
+
+    width = header.XEnd - header.XStart + 1;
+    height = header.YEnd - header.YStart + 1;
+
+    int MaxNumberOfColors = (1L << (header.BitsPerPixel * header.NumBitPlanes));
+    int ScanLineLength = (header.BytesPerLine * header.NumBitPlanes);
+    cout << "MaxNumberOfColors: " << MaxNumberOfColors << endl;
+    cout << "ScanLineLength: " << ScanLineLength << endl;
+    cout << "Image size: " << width << "x" << height << endl;
+  }
+
+ private:
+  string filename;
+  int width;
+  int height;
+
+  PcxHeader header;
+};
+
+int main() {
+
+  PcxFile img("ucsnow.pcx");
+  img.printInfo();
+
+
+}
+
