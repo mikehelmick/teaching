@@ -1,0 +1,2 @@
+main.o: main.cpp bigint.h
+bigint.o: bigint.cpp bigint.h

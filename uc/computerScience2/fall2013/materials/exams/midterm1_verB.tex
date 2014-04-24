@@ -1,0 +1,371 @@
+\documentclass[11pt,answers]{exam}
+\usepackage{listings}
+\usepackage{pdfsync}
+
+%
+%  Created by Mike Helmick on 2006-09-13.
+%  Copyright (c) 2006 Mike Helmick. All rights reserved.
+%
+%
+
+\pdfoutput=1 % we are running PDFLaTeX
+
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% exam settings
+\boxedpoints
+\pointsinmargin
+\printanswers 
+%\noprintanswers
+
+\usepackage{color} 
+\definecolor{SolutionColor}{rgb}{0.8,0.9,0.9} 
+\shadedsolutions 
+
+
+%
+%  Update these values for running headers
+%
+\firstpageheader{\bf\Large CS 1022C}{\bf\Large Midterm Exam - VER B}{\bf\Large
+  2013-10-10 }
+\runningheader{CS 1022C-001/002}{University of Cincinnati}{Midterm - Fall 2013 - VER B}
+\addpoints
+
+\begin{document}
+
+\begin{center} 
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    CS 1022C-001/002 - Fall 2013 - Midterm Exam \newline
+	University of Cincinnati \newline
+	\newline
+ 	There are \numquestions\  questions for a total of  \numpoints\ points.
+}}}
+\end{center}
+
+% setup standard options for the including code fragments
+\lstset{language=C++,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, showstringspaces=true}
+
+\vspace{0.1in} 
+\hbox to \textwidth{Name:\enspace\hrulefill} 
+Please circle your section : Section 001 - Dr. Talaga : Section 002 - Dr. Helmick
+
+\section*{Instructions}
+\begin{itemize}
+\item Please read through this entire exam very carefully before starting. 
+\item This exam is closed notes and closed books.
+\item All work must be written on the exam pages in order to be graded. Any scrap paper used, must be the scrap paper provided during the exam period.
+\item For programming questions: Please be accurate with your C++ syntax: this includes appropriate use of braces, semicolons, and the proper use of upper/lowercase letters.  
+\item No electronic devices may be used during the exam: this includes (but is not limited to) calculators, phones, tablets, and computers.
+\item You have 55 minutes to complete the exam.  
+\end{itemize}
+
+\section*{Good Luck!}
+
+\begin{center} 
+	\combinedgradetable[h]
+\end{center}
+\newpage
+
+% Questions start here:
+\begin{questions}
+
+\section*{Multiple Choice and True/False}
+
+\question{Circle the {\bf best} response.}
+\begin{parts}
+	
+\part[2] The input to the compiler is called
+\begin{choices}
+  \choice Source File \choice Machine Code \choice Library Files \choice Executable program
+\end{choices}
+\begin{solution} A - source file \end{solution}
+
+\part[2] True of False: It is best practice to initialize variables when you define them.
+\begin{choices}
+  \choice True \choice False
+\end{choices}
+\begin{solution} true \end{solution}
+
+\part[2] When calling a function, the default type of parameter passing is:
+\begin{choices}
+  \choice pass-by-reference
+  \choice pass-by-pointer
+  \choice pass-by-value
+  \choice pass-by-osmosis
+\end{choices}
+\begin{solution} C - pass-by-value \end{solution}
+	
+\part[2] True of False: A {\tt for} loop always executes at least one iteration	
+\begin{choices}
+  \choice True \choice False
+\end{choices}
+\begin{solution} false \end{solution}
+
+\part[2] True of False: A {\tt do} loop always executes at least one iteration	
+\begin{choices}
+  \choice True \choice False
+\end{choices}
+\begin{solution} true \end{solution}
+	
+\part[2] When using pointers, the {\tt *} operator is used to 
+\begin{choices}
+	\choice access the pointer
+	\choice dereference the pointer
+	\choice assign the pointer
+	\choice inspect the pointer
+\end{choices}
+\begin{solution}B - dereference the pointer\end{solution}
+	
+\part[2] If you attempt to access memory that isn't properly initialized, your program may result in a
+\begin{choices}
+	\choice logical error
+	\choice array index out of bounds exception
+	\choice segmentation fault
+	\choice null pointer error
+\end{choices}
+\begin{solution}C - segmentation fault\end{solution}
+	
+%\part[2] True or False: For local variables of class types, the destructor is automatically called when the variable goes out of scope.
+\part[2] True or False: The class destructor will automatically get called when an instance of that class, stored in a local variable,  goes out of scope.
+\begin{choices}
+	\choice True \choice False
+\end{choices}
+\begin{solution}True\end{solution}
+
+\part[2] A constructor that has a single parameter, that is a reference to an instance of the same class, is called a:
+\begin{choices}
+	\choice Copy constructor
+	\choice Duplication Constructor
+	\choice Assignment operator
+	\choice Destructor
+\end{choices}
+\begin{solution}A - Copy constructor\end{solution}
+
+\end{parts}
+
+\newpage
+\section*{Short Answer}
+\question{Write a brief response to each question. Please write in complete sentences, using a maximum of 2 sentences.}
+\begin{parts}
+
+\part[6] What is encapsulation? Why is it useful?
+\begin{solution}[1.5in]
+Encapsulation is the process of making data private and internal to a class. This allows you to control how the data is accessed and changed.
+\end{solution}
+
+\part[6] How do you discover syntax errors? How do you discover logic errors?
+\begin{solution}[1.5in]
+Syntax errors are discovered during the compiler, during program compilation. Logic errors are discovered when running your program or during unit testing.
+\end{solution}
+	
+\end{parts}
+	
+\newpage
+
+\section*{Code Analysis}
+
+\question Examine the following code segment and answer the questions below.
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+
+// todo(helmick): Document this function!
+int sillyFunction(int x, int &y, const int &z) {
+  x = z;
+  y = 50;
+}
+
+int main() {
+  int x = 40;
+  int y = 60;
+  int z;
+  cout << "x: " << x << " y: " << y << " z: " << z << endl;
+  z = y;
+  sillyFunction(z, y, x);
+  cout << "x: " << x << " y: " << y << " z: " << z << endl;
+  return 0;
+}
+\end{lstlisting}
+
+\begin{parts}
+	
+\part[5] What is the output of this code?
+\begin{solution}[1.0in]
+\begin{tt}
+x: 40 y: 60 z: <randomvalue>\newline
+x: 40 y: 50 z: 60\newline
+\end{tt}
+\end{solution}
+
+\part[5] What is the type of parameter passing used for {\tt x}, {\tt y}, and {\tt z} in {\tt sillyFunction}? Which, if any, parameters will have their changes reflected in the calling code?
+\begin{solution}[1.0in]
+x is pass-by-value, y is pass-by-reference, z is a const reference.\newline
+the second parameter, y, can be changed since it is pass-by-reference.
+\end{solution}
+
+\part[5] What is missing from {\tt sillyFunction}?
+\begin{solution}[1.0in]
+It should have a return statement, but it doesn't. That is too bad.
+\end{solution}
+\end{parts}
+
+\newpage
+\question Examine the following code segment and answer the questions below.
+\begin{parts}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+
+int main() {
+  int* a = new int;
+  *a = 45;
+  int* b = a;
+  cout << "a=" << *a << " b=" << *b << endl;
+  *b = 55;
+  cout << "a=" << *a << " b=" << *b << endl;
+  b = new int;
+  *b = 65;
+  cout << "a=" << *a << " b=" << *b << endl;
+  *a = 75;
+  cout << "a=" << *a << " b=" << *b << endl;
+  delete a;
+  a = NULL;
+  b = NULL;
+  return 0;
+}
+\end{lstlisting}
+
+\part[10] What is the output of this code?
+\begin{solution}[1.0in]
+\begin{tt}
+a=45 b=45\newline
+a=55 b=55\newline
+a=55 b=65\newline
+a=75 b=65\newline
+\end{tt}
+\end{solution}
+
+\part[5] Does this code correctly clean up all of the memory it dynamically allocates? If not, how would you fix it?
+\begin{solution}[1.0in]
+\begin{tt}
+b is not cleaned up, it should be deleted instead of just set to NULL.
+\end{tt}
+\end{solution}
+\end{parts}
+
+\newpage
+\section*{Programming Questions}
+
+% This question should be common.
+\question[20] Design and write the header file for a class that represents a single playing card. Playing cards are immutable, so there don't need to be any methods to change the card.
+\begin{verbatim}
+#ifndef CARD_H
+#define CARD_H
+
+// Assume that anything you need is included.
+using namespace std;
+
+class Card {
+\end{verbatim}
+
+\begin{solution}[4.5in]
+\begin{verbatim}
+public:
+  Card(int suit, int rank);
+  int getSuit() const;
+  int getRank() const;
+private:
+  const int suit;
+  const int rank;
+  // It doesn't make sense to construct a card without suit and rank,
+  // make defualt constructor private.
+  Card();
+\end{verbatim}
+\end{solution}
+
+\begin{verbatim}
+};
+\end{verbatim}
+
+\newpage
+
+\question[20] Write a program that reads in one integer from the user and prints a multiplication table from 0 to the number, formatted so that each number takes up 3 spaces, plus a space between each number. \newline
+\begin{verbatim}
+Enter a number: 5
+  0   0   0   0   0   0 
+  0   1   2   3   4   5 
+  0   2   4   6   8  10 
+  0   3   6   9  12  15 
+  0   4   8  12  16  20 
+  0   5  10  15  20  25
+\end{verbatim}
+
+\begin{verbatim}
+#include <iostream>
+using namespace std;
+int main() {
+  cout.width(3);  // This sets the next number printed to be of width 3.  Does not stick!
+  cout << "Enter the dimension of the multiplication table? "; 
+  // START ANSWER HERE
+\end{verbatim}
+
+\begin{solution}[4.5in]
+\begin{verbatim}
+  int dim = 0;
+  cin >> dim;
+  for (int y = 0; y <= dim; y++) {
+    for (int x = 0; x <= dim; x++) {
+      cout.width(3);
+      cout << (y * x);
+      cout << ' ';
+    }
+    cout << endl;
+  }
+  return 0;
+\end{verbatim}
+\end{solution}
+
+\begin{verbatim}
+    // END OF ANSWER
+}
+\end{verbatim}
+
+
+\newpage
+\bonusquestion[15] Implement a class called {\tt SodaCan} with functions {\tt getSurfaceArea()} and {\tt getVolume()}. In the constructor, supply the height and radius of the can. You may assume that the constant {\tt PI} (type double) is defined and available for you to use. Formulas for your reference:
+\begin{center} 
+  $V = \pi r^2h$ {\bf and} $A = 2 \pi r^2 + 2 \pi r h$
+\end{center}
+
+\begin{solution}
+\begin{lstlisting}
+class SodaCan {
+public:
+  SodaCan(double height, double radius) {
+    this->height = height;
+    this->radius = radius;
+  }
+
+  double getSurfaceArea() {
+    return 2 * PI * radius*radius + 2 * PI * radius * height;	
+  }
+
+  double getVolume() {
+	return PI * r * r * h;
+  }
+
+private: 
+  double height;
+  double radius;
+
+  SodaCan() {};
+};
+\end{lstlisting}
+\end{solution}
+
+\end{questions}
+
+\end{document}
+

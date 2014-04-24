@@ -1,0 +1,85 @@
+Num Players: 2 Turns: 5
+Verbose: 1
+
+ROUND 1 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Connecticut Avenue with a 9
+
+Player: 1 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Chance with a 7
+Chance: Advance to Go
+
+
+ROUND 2 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 9: Connecticut Avenue  ChanceJail: 0  ChestJail: 0
+Landed on St. James Place with a 7
+
+Player: 1 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Income Tax with a 4
+
+
+ROUND 3 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 16: St. James Place  ChanceJail: 0  ChestJail: 0
+Landed on Kentucky Avenue with a 5
+
+Player: 1 at 4: Income Tax  ChanceJail: 0  ChestJail: 0
+Landed on Electric Company with a 8 DOUBLES
+Landed on Free Parking with a 8
+
+
+ROUND 4 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 21: Kentucky Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Alantic Avenue with a 5
+
+Player: 1 at 20: Free Parking  ChanceJail: 0  ChestJail: 0
+Landed on Go To Jail with a 10 DOUBLES
+
+
+ROUND 5 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 26: Alantic Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Community Chest with a 7
+Community Chest: Advance to Go
+
+Player: 1 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Rolled a 8 not doubles. ;-(
+
+2  0:Go : 2
+0  1:Mediterranean Avenue : 0
+0  2:Community Chest : 0
+0  3:Baltic Avenue : 0
+1  4:Income Tax : 1
+0  5:Reading Railroad : 0
+0  6:Oriental Avenue : 0
+1  7:Chance : 1
+0  8:Vermont Avenue : 0
+1  9:Connecticut Avenue : 1
+1  10:In Jail/Just Visiting : 1
+0  11:St. Charles Place : 0
+1  12:Electric Company : 1
+0  13:States Avenue : 0
+0  14:Virginia Avenue : 0
+0  15:Pennsylvania Railroad : 0
+1  16:St. James Place : 1
+0  17:Community Chest : 0
+0  18:Tennessee Avenue : 0
+0  19:New York Avenue : 0
+1  20:Free Parking : 1
+1  21:Kentucky Avenue : 1
+0  22:Chance : 0
+0  23:Indiana Avenue : 0
+0  24:Illinois Avenue : 0
+0  25:B. & O. Railroad : 0
+1  26:Alantic Avenue : 1
+0  27:Ventnor Avenue : 0
+0  28:Water Works : 0
+0  29:Marvin Gardens : 0
+1  30:Go To Jail : 1
+0  31:Pacific Avenue : 0
+0  32:North Carolina AVenue : 0
+1  33:Community Chest : 1
+0  34:Pennsylvania Avenue : 0
+0  35:Short Line : 0
+0  36:Chance : 0
+0  37:Park Place : 0
+0  38:Luxury Tax : 0
+0  39:Boardwalk : 0

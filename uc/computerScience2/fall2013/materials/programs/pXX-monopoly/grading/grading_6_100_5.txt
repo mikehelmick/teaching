@@ -1,0 +1,42 @@
+
+Go :: 20
+Mediterranean Avenue :: 12
+Community Chest :: 20
+Baltic Avenue :: 15
+Income Tax :: 14
+Reading Railroad :: 15
+Oriental Avenue :: 15
+Chance :: 16
+Vermont Avenue :: 15
+Connecticut Avenue :: 19
+In Jail/Just Visiting :: 48
+St. Charles Place :: 19
+Electric Company :: 25
+States Avenue :: 15
+Virginia Avenue :: 16
+Pennsylvania Railroad :: 13
+St. James Place :: 21
+Community Chest :: 26
+Tennessee Avenue :: 22
+New York Avenue :: 17
+Free Parking :: 22
+Kentucky Avenue :: 16
+Chance :: 16
+Indiana Avenue :: 23
+Illinois Avenue :: 24
+B. & O. Railroad :: 15
+Alantic Avenue :: 19
+Ventnor Avenue :: 16
+Water Works :: 18
+Marvin Gardens :: 17
+Go To Jail :: 23
+Pacific Avenue :: 19
+North Carolina AVenue :: 15
+Community Chest :: 20
+Pennsylvania Avenue :: 11
+Short Line :: 24
+Chance :: 13
+Park Place :: 13
+Luxury Tax :: 11
+Boardwalk :: 16
+

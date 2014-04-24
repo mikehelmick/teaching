@@ -1,0 +1,43 @@
+Num Players: 6 Turns: 1000
+Verbose: 0
+
+Go :: 222
+Mediterranean Avenue :: 138
+Community Chest :: 139
+Baltic Avenue :: 151
+Income Tax :: 179
+Reading Railroad :: 180
+Oriental Avenue :: 164
+Chance :: 146
+Vermont Avenue :: 146
+Connecticut Avenue :: 137
+In Jail/Just Visiting :: 425
+St. Charles Place :: 195
+Electric Company :: 177
+States Avenue :: 144
+Virginia Avenue :: 179
+Pennsylvania Railroad :: 197
+St. James Place :: 185
+Community Chest :: 201
+Tennessee Avenue :: 193
+New York Avenue :: 210
+Free Parking :: 218
+Kentucky Avenue :: 158
+Chance :: 191
+Indiana Avenue :: 166
+Illinois Avenue :: 213
+B. & O. Railroad :: 222
+Alantic Avenue :: 186
+Ventnor Avenue :: 175
+Water Works :: 188
+Marvin Gardens :: 184
+Go To Jail :: 169
+Pacific Avenue :: 172
+North Carolina AVenue :: 187
+Community Chest :: 202
+Pennsylvania Avenue :: 155
+Short Line :: 165
+Chance :: 162
+Park Place :: 142
+Luxury Tax :: 149
+Boardwalk :: 175

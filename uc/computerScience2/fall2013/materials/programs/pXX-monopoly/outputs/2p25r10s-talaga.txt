@@ -1,0 +1,261 @@
+Num Players: 2 Turns: 25
+Verbose: 1
+
+ROUND 1 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Connecticut Avenue with a 9
+
+Player: 1 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Chance with a 7
+Chance: Advance to Go
+
+
+ROUND 2 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 9: Connecticut Avenue  ChanceJail: 0  ChestJail: 0
+Landed on St. James Place with a 7
+
+Player: 1 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Income Tax with a 4
+
+
+ROUND 3 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 16: St. James Place  ChanceJail: 0  ChestJail: 0
+Landed on Kentucky Avenue with a 5
+
+Player: 1 at 4: Income Tax  ChanceJail: 0  ChestJail: 0
+Landed on Electric Company with a 8 DOUBLES
+Landed on Free Parking with a 8
+
+
+ROUND 4 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 21: Kentucky Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Alantic Avenue with a 5
+
+Player: 1 at 20: Free Parking  ChanceJail: 0  ChestJail: 0
+Landed on Go To Jail with a 10 DOUBLES
+
+
+ROUND 5 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 26: Alantic Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Community Chest with a 7
+Community Chest: Advance to Go
+
+Player: 1 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Rolled a 8 not doubles. ;-(
+
+
+ROUND 6 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Vermont Avenue with a 8
+
+Player: 1 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Rolled a 5 not doubles. ;-(
+
+
+ROUND 7 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 8: Vermont Avenue  ChanceJail: 0  ChestJail: 0
+Landed on In Jail/Just Visiting with a 2 DOUBLES
+Landed on New York Avenue with a 9
+
+Player: 1 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Landed on Virginia Avenue with a 4 DOUBLES
+Landed on Free Parking with a 6
+
+
+ROUND 8 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 19: New York Avenue  ChanceJail: 0  ChestJail: 0
+Landed on B. & O. Railroad with a 6
+
+Player: 1 at 20: Free Parking  ChanceJail: 0  ChestJail: 0
+Landed on Marvin Gardens with a 9
+
+
+ROUND 9 -----Chess: 17 -----Chance: 16------------------------------------------------------------
+Player: 0 at 25: B. & O. Railroad  ChanceJail: 0  ChestJail: 0
+Landed on Community Chest with a 8 DOUBLES
+Community Chest: Bank error in your favor
+Landed on Community Chest with a 9
+Community Chest: Doctor's fees
+
+Player: 1 at 29: Marvin Gardens  ChanceJail: 0  ChestJail: 0
+Landed on Boardwalk with a 10
+
+
+ROUND 10 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 2: Community Chest  ChanceJail: 0  ChestJail: 0
+Landed on Vermont Avenue with a 6 DOUBLES
+Landed on Virginia Avenue with a 6 DOUBLES
+Landed on Free Parking with a 6
+
+Player: 1 at 39: Boardwalk  ChanceJail: 0  ChestJail: 0
+Landed on Oriental Avenue with a 7
+
+
+ROUND 11 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 20: Free Parking  ChanceJail: 0  ChestJail: 0
+Landed on Alantic Avenue with a 6 DOUBLES
+Landed on Go To Jail with a 4 DOUBLES
+
+Player: 1 at 6: Oriental Avenue  ChanceJail: 0  ChestJail: 0
+Landed on In Jail/Just Visiting with a 4
+
+
+ROUND 12 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Rolled a 9 not doubles. ;-(
+
+Player: 1 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Landed on Tennessee Avenue with a 8
+
+
+ROUND 13 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Rolled a 8 not doubles. ;-(
+
+Player: 1 at 18: Tennessee Avenue  ChanceJail: 0  ChestJail: 0
+Landed on B. & O. Railroad with a 7
+
+
+ROUND 14 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 10: In Jail/Just Visiting  ChanceJail: 0  ChestJail: 0
+Landed on St. James Place with a 6
+
+Player: 1 at 25: B. & O. Railroad  ChanceJail: 0  ChestJail: 0
+Landed on Pennsylvania Avenue with a 9
+
+
+ROUND 15 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 16: St. James Place  ChanceJail: 0  ChestJail: 0
+Landed on Illinois Avenue with a 8
+
+Player: 1 at 34: Pennsylvania Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Boardwalk with a 5
+
+
+ROUND 16 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 24: Illinois Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Ventnor Avenue with a 3
+
+Player: 1 at 39: Boardwalk  ChanceJail: 0  ChestJail: 0
+Landed on Oriental Avenue with a 7
+
+
+ROUND 17 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 27: Ventnor Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Pacific Avenue with a 4 DOUBLES
+Landed on Go with a 9
+
+Player: 1 at 6: Oriental Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Electric Company with a 6
+
+
+ROUND 18 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 0: Go  ChanceJail: 0  ChestJail: 0
+Landed on Income Tax with a 4
+
+Player: 1 at 12: Electric Company  ChanceJail: 0  ChestJail: 0
+Landed on Free Parking with a 8
+
+
+ROUND 19 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 4: Income Tax  ChanceJail: 0  ChestJail: 0
+Landed on States Avenue with a 9
+
+Player: 1 at 20: Free Parking  ChanceJail: 0  ChestJail: 0
+Landed on Pacific Avenue with a 11
+
+
+ROUND 20 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 13: States Avenue  ChanceJail: 0  ChestJail: 0
+Landed on B. & O. Railroad with a 12 DOUBLES
+Landed on Water Works with a 3
+
+Player: 1 at 31: Pacific Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Park Place with a 6
+
+
+ROUND 21 -----Chess: 15 -----Chance: 16------------------------------------------------------------
+Player: 0 at 28: Water Works  ChanceJail: 0  ChestJail: 0
+Landed on North Carolina AVenue with a 4
+
+Player: 1 at 37: Park Place  ChanceJail: 0  ChestJail: 0
+Landed on Community Chest with a 5
+Community Chest: From sale of stock you get $50
+
+
+ROUND 22 -----Chess: 14 -----Chance: 16------------------------------------------------------------
+Player: 0 at 32: North Carolina AVenue  ChanceJail: 0  ChestJail: 0
+Landed on Short Line with a 3
+
+Player: 1 at 2: Community Chest  ChanceJail: 0  ChestJail: 0
+Landed on Vermont Avenue with a 6
+
+
+ROUND 23 -----Chess: 14 -----Chance: 16------------------------------------------------------------
+Player: 0 at 35: Short Line  ChanceJail: 0  ChestJail: 0
+Landed on Boardwalk with a 4
+
+Player: 1 at 8: Vermont Avenue  ChanceJail: 0  ChestJail: 0
+Landed on States Avenue with a 5
+
+
+ROUND 24 -----Chess: 14 -----Chance: 16------------------------------------------------------------
+Player: 0 at 39: Boardwalk  ChanceJail: 0  ChestJail: 0
+Landed on Chance with a 8
+Chance: Advance to Illinois Ave.
+
+Player: 1 at 13: States Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Chance with a 9
+Chance: Advance to St. Charles Place
+
+
+ROUND 25 -----Chess: 14 -----Chance: 16------------------------------------------------------------
+Player: 0 at 24: Illinois Avenue  ChanceJail: 0  ChestJail: 0
+Landed on Alantic Avenue with a 2 DOUBLES
+Landed on Community Chest with a 7
+Community Chest: Get Out of Jail Free
+
+Player: 1 at 11: St. Charles Place  ChanceJail: 0  ChestJail: 0
+Landed on Pennsylvania Railroad with a 4 DOUBLES
+Landed on New York Avenue with a 4
+
+3  0:Go : 3
+0  1:Mediterranean Avenue : 0
+2  2:Community Chest : 2
+0  3:Baltic Avenue : 0
+2  4:Income Tax : 2
+0  5:Reading Railroad : 0
+2  6:Oriental Avenue : 2
+2  7:Chance : 2
+3  8:Vermont Avenue : 3
+1  9:Connecticut Avenue : 1
+4  10:In Jail/Just Visiting : 4
+1  11:St. Charles Place : 1
+2  12:Electric Company : 2
+2  13:States Avenue : 2
+2  14:Virginia Avenue : 2
+1  15:Pennsylvania Railroad : 1
+2  16:St. James Place : 2
+0  17:Community Chest : 0
+1  18:Tennessee Avenue : 1
+2  19:New York Avenue : 2
+4  20:Free Parking : 4
+1  21:Kentucky Avenue : 1
+1  22:Chance : 1
+0  23:Indiana Avenue : 0
+2  24:Illinois Avenue : 2
+3  25:B. & O. Railroad : 3
+3  26:Alantic Avenue : 3
+1  27:Ventnor Avenue : 1
+1  28:Water Works : 1
+1  29:Marvin Gardens : 1
+2  30:Go To Jail : 2
+2  31:Pacific Avenue : 2
+1  32:North Carolina AVenue : 1
+3  33:Community Chest : 3
+1  34:Pennsylvania Avenue : 1
+1  35:Short Line : 1
+0  36:Chance : 0
+1  37:Park Place : 1
+0  38:Luxury Tax : 0
+3  39:Boardwalk : 3

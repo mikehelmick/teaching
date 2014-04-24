@@ -1,0 +1,42 @@
+Num Players: 6 Turns: 1000
+Verbose: 0
+205  0:Go : 205
+143  1:Mediterranean Avenue : 143
+159  2:Community Chest : 159
+136  3:Baltic Avenue : 136
+160  4:Income Tax : 160
+209  5:Reading Railroad : 209
+150  6:Oriental Avenue : 150
+157  7:Chance : 157
+161  8:Vermont Avenue : 161
+160  9:Connecticut Avenue : 160
+411  10:In Jail/Just Visiting : 411
+210  11:St. Charles Place : 210
+182  12:Electric Company : 182
+151  13:States Avenue : 151
+177  14:Virginia Avenue : 177
+147  15:Pennsylvania Railroad : 147
+208  16:St. James Place : 208
+201  17:Community Chest : 201
+206  18:Tennessee Avenue : 206
+190  19:New York Avenue : 190
+181  20:Free Parking : 181
+184  21:Kentucky Avenue : 184
+186  22:Chance : 186
+204  23:Indiana Avenue : 204
+209  24:Illinois Avenue : 209
+196  25:B. & O. Railroad : 196
+192  26:Alantic Avenue : 192
+185  27:Ventnor Avenue : 185
+174  28:Water Works : 174
+169  29:Marvin Gardens : 169
+178  30:Go To Jail : 178
+188  31:Pacific Avenue : 188
+176  32:North Carolina AVenue : 176
+194  33:Community Chest : 194
+179  34:Pennsylvania Avenue : 179
+169  35:Short Line : 169
+161  36:Chance : 161
+150  37:Park Place : 150
+139  38:Luxury Tax : 139
+158  39:Boardwalk : 158
